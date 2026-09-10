@@ -1,0 +1,245 @@
+{
+  "sourceSha256": "f2589349ec39691c150b9eb59693a1acee69222234642d515362d0ef6bfe00ca",
+  "note": "Only obvious formatting/typo corrections. Semantic translations remain reference expressions. IDs must persist across reorderings.",
+  "labelIssues": [
+    {
+      "kind": "speaker_label",
+      "episode": 5,
+      "paragraph": 119,
+      "raw": "拟：你猜它几岁了？",
+      "interpretation": "treated_as_chinese_user_line"
+    },
+    {
+      "kind": "speaker_label",
+      "episode": 74,
+      "paragraph": 1942,
+      "raw": "图：不过我感觉我的无名指和小指都没什么力气。",
+      "interpretation": "treated_as_chinese_user_line"
+    },
+    {
+      "kind": "speaker_label",
+      "episode": 174,
+      "paragraph": 4729,
+      "raw": "应用你：而且因为我在这个商场有积分，抵扣了200多块钱呢。",
+      "interpretation": "treated_as_chinese_user_line"
+    }
+  ],
+  "changes": [
+    {
+      "episode": 1,
+      "sequence": 3,
+      "before": {
+        "zh": "我也很高兴认识你。你是男性还是女性？",
+        "en": "Nice to meet you too.  Are you male or female?"
+      },
+      "after": {
+        "zh": "我也很高兴认识你。你是男性还是女性？",
+        "en": "Nice to meet you too. Are you male or female?"
+      }
+    },
+    {
+      "episode": 6,
+      "sequence": 4,
+      "before": {
+        "zh": "椰子树我也很喜欢。",
+        "en": "I really like coconut trees , too."
+      },
+      "after": {
+        "zh": "椰子树我也很喜欢。",
+        "en": "I really like coconut trees, too."
+      }
+    },
+    {
+      "episode": 10,
+      "sequence": 2,
+      "before": {
+        "zh": "好的，需要什么别的喝的吗？",
+        "en": "Got it.Anything to drink with that?"
+      },
+      "after": {
+        "zh": "好的，需要什么别的喝的吗？",
+        "en": "Got it. Anything to drink with that?"
+      }
+    },
+    {
+      "episode": 11,
+      "sequence": 4,
+      "before": {
+        "zh": "汉堡不要放芝士和酱，咖啡少冰。",
+        "en": "No cheese or sauce on the burger, and light ice on the coffee,please."
+      },
+      "after": {
+        "zh": "汉堡不要放芝士和酱，咖啡少冰。",
+        "en": "No cheese or sauce on the burger, and light ice on the coffee, please."
+      }
+    },
+    {
+      "episode": 12,
+      "sequence": 7,
+      "before": {
+        "zh": "要是烂尾的话我直接气死。",
+        "en": "If it has a bad ending,I'm gonna be so pissed."
+      },
+      "after": {
+        "zh": "要是烂尾的话我直接气死。",
+        "en": "If it has a bad ending, I'm gonna be so pissed."
+      }
+    },
+    {
+      "episode": 20,
+      "sequence": 2,
+      "before": {
+        "zh": "那牛排呢？你会喜欢几分熟？一分？三分？五分？七分？全熟？",
+        "en": "What about steak? How would you like it cooked—rare, medium-rare,medium,medium-well, well-done?"
+      },
+      "after": {
+        "zh": "那牛排呢？你会喜欢几分熟？一分？三分？五分？七分？全熟？",
+        "en": "What about steak? How would you like it cooked—rare, medium-rare, medium, medium-well, well-done?"
+      }
+    },
+    {
+      "episode": 26,
+      "sequence": 3,
+      "before": {
+        "zh": "哎我橡皮怎么不见了，本来里面还有一个橡皮呢。",
+        "en": "Wait, where's my eraser?I know there was one in here."
+      },
+      "after": {
+        "zh": "哎我橡皮怎么不见了，本来里面还有一个橡皮呢。",
+        "en": "Wait, where's my eraser? I know there was one in here."
+      }
+    },
+    {
+      "episode": 31,
+      "sequence": 2,
+      "before": {
+        "zh": "好的，您那边是几个人呢？",
+        "en": "Sure thing!How many people will it be?"
+      },
+      "after": {
+        "zh": "好的，您那边是几个人呢？",
+        "en": "Sure thing! How many people will it be?"
+      }
+    },
+    {
+      "episode": 33,
+      "sequence": 10,
+      "before": {
+        "zh": "你听过这个吗？有一只南方的蟑螂和一只北方的蟑螂第一次见面，南方蟑螂看了看北方蟑螂说：额，你是个，瓜子儿？",
+        "en": "Have you heard this one?A southern roach meets a northern roach for the first time.The southern one looks at the northern one and says:“Uh… are you a sunflower seed?”"
+      },
+      "after": {
+        "zh": "你听过这个吗？有一只南方的蟑螂和一只北方的蟑螂第一次见面，南方蟑螂看了看北方蟑螂说：额，你是个，瓜子儿？",
+        "en": "Have you heard this one? A southern roach meets a northern roach for the first time. The southern one looks at the northern one and says:“Uh… are you a sunflower seed?”"
+      }
+    },
+    {
+      "episode": 34,
+      "sequence": 4,
+      "before": {
+        "zh": "公交车太慢了，而且也要转车，45转197",
+        "en": "The bus is too slow. And I still have to transfer.Like the forty-five to the one ninety-seven."
+      },
+      "after": {
+        "zh": "公交车太慢了，而且也要转车，45转197",
+        "en": "The bus is too slow. And I still have to transfer. Like the forty-five to the one ninety-seven."
+      }
+    },
+    {
+      "episode": 101,
+      "sequence": 3,
+      "before": {
+        "zh": "今天终于收到一家公司的录用通知了。",
+        "en": "And today he finally got a job offer ."
+      },
+      "after": {
+        "zh": "今天终于收到一家公司的录用通知了。",
+        "en": "And today he finally got a job offer."
+      }
+    },
+    {
+      "episode": 105,
+      "sequence": 8,
+      "before": {
+        "zh": "我一个朋友每次喝完酒心跳都特别快，他去年就戒酒了。",
+        "en": "A friend of mine,  his heart goes crazy every time he drinks—he quit last year."
+      },
+      "after": {
+        "zh": "我一个朋友每次喝完酒心跳都特别快，他去年就戒酒了。",
+        "en": "A friend of mine, his heart goes crazy every time he drinks—he quit last year."
+      }
+    },
+    {
+      "episode": 113,
+      "sequence": 8,
+      "before": {
+        "zh": "如果有来世，希望他做一个很幸福的人。",
+        "en": "If there's an afterlife,I hope he's happy there."
+      },
+      "after": {
+        "zh": "如果有来世，希望他做一个很幸福的人。",
+        "en": "If there's an afterlife, I hope he's happy there."
+      }
+    },
+    {
+      "episode": 120,
+      "sequence": 4,
+      "before": {
+        "zh": "而且我今天吃的是煮鸡腿哦，我以前都是吃炸鸡腿的，我特别喜欢吃炸的东西。",
+        "en": "And I had a boiled chicken drumstick today—I used to always eat fried ones,I'm obsessed with fried food."
+      },
+      "after": {
+        "zh": "而且我今天吃的是煮鸡腿哦，我以前都是吃炸鸡腿的，我特别喜欢吃炸的东西。",
+        "en": "And I had a boiled chicken drumstick today—I used to always eat fried ones, I'm obsessed with fried food."
+      }
+    },
+    {
+      "episode": 122,
+      "sequence": 3,
+      "before": {
+        "zh": "上车的时候我跟司机说我的很清楚去机场T2航站楼，他还确认了一下说T2对吧，我说对，结果他还是把我送到了T3。",
+        "en": "When I got in, I made it super clear that I needed Terminal 2—he even confirmed, 'T2, right?' and I said yeah. But he still dropped me off at T3."
+      },
+      "after": {
+        "zh": "上车的时候我跟司机说得很清楚去机场T2航站楼，他还确认了一下说T2对吧，我说对，结果他还是把我送到了T3。",
+        "en": "When I got in, I made it super clear that I needed Terminal 2—he even confirmed, 'T2, right?' and I said yeah. But he still dropped me off at T3."
+      }
+    },
+    {
+      "episode": 135,
+      "sequence": 6,
+      "before": {
+        "zh": "不过我其它5个室友这门课也都挂了，我们可以一起重修。",
+        "en": "On the bright side, my other five roommates all failed it too, so at least .we can retake it together."
+      },
+      "after": {
+        "zh": "不过我其它5个室友这门课也都挂了，我们可以一起重修。",
+        "en": "On the bright side, my other five roommates all failed it too, so at least.we can retake it together."
+      }
+    },
+    {
+      "episode": 165,
+      "sequence": 6,
+      "before": {
+        "zh": "哇雾散了，天居然晴了耶！太不容易了。",
+        "en": "Whoa, the fog cleared up—it actually turned sunny!  It's about time!"
+      },
+      "after": {
+        "zh": "哇雾散了，天居然晴了耶！太不容易了。",
+        "en": "Whoa, the fog cleared up—it actually turned sunny! It's about time!"
+      }
+    },
+    {
+      "episode": 192,
+      "sequence": 2,
+      "before": {
+        "zh": "我们伴娘伴郎一共八个人，今天我要和linda一起去选衣服。",
+        "en": "There are eight of us in the wedding party—bridesmaids and groomsmen.Today I'm going with Linda to pick out everyone's outfits."
+      },
+      "after": {
+        "zh": "我们伴娘伴郎一共八个人，今天我要和linda一起去选衣服。",
+        "en": "There are eight of us in the wedding party—bridesmaids and groomsmen. Today I'm going with Linda to pick out everyone's outfits."
+      }
+    }
+  ]
+}

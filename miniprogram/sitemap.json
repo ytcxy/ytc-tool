@@ -1,0 +1,9 @@
+{
+  "desc": "开发阶段不开放页面索引",
+  "rules": [
+    {
+      "action": "disallow",
+      "page": "*"
+    }
+  ]
+}

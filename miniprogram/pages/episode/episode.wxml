@@ -1,0 +1,24 @@
+<view class="page">
+ <view wx:if="{{error}}" class="error">{{error}}<button class="plain" bindtap="load">重新加载</button></view>
+ <view wx:if="{{loading}}" class="empty">正在准备复习内容…</view>
+ <block wx:if="{{episode && !loading}}">
+  <view class="eyebrow">第 {{episode.sequence}} 集 · RECALL</view><view class="hero-title">{{episode.title}}</view><view class="muted">{{episode.collectionTitle}}</view>
+  <view class="progress-line"><view style="width:{{sentences.length ? mastered / sentences.length * 100 : 0}}%"></view></view>
+  <view class="row"><text class="muted">{{loggedIn ? '已掌握 ' + mastered + ' / ' + sentences.length + ' 条' : sentences.length + ' 条表达 · 登录后保存进度'}}</text><text class="badge">{{completed ? '本集已完成' : '慢慢练，不着急'}}</text></view>
+  <button wx:if="{{!loggedIn}}" class="plain stack" bindtap="login">登录，保存我的学习记录 →</button>
+  <view wx:if="{{progressError}}" class="error">进度加载失败：{{progressError}}<button class="plain" bindtap="load">重新加载进度</button></view>
+  <button wx:if="{{lastSentenceId}}" class="secondary stack" bindtap="resume">回到上次学习位置</button>
+  <view class="toolbar"><button class="plain" bindtap="toggleAll">{{allRevealed ? '全部隐藏' : '全部显示'}}</button><button class="plain" bindtap="filter">{{onlyUnmastered ? '显示全部内容' : '只看未掌握'}}</button></view>
+  <view wx:if="{{saveError}}" class="error sync">{{saveError}}<button class="plain" bindtap="retry" disabled="{{saving}}">重试同步</button></view>
+  <view wx:for="{{sentences}}" wx:key="id" id="s-{{item.id}}" data-id="{{item.id}}" class="card sentence" hidden="{{onlyUnmastered && item.status === 'mastered'}}">
+   <view class="row sentence-head"><text class="number">{{item.sequence < 10 ? '0' + item.sequence : item.sequence}}</text><text class="muted">{{item.status === 'mastered' ? '已掌握' : item.status === 'learning' ? '还不熟' : '未练习'}}</text></view>
+   <view wx:if="{{item.context}}" class="context">{{item.context}}</view><view class="chinese">{{item.zh}}</view>
+   <view wx:if="{{item.revealed}}" class="english">{{item.en}}</view>
+   <button class="reveal" data-id="{{item.id}}" bindtap="toggle">{{item.revealed ? '隐藏参考英文 ↑' : '想好了吗？查看参考英文 ↓'}}</button>
+   <view class="actions"><button class="secondary" data-id="{{item.id}}" data-status="learning" bindtap="mark" disabled="{{saving || !!saveError || !!progressError}}">还不熟</button><button class="primary" data-id="{{item.id}}" data-status="mastered" bindtap="mark" disabled="{{saving || !!saveError || !!progressError}}">已掌握</button><button wx:if="{{item.status !== 'unseen'}}" class="plain" data-id="{{item.id}}" data-status="unseen" bindtap="mark" disabled="{{saving || !!saveError || !!progressError}}">重置</button></view>
+  </view>
+  <view wx:if="{{!visibleCount}}" class="empty">{{onlyUnmastered ? '这一集的表达都已掌握，做得不错。' : '本集内容还在准备中。'}}</view>
+  <button wx:if="{{sentences.length}}" class="primary stack" loading="{{saving}}" disabled="{{saving || !!saveError || !!progressError}}" bindtap="complete">{{completed ? '撤销本集完成标记' : '标记本集已完成'}}</button>
+  <view class="footer-note">英文是一种参考表达，能表达原意同样很好。</view>
+ </block>
+</view>

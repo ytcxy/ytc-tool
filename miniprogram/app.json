@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/me/me",
+    "pages/collection/collection",
+    "pages/episode/episode",
+    "pages/profile/profile",
+    "pages/review/review"
+  ],
+  "window": {
+    "navigationBarTitleText": "拾句英语",
+    "navigationBarBackgroundColor": "#f5f4ee",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f5f4ee"
+  },
+  "tabBar": {
+    "color": "#777d73",
+    "selectedColor": "#245b43",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "学习"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
