@@ -76,6 +76,7 @@ test('catalog SQL checks publication and soft deletion along every parent link',
  const db={pool:{execute,query:execute}} as unknown as DatabaseService;
  const service=new CatalogService(db);
  await service.collections(0,20);await service.episodes('1',0,20);await service.episode('1');await service.sentences('1');await service.sentence('1');
+ assert.ok(queries.some(sql=>sql.includes('s.speaker')));
  for(const sql of queries){
   assert.ok(sql.includes('c.is_del=0')&&sql.includes('c.status=1'));
   if(sql.includes('JOIN el_episodes e')||sql.includes('FROM el_episodes e'))assert.ok(sql.includes('e.is_del=0')&&sql.includes('e.status=1'));
@@ -93,6 +94,7 @@ test('progress reads hide deleted records and use business timestamps for recenc
  assert.ok(queries.some(sql=>sql.includes('ORDER BY p.last_studied_at DESC')));
  assert.ok(queries.some(sql=>sql.includes('LEFT JOIN el_sentences s')&&sql.includes('s.is_del=0')));
  assert.ok(!queries.some(sql=>sql.includes('ORDER BY p.updated_at')));
+ assert.ok(queries.some(sql=>sql.includes('s.speaker')));
 });
 
 test('catalog preserves BIGINT IDs as strings but returns count fields as numbers',async()=>{

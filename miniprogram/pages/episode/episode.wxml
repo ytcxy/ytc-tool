@@ -11,7 +11,7 @@
   <view class="toolbar"><button class="plain" bindtap="toggleAll">{{allRevealed ? '全部隐藏' : '全部显示'}}</button><button class="plain" bindtap="filter">{{onlyUnmastered ? '显示全部内容' : '只看未掌握'}}</button></view>
   <view wx:if="{{saveError}}" class="error sync">{{saveError}}<button class="plain" bindtap="retry" disabled="{{saving}}">重试同步</button></view>
   <view wx:for="{{sentences}}" wx:key="id" id="s-{{item.id}}" data-id="{{item.id}}" class="card sentence" hidden="{{onlyUnmastered && item.status === 'mastered'}}">
-   <view class="row sentence-head"><text class="number">{{item.sequence < 10 ? '0' + item.sequence : item.sequence}}</text><text class="muted">{{item.status === 'mastered' ? '已掌握' : item.status === 'learning' ? '还不熟' : '未练习'}}</text></view>
+   <view class="row sentence-head"><text class="number">{{item.speaker === 1 ? 'AI' : '你'}} · {{item.sequence < 10 ? '0' + item.sequence : item.sequence}}</text><text class="muted">{{item.status === 'mastered' ? '已掌握' : item.status === 'learning' ? '还不熟' : '未练习'}}</text></view>
    <view wx:if="{{item.context}}" class="context">{{item.context}}</view><view class="chinese">{{item.zh}}</view>
    <view wx:if="{{item.revealed}}" class="english">{{item.en}}</view>
    <button class="reveal" data-id="{{item.id}}" bindtap="toggle">{{item.revealed ? '隐藏参考英文 ↑' : '想好了吗？查看参考英文 ↓'}}</button>
@@ -19,6 +19,6 @@
   </view>
   <view wx:if="{{!visibleCount}}" class="empty">{{onlyUnmastered ? '这一集的表达都已掌握，做得不错。' : '本集内容还在准备中。'}}</view>
   <button wx:if="{{sentences.length}}" class="primary stack" loading="{{saving}}" disabled="{{saving || !!saveError || !!progressError}}" bindtap="complete">{{completed ? '撤销本集完成标记' : '标记本集已完成'}}</button>
-  <view class="footer-note">英文是一种参考表达，能表达原意同样很好。</view>
+  <view class="footer-note">英文是一种参考表达，能表达原意同样很好。AI 台词为学习补写，并非原视频逐字稿。</view>
  </block>
 </view>

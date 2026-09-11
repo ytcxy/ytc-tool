@@ -41,7 +41,7 @@ export class CatalogService {
  }
  async sentences(episodeId: string) {
   await this.episode(episodeId);
-  const [items] = await this.db.pool.execute<RowDataPacket[]>(`SELECT s.id,s.sequence,s.zh,s.en,s.context
+  const [items] = await this.db.pool.execute<RowDataPacket[]>(`SELECT s.id,s.sequence,s.zh,s.en,s.context,s.speaker
     FROM el_sentences s JOIN el_episodes e ON e.id=s.episode_id JOIN el_collections c ON c.id=e.collection_id
     WHERE s.episode_id=? AND ${visibleSentence} ORDER BY s.sequence,s.id LIMIT 200`, [episodeId]);
   return { items };

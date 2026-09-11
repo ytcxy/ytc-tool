@@ -9,3 +9,5 @@ project.private.config.json
 coverage/
 
 server/uploads/
+
+.deploy-docker.lock

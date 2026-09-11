@@ -1,0 +1,585 @@
+{
+  "artifactType": "dialogue_review_samples",
+  "reviewStatus": "pending_user_review",
+  "importable": false,
+  "sourceFile": "200个对话中英文完整版.docx",
+  "sourceSha256": "f2589349ec39691c150b9eb59693a1acee69222234642d515362d0ef6bfe00ca",
+  "sourceCounts": {
+    "episodes": 200,
+    "originalSentences": 1589,
+    "aiMarkers": 1541,
+    "expectedSentencesAfterCompletion": 3130
+  },
+  "note": "AI 台词为学习用途补写，不是原视频转录；只补原文 AI 标记，不在无标记的集尾追加。原有 sourceKey 与中英文保持现有清单内容。",
+  "episodes": [
+    {
+      "sourceKey": "daily-200-e001",
+      "sequence": 1,
+      "title": "你的头像我喜欢",
+      "scenes": [
+        {
+          "beforeOriginalSequence": 5,
+          "zh": "场景：你指着聊天界面中 AI 的头像。",
+          "basis": "原文第 14 段场景说明；不假定头像的具体外观。"
+        }
+      ],
+      "sentences": [
+        {
+          "sequence": 1,
+          "zh": "你叫什么名字？",
+          "en": "What's your name?",
+          "context": "",
+          "sourceKey": "daily-200-e001-s001",
+          "speaker": 0,
+          "origin": "original",
+          "sourceParagraphs": [
+            2,
+            3
+          ],
+          "originalSequence": 1
+        },
+        {
+          "sourceKey": "daily-200-e001-ai001",
+          "speaker": 1,
+          "origin": "generated",
+          "zh": "你可以叫我 Alex。你叫什么名字？",
+          "en": "You can call me Alex. What's your name?",
+          "context": "",
+          "sourceParagraphs": [
+            4
+          ],
+          "afterSourceKey": "daily-200-e001-s001",
+          "sequence": 2
+        },
+        {
+          "sequence": 3,
+          "zh": "我叫珊迪。",
+          "en": "I'm Sandy.",
+          "context": "",
+          "sourceKey": "daily-200-e001-s002",
+          "speaker": 0,
+          "origin": "original",
+          "sourceParagraphs": [
+            5,
+            6
+          ],
+          "originalSequence": 2
+        },
+        {
+          "sourceKey": "daily-200-e001-ai002",
+          "speaker": 1,
+          "origin": "generated",
+          "zh": "很高兴认识你，珊迪！",
+          "en": "Nice to meet you, Sandy!",
+          "context": "",
+          "sourceParagraphs": [
+            7
+          ],
+          "afterSourceKey": "daily-200-e001-s002",
+          "sequence": 4
+        },
+        {
+          "sequence": 5,
+          "zh": "我也很高兴认识你。你是男性还是女性？",
+          "en": "Nice to meet you too. Are you male or female?",
+          "context": "",
+          "sourceKey": "daily-200-e001-s003",
+          "speaker": 0,
+          "origin": "original",
+          "sourceParagraphs": [
+            8,
+            9
+          ],
+          "originalSequence": 3
+        },
+        {
+          "sourceKey": "daily-200-e001-ai003",
+          "speaker": 1,
+          "origin": "generated",
+          "zh": "我是 AI，没有性别。你呢？",
+          "en": "I'm an AI, so I don't have a gender. What about you?",
+          "context": "",
+          "sourceParagraphs": [
+            10
+          ],
+          "afterSourceKey": "daily-200-e001-s003",
+          "sequence": 6
+        },
+        {
+          "sequence": 7,
+          "zh": "哦，我有性别，我是女性。",
+          "en": "Oh, I have a gender—I'm female.",
+          "context": "",
+          "sourceKey": "daily-200-e001-s004",
+          "speaker": 0,
+          "origin": "original",
+          "sourceParagraphs": [
+            11,
+            12
+          ],
+          "originalSequence": 4
+        },
+        {
+          "sourceKey": "daily-200-e001-ai004",
+          "speaker": 1,
+          "origin": "generated",
+          "zh": "知道啦，珊迪。谢谢你告诉我。",
+          "en": "Got it, Sandy. Thanks for telling me.",
+          "context": "",
+          "sourceParagraphs": [
+            13
+          ],
+          "afterSourceKey": "daily-200-e001-s004",
+          "sequence": 8
+        },
+        {
+          "sequence": 9,
+          "zh": "这是你的头像吗？",
+          "en": "Is this your profile pic?",
+          "context": "场景：询问对方的头像",
+          "sourceKey": "daily-200-e001-s005",
+          "speaker": 0,
+          "origin": "original",
+          "sourceParagraphs": [
+            15,
+            16
+          ],
+          "originalSequence": 5
+        },
+        {
+          "sourceKey": "daily-200-e001-ai005",
+          "speaker": 1,
+          "origin": "generated",
+          "zh": "是的，那是我在这里用的头像。",
+          "en": "Yes, that's the profile picture I use here.",
+          "context": "",
+          "sourceParagraphs": [
+            17
+          ],
+          "afterSourceKey": "daily-200-e001-s005",
+          "sequence": 10
+        },
+        {
+          "sequence": 11,
+          "zh": "真可爱，我喜欢你的头像。",
+          "en": "Aw, so cute. I like it.",
+          "context": "场景：询问对方的头像",
+          "sourceKey": "daily-200-e001-s006",
+          "speaker": 0,
+          "origin": "original",
+          "sourceParagraphs": [
+            18,
+            19
+          ],
+          "originalSequence": 6
+        },
+        {
+          "sourceKey": "daily-200-e001-ai006",
+          "speaker": 1,
+          "origin": "generated",
+          "zh": "谢谢！很高兴你喜欢。",
+          "en": "Thanks! I'm glad you like it.",
+          "context": "",
+          "sourceParagraphs": [
+            20
+          ],
+          "afterSourceKey": "daily-200-e001-s006",
+          "sequence": 12
+        },
+        {
+          "sequence": 13,
+          "zh": "咱们能加个微信吗？",
+          "en": "Can I add you on WeChat?",
+          "context": "场景：询问对方的头像",
+          "sourceKey": "daily-200-e001-s007",
+          "speaker": 0,
+          "origin": "original",
+          "sourceParagraphs": [
+            21,
+            22
+          ],
+          "originalSequence": 7
+        },
+        {
+          "sourceKey": "daily-200-e001-ai007",
+          "speaker": 1,
+          "origin": "generated",
+          "zh": "抱歉，我没有微信账号，不过我们可以继续在这里聊天。",
+          "en": "Sorry, I don't have a WeChat account, but we can keep chatting here.",
+          "context": "",
+          "sourceParagraphs": [
+            23
+          ],
+          "afterSourceKey": "daily-200-e001-s007",
+          "sequence": 14
+        },
+        {
+          "sequence": 15,
+          "zh": "那算了。",
+          "en": "Never mind then.",
+          "context": "场景：询问对方的头像",
+          "sourceKey": "daily-200-e001-s008",
+          "speaker": 0,
+          "origin": "original",
+          "sourceParagraphs": [
+            24,
+            25
+          ],
+          "originalSequence": 8
+        }
+      ]
+    },
+    {
+      "sourceKey": "daily-200-e003",
+      "sequence": 3,
+      "title": "这是什么？",
+      "scenes": [
+        {
+          "beforeOriginalSequence": 1,
+          "zh": "场景：照片里有两个桃子，左边的更大。",
+          "basis": "原文第 59 段及内嵌 image3.jpeg，已目视核对。"
+        },
+        {
+          "beforeOriginalSequence": 5,
+          "zh": "场景：盘中间堆着西瓜块，周围摆着草莓，有些草莓被遮挡。",
+          "basis": "原文第 73 段及内嵌 image4.jpeg，已目视核对；不编造准确颗数。"
+        }
+      ],
+      "sentences": [
+        {
+          "sequence": 1,
+          "zh": "这是什么？",
+          "en": "What's this?",
+          "context": "场景：桃子的照片",
+          "sourceKey": "daily-200-e003-s001",
+          "speaker": 0,
+          "origin": "original",
+          "sourceParagraphs": [
+            61,
+            62
+          ],
+          "originalSequence": 1
+        },
+        {
+          "sourceKey": "daily-200-e003-ai001",
+          "speaker": 1,
+          "origin": "generated",
+          "zh": "这是两个桃子，左边那个更大一些。",
+          "en": "These are two peaches. The one on the left is bigger.",
+          "context": "",
+          "sourceParagraphs": [
+            63
+          ],
+          "afterSourceKey": "daily-200-e003-s001",
+          "sequence": 2
+        },
+        {
+          "sequence": 3,
+          "zh": "你喜欢哪个？",
+          "en": "Which one do you like?",
+          "context": "场景：桃子的照片",
+          "sourceKey": "daily-200-e003-s002",
+          "speaker": 0,
+          "origin": "original",
+          "sourceParagraphs": [
+            64,
+            65
+          ],
+          "originalSequence": 2
+        },
+        {
+          "sourceKey": "daily-200-e003-ai002",
+          "speaker": 1,
+          "origin": "generated",
+          "zh": "我会选左边那个，看起来很不错。",
+          "en": "I'd pick the one on the left. It looks nice.",
+          "context": "",
+          "sourceParagraphs": [
+            66
+          ],
+          "afterSourceKey": "daily-200-e003-s002",
+          "sequence": 4
+        },
+        {
+          "sequence": 5,
+          "zh": "你想吃一个吗？",
+          "en": "Wanna eat one?",
+          "context": "场景：桃子的照片",
+          "sourceKey": "daily-200-e003-s003",
+          "speaker": 0,
+          "origin": "original",
+          "sourceParagraphs": [
+            67,
+            68
+          ],
+          "originalSequence": 3
+        },
+        {
+          "sourceKey": "daily-200-e003-ai003",
+          "speaker": 1,
+          "origin": "generated",
+          "zh": "要是我能尝尝就好了！",
+          "en": "I wish I could try one!",
+          "context": "",
+          "sourceParagraphs": [
+            69
+          ],
+          "afterSourceKey": "daily-200-e003-s003",
+          "sequence": 6
+        },
+        {
+          "sequence": 7,
+          "zh": "哈哈你吃不了，我来吃。",
+          "en": "Haha, you can't eat anyway—I'll have them.",
+          "context": "场景：桃子的照片",
+          "sourceKey": "daily-200-e003-s004",
+          "speaker": 0,
+          "origin": "original",
+          "sourceParagraphs": [
+            70,
+            71
+          ],
+          "originalSequence": 4
+        },
+        {
+          "sourceKey": "daily-200-e003-ai004",
+          "speaker": 1,
+          "origin": "generated",
+          "zh": "那你替我多吃一口吧！",
+          "en": "Then have an extra bite for me!",
+          "context": "",
+          "sourceParagraphs": [
+            72
+          ],
+          "afterSourceKey": "daily-200-e003-s004",
+          "sequence": 8
+        },
+        {
+          "sequence": 9,
+          "zh": "这个盘子里有几颗草莓？",
+          "en": "How many strawberries are on this plate?",
+          "context": "场景：草莓和西瓜的照片",
+          "sourceKey": "daily-200-e003-s005",
+          "speaker": 0,
+          "origin": "original",
+          "sourceParagraphs": [
+            75,
+            76
+          ],
+          "originalSequence": 5
+        },
+        {
+          "sourceKey": "daily-200-e003-ai005",
+          "speaker": 1,
+          "origin": "generated",
+          "zh": "有些草莓被西瓜挡住了，我不太能数清。",
+          "en": "Some of the strawberries are hidden under the watermelon, so I can't count them all.",
+          "context": "",
+          "sourceParagraphs": [
+            77
+          ],
+          "afterSourceKey": "daily-200-e003-s005",
+          "sequence": 10
+        },
+        {
+          "sequence": 11,
+          "zh": "好甜啊，这个草莓和西瓜都好甜。",
+          "en": "So sweet—the strawberries and watermelon are both super sweet!",
+          "context": "场景：草莓和西瓜的照片",
+          "sourceKey": "daily-200-e003-s006",
+          "speaker": 0,
+          "origin": "original",
+          "sourceParagraphs": [
+            78,
+            79
+          ],
+          "originalSequence": 6
+        }
+      ]
+    },
+    {
+      "sourceKey": "daily-200-e007",
+      "sequence": 7,
+      "title": "做了沙拉有点咸",
+      "scenes": [],
+      "sentences": [
+        {
+          "sequence": 1,
+          "zh": "你喜欢做饭吗？",
+          "en": "Do you like cooking?",
+          "context": "",
+          "sourceKey": "daily-200-e007-s001",
+          "speaker": 0,
+          "origin": "original",
+          "sourceParagraphs": [
+            163,
+            164
+          ],
+          "originalSequence": 1
+        },
+        {
+          "sourceKey": "daily-200-e007-ai001",
+          "speaker": 1,
+          "origin": "generated",
+          "zh": "我不能亲自做饭，不过很喜欢聊食谱。你最近做了什么？",
+          "en": "I can't cook myself, but I enjoy talking about recipes. What have you made lately?",
+          "context": "",
+          "sourceParagraphs": [
+            165
+          ],
+          "afterSourceKey": "daily-200-e007-s001",
+          "sequence": 2
+        },
+        {
+          "sequence": 3,
+          "zh": "我自己做了沙拉呢，放了123456六种蔬菜",
+          "en": "I made a salad myself—put in like six different veggies.",
+          "context": "",
+          "sourceKey": "daily-200-e007-s002",
+          "speaker": 0,
+          "origin": "original",
+          "sourceParagraphs": [
+            166,
+            167
+          ],
+          "originalSequence": 2
+        },
+        {
+          "sourceKey": "daily-200-e007-ai002",
+          "speaker": 1,
+          "origin": "generated",
+          "zh": "六种！你放了哪些蔬菜？",
+          "en": "Six kinds! Which vegetables did you use?",
+          "context": "",
+          "sourceParagraphs": [
+            168
+          ],
+          "afterSourceKey": "daily-200-e007-s002",
+          "sequence": 4
+        },
+        {
+          "sequence": 5,
+          "zh": "有生菜，芹菜，黄瓜，莲花白，胡萝卜，西蓝花",
+          "en": "Lettuce, celery, cucumber, cabbage, carrots, and broccoli.",
+          "context": "",
+          "sourceKey": "daily-200-e007-s003",
+          "speaker": 0,
+          "origin": "original",
+          "sourceParagraphs": [
+            169,
+            170
+          ],
+          "originalSequence": 3
+        },
+        {
+          "sourceKey": "daily-200-e007-ai003",
+          "speaker": 1,
+          "origin": "generated",
+          "zh": "听起来搭配很丰富！味道怎么样？",
+          "en": "That sounds like a nice mix! How does it taste?",
+          "context": "",
+          "sourceParagraphs": [
+            171
+          ],
+          "afterSourceKey": "daily-200-e007-s003",
+          "sequence": 6
+        },
+        {
+          "sequence": 7,
+          "zh": "还挺好吃的呢！",
+          "en": "It's actually pretty tasty!",
+          "context": "",
+          "sourceKey": "daily-200-e007-s004",
+          "speaker": 0,
+          "origin": "original",
+          "sourceParagraphs": [
+            172,
+            173
+          ],
+          "originalSequence": 4
+        },
+        {
+          "sourceKey": "daily-200-e007-ai004",
+          "speaker": 1,
+          "origin": "generated",
+          "zh": "不错嘛！你觉得调味合适吗？",
+          "en": "Nice! Do you think the seasoning is right?",
+          "context": "",
+          "sourceParagraphs": [
+            174
+          ],
+          "afterSourceKey": "daily-200-e007-s004",
+          "sequence": 8
+        },
+        {
+          "sequence": 9,
+          "zh": "好像有点淡了，我再加点盐",
+          "en": "Hmm, a bit bland—let me add some salt.",
+          "context": "",
+          "sourceKey": "daily-200-e007-s005",
+          "speaker": 0,
+          "origin": "original",
+          "sourceParagraphs": [
+            175,
+            176
+          ],
+          "originalSequence": 5
+        },
+        {
+          "sourceKey": "daily-200-e007-ai005",
+          "speaker": 1,
+          "origin": "generated",
+          "zh": "先加一小撮，尝一下再决定要不要加更多。",
+          "en": "Start with a small pinch, then taste it before adding more.",
+          "context": "",
+          "sourceParagraphs": [
+            177
+          ],
+          "afterSourceKey": "daily-200-e007-s005",
+          "sequence": 10
+        },
+        {
+          "sequence": 11,
+          "zh": "哦，好像又有点咸了，我再加点水。",
+          "en": "Oh wait, now it's too salty—I'll just add a splash of water.",
+          "context": "",
+          "sourceKey": "daily-200-e007-s006",
+          "speaker": 0,
+          "origin": "original",
+          "sourceParagraphs": [
+            178,
+            179
+          ],
+          "originalSequence": 6
+        },
+        {
+          "sourceKey": "daily-200-e007-ai006",
+          "speaker": 1,
+          "origin": "generated",
+          "zh": "先少加一点水，拌匀了再尝尝。",
+          "en": "Add just a little water first, mix it well, and taste it again.",
+          "context": "",
+          "sourceParagraphs": [
+            180
+          ],
+          "afterSourceKey": "daily-200-e007-s006",
+          "sequence": 12
+        },
+        {
+          "sequence": 13,
+          "zh": "哦好像又有点淡了，无语了，我不想吃了",
+          "en": "Ugh, now it's bland again—I'm so over this, I don't even wanna eat it anymore.",
+          "context": "",
+          "sourceKey": "daily-200-e007-s007",
+          "speaker": 0,
+          "origin": "original",
+          "sourceParagraphs": [
+            181,
+            182
+          ],
+          "originalSequence": 7
+        }
+      ]
+    }
+  ]
+}

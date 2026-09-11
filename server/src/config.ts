@@ -13,8 +13,14 @@ export function validateConfig(env: Record<string, unknown>) {
     if (number < 1 || number > 65535) throw new Error(`Invalid port: ${name}`);
     return number;
   };
+  const bindHost = env.BIND_HOST ?? '0.0.0.0';
+  if (!['0.0.0.0', '127.0.0.1', '::1'].includes(String(bindHost))) throw new Error('Invalid BIND_HOST');
+  const trustProxy = env.TRUST_LOOPBACK_PROXY ?? 'false';
+  if (!['true', 'false'].includes(String(trustProxy))) throw new Error('Invalid TRUST_LOOPBACK_PROXY');
   return {
     ...env,
+    BIND_HOST: String(bindHost),
+    TRUST_LOOPBACK_PROXY: trustProxy === 'true',
     PORT: port('PORT', 3000),
     DB_PORT: port('DB_PORT', 3306),
     DB_HOST: required('DB_HOST'),

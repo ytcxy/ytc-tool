@@ -55,11 +55,11 @@ function memoryDatabase() {
   async query(query, values) {
    assert.match(query, /^INSERT INTO el_sentences/);calls.push({ sql: query, values });
    if (failBulk) throw new Error('simulated write failure');
-   for (const [episodeId, sourceKey, sequence, zh, en, context] of values[0]) {
+   for (const [episodeId, sourceKey, sequence, zh, en, context, speaker] of values[0]) {
     assert.ok(state.episodes.some(e => e.id === episodeId));
     const row = state.sentences.find(s => s.episodeId === episodeId && s.sourceKey === sourceKey);
-    if (row) Object.assign(row, { sequence, zh, en, context });
-    else state.sentences.push({ id: allocate(), episodeId, sourceKey, sequence, zh, en, context, is_del: 0 });
+    if (row) Object.assign(row, { sequence, zh, en, context, speaker });
+    else state.sentences.push({ id: allocate(), episodeId, sourceKey, sequence, zh, en, context, speaker, is_del: 0 });
    }
    return [{}];
   },
@@ -120,4 +120,36 @@ test('sentence failure rolls back its episode; a later retry can acquire the imp
  await assert.rejects(applyContent(db, data), /simulated/);
  assert.equal(db.state.episodes.length, 0);assert.equal(db.state.sentences.length, 0);
  db.failBulk = false;await applyContent(db, data);assert.equal(db.state.sentences.length, 1);
+});
+
+test('speaker defaults for legacy manifests, rejects invalid values and reports role changes', async () => {
+ const data=content();
+ assert.equal(validateContent(data).episodes[0].sentences[0].speaker,0);
+ for(const speaker of [null,-1,2,'1',true]){
+  const bad=structuredClone(data);bad.episodes[0].sentences[0].speaker=speaker;
+  assert.throws(()=>validateContent(bad),/speaker/);
+ }
+ const db=memoryDatabase();await applyContent(db,data);
+ data.episodes[0].sentences[0].speaker=1;
+ const plan=buildPlan(data,await readSnapshot(db,data.sourceKey));
+ assert.deepEqual(plan.changes[0].diff.speaker,{before:0,after:1});
+ await assert.rejects(applyContent(db,data),/accept-changes/);
+});
+test('inserting AI turns and reordering originals preserves IDs and progress references on repeated imports', async () => {
+ const db=memoryDatabase(),data=content();await applyContent(db,data);
+ const oldSentence=structuredClone(db.state.sentences[0]);
+ const progress={sentenceId:oldSentence.id,status:'mastered',lastSentenceId:oldSentence.id,completedAt:'2026-09-01'};
+ const original=data.episodes[0].sentences[0];original.sequence=2;
+ data.episodes[0].sentences.unshift({sourceKey:'episode-ai001',sequence:1,zh:'你好！',en:'Hello!',context:'',speaker:1});
+ const plan=buildPlan(data,await readSnapshot(db,data.sourceKey));
+ assert.equal(plan.sentencesAdded,1);assert.equal(plan.missing.length,0);
+ assert.deepEqual(plan.changes[0].diff,{sequence:{before:1,after:2}});
+ await applyContent(db,data,{acceptChanges:true});
+ const saved=db.state.sentences.find(s=>s.sourceKey===oldSentence.sourceKey);
+ assert.deepEqual(saved,{...oldSentence,sequence:2});
+ assert.equal(db.state.sentences.find(s=>s.sourceKey==='episode-ai001').speaker,1);
+ assert.equal(saved.id,progress.sentenceId);assert.equal(saved.id,progress.lastSentenceId);
+ assert.ok(db.calls.every(c=>!c.sql.includes('el_sentence_progress')&&!c.sql.includes('el_episode_progress')));
+ const repeated=await applyContent(db,data);
+ assert.equal(repeated.sentencesAdded,0);assert.equal(repeated.changes.length,0);
 });

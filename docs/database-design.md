@@ -1,6 +1,6 @@
-# 数据库设计 v2
+# 数据库设计 v2（含对话角色）
 
-本设计对应 `server/migrations/001_learning.sql`，当前仅修改文件，尚未执行建表或导入。旧字符串主键表若已存在，必须单独设计并确认升级路径，不能用本初始化脚本直接替换。
+本设计对应 `server/migrations/001_learning.sql`，新库使用该初始化 SQL；已有数字主键库新增角色字段使用 `002_sentence_speaker.sql`，本轮未执行数据库变更。旧字符串主键表若已存在，必须单独设计并确认升级路径，不能用本初始化脚本直接替换。
 
 ## 公共字段与约束
 
@@ -68,9 +68,10 @@ created_at 默认 CURRENT_TIMESTAMP(3)；updated_at 默认及自动更新均为 
 | sequence | INT UNSIGNED | 单集内顺序 |
 | zh | TEXT | 中文 |
 | en | TEXT | 参考英文 |
+| speaker | TINYINT UNSIGNED NOT NULL DEFAULT 0 | 0 你，1 AI |
 | context | VARCHAR(500) | 场景提示，默认空字符串 |
 
-唯一键 (episode_id,source_key)；列表索引 (episode_id,is_del,sequence,id)。随单集发布，不存图片、原文标签和段落编号。
+唯一键 (episode_id,source_key)；列表索引 (episode_id,is_del,sequence,id)。随单集发布，不存图片、原文标签和段落编号。API 返回数值 speaker；原文及生成台词都可独立自评。新增 AI 条目没有历史进度，视为未练习；已有条目 ID、学习位置和单集完成标记不重置。来源段落与补写记录保存在内容 source 目录中。
 
 ## el_episode_progress 单集进度
 

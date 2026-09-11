@@ -17,3 +17,11 @@ test('rejects malformed and out-of-range ports', () => {
     assert.throws(() => validateConfig({ ...env, PORT: value }), /Invalid port/);
   }
 });
+
+test('deployment binds locally and enables only explicit loopback proxy trust',()=>{
+ const local=validateConfig(env);assert.equal(local.BIND_HOST,'0.0.0.0');assert.equal(local.TRUST_LOOPBACK_PROXY,false);
+ const production=validateConfig({...env,BIND_HOST:'127.0.0.1',TRUST_LOOPBACK_PROXY:'true'});
+ assert.equal(production.BIND_HOST,'127.0.0.1');assert.equal(production.TRUST_LOOPBACK_PROXY,true);
+ assert.throws(()=>validateConfig({...env,BIND_HOST:'invalid'}),/BIND_HOST/);
+ assert.throws(()=>validateConfig({...env,TRUST_LOOPBACK_PROXY:'yes'}),/TRUST_LOOPBACK_PROXY/);
+});

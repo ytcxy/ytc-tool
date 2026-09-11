@@ -12,7 +12,11 @@
     "db:migrate": "node scripts/migrate.mjs --apply",
     "content:validate": "node scripts/import.mjs --validate",
     "content:plan": "node scripts/import.mjs",
-    "content:import": "node scripts/import.mjs --apply"
+    "content:import": "node scripts/import.mjs --apply",
+    "db:speaker:plan": "node scripts/migrate-speaker.mjs",
+    "db:speaker:migrate": "node scripts/migrate-speaker.mjs --apply",
+    "content:build": "node scripts/build-dialogues.mjs --write",
+    "content:check": "node scripts/build-dialogues.mjs --check"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.0",

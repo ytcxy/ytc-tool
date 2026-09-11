@@ -44,7 +44,9 @@ export function validateContent(data) {
    return { ...e, status: status(e.status), sourceUrl: url(e.sourceUrl), sentences: e.sentences.map(s => {
     record(s); key(s.sourceKey, sentenceKeys); order(s.sequence, sentenceOrder); text(s.zh, 4000); text(s.en, 8000);
     if (typeof s.context !== 'string' || s.context.length > 500) throw new Error('Invalid context');
-    return { ...s };
+    const speaker = s.speaker === undefined ? 0 : s.speaker;
+    if (speaker !== 0 && speaker !== 1) throw new Error('Invalid speaker: expected 0 or 1');
+    return { ...s, speaker };
    }) };
   }),
  };
@@ -52,16 +54,47 @@ export function validateContent(data) {
 export async function content() {
  return validateContent(JSON.parse(await readFile(serverRoot + 'content/daily-200.json', 'utf8')));
 }
-export async function connect() {
+export function parseOptions(argv, allowed) {
+ const args = new Set();
+ let database;
+ for (const arg of argv) {
+  if (arg.startsWith('--database=')) {
+   if (database !== undefined) throw new Error('Duplicate --database option');
+   database = arg.slice('--database='.length);
+   if (!['ytc-tool', 'ytc-tool-prod'].includes(database)) throw new Error('Unsupported database');
+  } else {
+   if (!allowed.includes(arg)) throw new Error('Unknown option: ' + arg);
+   if (args.has(arg)) throw new Error('Duplicate option: ' + arg);
+   args.add(arg);
+  }
+ }
+ if (args.has('--validate') && argv.length !== 1) throw new Error('--validate must be used alone');
+ if (args.has('--accept-changes') && !args.has('--apply')) throw new Error('--accept-changes requires --apply');
+ return { args, database };
+}
+export function targetDatabase(explicit, configured) {
+ if (explicit !== undefined) {
+  if (!['ytc-tool', 'ytc-tool-prod'].includes(explicit)) throw new Error('Unsupported database');
+  return explicit;
+ }
+ if (configured !== 'ytc-tool') throw new Error('Default CLI target must be ytc-tool; production requires --database=ytc-tool-prod');
+ return configured;
+}
+export async function connect(explicitDatabase) {
  try { process.loadEnvFile(serverRoot + '.env'); } catch (error) { if (error.code !== 'ENOENT') throw error; }
- for (const name of ['DB_HOST', 'DB_NAME', 'DB_USER', 'DB_PASSWORD']) if (!process.env[name]) throw new Error('Missing ' + name);
- if (process.env.DB_NAME !== 'ytc-tool') throw new Error('This CLI only operates on the ytc-tool development database');
+ for (const name of ['DB_HOST', 'DB_USER', 'DB_PASSWORD']) if (!process.env[name]) throw new Error('Missing ' + name);
+ const database = targetDatabase(explicitDatabase, process.env.DB_NAME);
  const db = await mysql.createConnection({
-  host: process.env.DB_HOST, port: Number(process.env.DB_PORT || 3306), database: process.env.DB_NAME,
+  host: process.env.DB_HOST, port: Number(process.env.DB_PORT || 3306), database,
   user: process.env.DB_USER, password: process.env.DB_PASSWORD, connectTimeout: 8000,
   multipleStatements: false, supportBigNumbers: true, bigNumberStrings: true, timezone: 'Z',
  });
- try { await db.query("SET time_zone = '+00:00'"); }
+ try {
+  await db.query("SET time_zone = '+00:00'");
+  const [rows] = await db.query('SELECT DATABASE() AS databaseName');
+  if (rows[0].databaseName !== database) throw new Error('Connected database does not match requested target');
+  console.log(JSON.stringify({ database: rows[0].databaseName }));
+ }
  catch (error) { await db.end(); throw error; }
  return db;
 }
