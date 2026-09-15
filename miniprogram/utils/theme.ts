@@ -3,6 +3,7 @@ export type ResolvedTheme = 'light' | 'dark';
 
 const STORAGE_KEY = 'themeMode';
 const modes: ThemeMode[] = ['system', 'light', 'dark'];
+const listeners = new Set<(state: ReturnType<typeof themeState>) => void>();
 
 type ThemePage = {
   setData(data: { theme: ResolvedTheme; themeMode: ThemeMode }): void;
@@ -41,6 +42,15 @@ function updatePages(state: ReturnType<typeof themeState>) {
   getCurrentPages().forEach(page => (page as unknown as ThemePage).setData(state));
 }
 
+function notifyTheme(state: ReturnType<typeof themeState>) {
+  listeners.forEach(listener => listener(state));
+}
+
+export function subscribeTheme(listener: (state: ReturnType<typeof themeState>) => void) {
+  listeners.add(listener);
+  return () => listeners.delete(listener);
+}
+
 export function syncTheme(page: ThemePage) {
   const state = themeState();
   page.setData(state);
@@ -52,6 +62,7 @@ export function setThemeMode(mode: ThemeMode) {
   wx.setStorageSync(STORAGE_KEY, mode);
   const state = themeState(mode);
   updatePages(state);
+  notifyTheme(state);
   applyChrome(state.theme);
 }
 
@@ -65,6 +76,7 @@ export function initTheme() {
     if (getThemeMode() !== 'system') return;
     const state = themeState('system', theme === 'dark' ? 'dark' : 'light');
     updatePages(state);
+    notifyTheme(state);
     applyChrome(state.theme);
   });
 }

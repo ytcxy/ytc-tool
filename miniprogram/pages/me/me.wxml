@@ -1,4 +1,6 @@
-<view class="page theme-{{theme}}"><view class="eyebrow">MY PRACTICE</view><view class="hero-title">每一点进步，<view>都值得记下来。</view></view>
+<page-meta page-style="background-color: {{theme === 'dark' ? '#101612' : '#f5f4ee'}}; color-scheme: {{theme}};" root-background-color="{{theme === 'dark' ? '#101612' : '#f5f4ee'}}" background-color="{{theme === 'dark' ? '#101612' : '#f5f4ee'}}" background-color-top="{{theme === 'dark' ? '#101612' : '#f5f4ee'}}" background-color-bottom="{{theme === 'dark' ? '#101612' : '#f5f4ee'}}" />
+<app-nav title="我的" theme="{{theme}}" />
+<view class="page tab-page theme-{{theme}}"><view class="eyebrow">MY PRACTICE</view><view class="hero-title">每一点进步，<view>都值得记下来。</view></view>
  <view class="appearance card">
   <view class="row"><view><view class="title">夜间模式</view><view class="muted">选择喜欢的阅读亮度</view></view><text class="appearance-mark">{{theme === 'dark' ? '☾' : '☼'}}</text></view>
   <view class="theme-options" role="radiogroup" aria-label="显示主题">
@@ -12,7 +14,7 @@
  <view wx:if="{{loading}}" class="empty">正在读取学习记录…</view>
  <block wx:if="{{loggedIn && profile}}"><view class="card row profile-card"><image wx:if="{{profile.avatarUrl}}" class="avatar" src="{{profile.avatarUrl}}" mode="aspectFill"/><view wx:else class="avatar avatar-placeholder">句</view><view class="grow profile-name"><view class="title">{{profile.nickname}}</view></view><button class="plain profile-edit" bindtap="edit">编辑</button></view>
  <view wx:if="{{summary}}" class="stats"><view><view class="stat-number">{{summary.completedEpisodes}}</view><text class="muted">完成单集</text></view><view><view class="stat-number">{{summary.mastered}}</view><text class="muted">掌握表达</text></view><view><view class="stat-number">{{summary.learning}}</view><text class="muted">还不熟</text></view></view>
- <view class="card row" bindtap="review"><view><view class="title">再练一遍</view><view class="muted">回顾标记为“还不熟”的表达</view></view><text class="link">→</text></view>
- <view class="section-title">最近学习</view><view wx:for="{{summary.recent}}" wx:key="id" class="card" data-id="{{item.id}}" bindtap="open"><view class="title">{{item.title}}</view><view class="muted">{{item.collectionTitle}} · 第 {{item.sequence}} 集</view></view><view wx:if="{{!summary.recent.length}}" class="empty">还没有学习记录，去书架选一集吧。</view>
+ <view class="card row" bindtap="review" hover-class="none"><view><view class="title">再练一遍</view><view class="muted">回顾标记为“还不熟”的表达</view></view><text class="link">→</text></view>
+ <view class="section-title">最近学习</view><view wx:for="{{summary.recent}}" wx:key="id" class="card" data-id="{{item.id}}" bindtap="open" hover-class="none"><view class="title">{{item.title}}</view><view class="muted">{{item.collectionTitle}} · 第 {{item.sequence}} 集</view></view><view wx:if="{{!summary.recent.length}}" class="empty">还没有学习记录，去书架选一集吧。</view>
  <button class="plain danger" bindtap="logout" disabled="{{loading}}">退出登录</button></block>
 </view>

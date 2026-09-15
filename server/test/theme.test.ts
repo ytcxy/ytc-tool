@@ -49,6 +49,19 @@ test('manual theme persists and ignores later system changes', () => {
   assert.equal(fixture.pages[0].data.theme, 'light');
 });
 
+test('manual and system changes notify custom theme components without page lifecycle recursion', () => {
+  const fixture = themeModule('dark');
+  const themes: string[] = [];
+  const unsubscribe = fixture.exports.subscribeTheme((state: { theme: string }) => themes.push(state.theme));
+  fixture.exports.setThemeMode('light');
+  fixture.exports.setThemeMode('system');
+  fixture.exports.initTheme();
+  fixture.fire('dark');
+  unsubscribe();
+  fixture.exports.setThemeMode('light');
+  assert.deepEqual(themes, ['light', 'dark', 'dark']);
+});
+
 test('unknown saved theme safely falls back to system', () => {
   const fixture = themeModule('dark', 'unexpected');
   assert.equal(fixture.exports.getThemeMode(), 'system');
@@ -58,9 +71,29 @@ test('unknown saved theme safely falls back to system', () => {
 test('all pages opt into theme classes and fixed colors use shared variables', () => {
   for (const page of ['index', 'collection', 'episode', 'me', 'profile', 'review']) {
     const wxml = readFileSync(resolve(__dirname, `../../miniprogram/pages/${page}/${page}.wxml`), 'utf8');
-    assert.match(wxml, /class="page theme-\{\{theme\}\}"/);
+    assert.match(wxml, /class="[^"]*page[^"]*theme-\{\{theme\}\}"/);
   }
   const styles = readFileSync(resolve(__dirname, '../../miniprogram/app.wxss'), 'utf8');
   assert.match(styles, /\.theme-dark/);
   assert.match(styles, /--surface: #18211b/);
+});
+
+test('learning route pages keep page backgrounds in sync with manual dark mode', () => {
+  for (const page of ['index', 'collection', 'episode']) {
+    const wxml = readFileSync(resolve(__dirname, `../../miniprogram/pages/${page}/${page}.wxml`), 'utf8');
+    assert.match(wxml, /root-background-color="\{\{theme === 'dark'/);
+    assert.match(wxml, /<page-meta[^>]+background-color-top="\{\{theme === 'dark'/);
+    assert.match(wxml, /background-color-bottom="\{\{theme === 'dark'/);
+    assert.match(wxml, /<app-nav[^>]+theme="\{\{theme\}\}"/);
+  }
+});
+
+test('custom navigation and tab bar replace native chrome during route transitions', () => {
+  const app = JSON.parse(readFileSync(resolve(__dirname, '../../miniprogram/app.json'), 'utf8'));
+  assert.equal(app.window.navigationStyle, 'custom');
+  assert.equal(app.tabBar.custom, true);
+  const tabBar = readFileSync(resolve(__dirname, '../../miniprogram/custom-tab-bar/index.wxml'), 'utf8');
+  const navigation = readFileSync(resolve(__dirname, '../../miniprogram/components/app-nav/index.wxml'), 'utf8');
+  assert.match(tabBar, /tab-bar-\{\{theme\}\}/);
+  assert.match(navigation, /nav-\{\{theme\}\}/);
 });

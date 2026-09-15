@@ -1,3 +1,5 @@
+<page-meta page-style="background-color: {{theme === 'dark' ? '#101612' : '#f5f4ee'}}; color-scheme: {{theme}};" root-background-color="{{theme === 'dark' ? '#101612' : '#f5f4ee'}}" background-color="{{theme === 'dark' ? '#101612' : '#f5f4ee'}}" background-color-top="{{theme === 'dark' ? '#101612' : '#f5f4ee'}}" background-color-bottom="{{theme === 'dark' ? '#101612' : '#f5f4ee'}}" />
+<app-nav title="单集复习" back theme="{{theme}}" />
 <view class="page theme-{{theme}}">
  <view wx:if="{{error}}" class="error">{{error}}<button class="plain" bindtap="load">重新加载</button></view>
  <view wx:if="{{loading}}" class="empty">正在准备复习内容…</view>
@@ -17,7 +19,7 @@
      <image wx:else class="speaker-icon" src="{{theme === 'dark' ? '/assets/icons/speaker-dark.svg' : '/assets/icons/speaker.svg'}}" mode="aspectFit" aria-hidden="true" />
      <view wx:if="{{audioSentenceId === item.id && audioState === 'error'}}" class="speaker-error-dot">!</view>
     </view>
-   <view wx:if="{{audioSentenceId === item.id && audioState === 'error'}}" class="speaker-error-note">播放失败，点击喇叭重试</view>
+   <view wx:if="{{audioSentenceId === item.id && audioState === 'error'}}" class="speaker-error-note">{{audioError}}</view>
    <view wx:if="{{item.context}}" class="context">{{item.context}}</view><view class="chinese">{{item.zh}}</view>
    <view wx:if="{{item.revealed}}" class="english" data-id="{{item.id}}" bindtap="toggle" role="button" aria-label="点击收起参考英文">{{item.en}}<view class="collapse-hint">点击英文区域收起 ↑</view></view>
    <button wx:if="{{!item.revealed}}" class="reveal" data-id="{{item.id}}" bindtap="toggle">想好了吗？查看参考英文 ↓</button>

@@ -1,0 +1,6 @@
+<view class="nav nav-{{theme}}" style="padding-top:{{statusBarHeight}}px">
+  <view class="nav-main" style="height:{{navigationHeight}}px">
+    <view wx:if="{{back}}" class="nav-back" role="button" aria-label="返回" hover-class="none" bindtap="goBack">‹</view>
+    <text class="nav-title">{{title}}</text>
+  </view>
+</view>

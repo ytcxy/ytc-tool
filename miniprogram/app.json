@@ -9,12 +9,14 @@
   ],
   "window": {
     "navigationBarTitleText": "拾句英语",
+    "navigationStyle": "custom",
     "navigationBarBackgroundColor": "@navBgColor",
     "navigationBarTextStyle": "@navTextStyle",
     "backgroundColor": "@pageBgColor",
     "backgroundTextStyle": "@pageTextStyle"
   },
   "tabBar": {
+    "custom": true,
     "color": "@tabTextColor",
     "selectedColor": "@tabSelectedColor",
     "backgroundColor": "@tabBgColor",
@@ -29,6 +31,9 @@
         "text": "我的"
       }
     ]
+  },
+  "usingComponents": {
+    "app-nav": "/components/app-nav/index"
   },
   "darkmode": true,
   "themeLocation": "theme.json",

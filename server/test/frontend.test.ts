@@ -173,9 +173,9 @@ test('audio switching destroys previous context and ignores its late callbacks',
 });
 test('failed audio retries inline and hide/unload release players',()=>{
  const {page,players,toasts}=withAudio();const id=page.data.sentences[0].id;
- page.playAudio(playEvent(id));players[0].callbacks.Error();assert.equal(page.data.audioState,'error');assert.ok(players[0].destroyed);
+ page.playAudio(playEvent(id));players[0].callbacks.Error({errCode:10002,errMsg:'network failed'});assert.equal(page.data.audioState,'error');assert.match(page.data.audioError,/网络错误.*10002/);assert.ok(players[0].destroyed);
  page.playAudio(playEvent(id));assert.equal(players.length,2);players[1].callbacks.Play();page.onHide();assert.ok(players[1].destroyed);
- players[1].callbacks.Error();assert.equal(page.data.audioState,'idle');
+ players[1].callbacks.Error({errCode:10002,errMsg:'network failed'});assert.equal(page.data.audioState,'idle');assert.equal(page.data.audioError,'');
  page.playAudio(playEvent(id));page.onUnload();assert.ok(players[2].destroyed);assert.equal(toasts.length,0);
 });
 test('audio completion, interruptions and filtering stop playback without reloading',()=>{

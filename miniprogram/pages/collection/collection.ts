@@ -4,7 +4,7 @@ import { Episode } from '../../types';
 Page({
  data:{...themeState(),id:'',title:'合集目录',description:'',items:[] as Episode[],total:0,page:1,loading:false,error:'',progressError:''},
  _progress:{} as Record<string,string>,
- onLoad(query:Record<string,string|undefined>){this.setData({id:query.id||''});},
+ onLoad(query:Record<string,string|undefined>){syncTheme(this);this.setData({id:query.id||''});},
  onShow(){syncTheme(this);this.load();},
  async load(){
   if(this.data.loading)return;this.setData({loading:true,error:'',progressError:''});this._progress={};

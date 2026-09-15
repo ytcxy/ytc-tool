@@ -2,11 +2,11 @@ import { request,getToken,requireLogin,errorMessage,audioUrl } from '../../utils
 import { syncTheme,themeState } from '../../utils/theme';
 import { Sentence,Episode,EpisodeProgress,Status } from '../../types';
 Page({
- data:{...themeState(),audioSentenceId:'',audioState:'idle',id:'',episode:null as Episode|null,sentences:[] as Sentence[],loading:true,error:'',saveError:'',progressError:'',saving:false,savingSentenceId:'',loggedIn:false,mastered:0,visibleCount:0,onlyUnmastered:false,allRevealed:false,completed:false,lastSentenceId:''},
+ data:{...themeState(),audioSentenceId:'',audioState:'idle',audioError:'',id:'',episode:null as Episode|null,sentences:[] as Sentence[],loading:true,error:'',saveError:'',progressError:'',saving:false,savingSentenceId:'',loggedIn:false,mastered:0,visibleCount:0,onlyUnmastered:false,allRevealed:false,completed:false,lastSentenceId:''},
  _audio:null as WechatMiniprogram.InnerAudioContext|null,_audioTimer:0 as ReturnType<typeof setTimeout>|0,
  _visible:false,_loadPromise:null as Promise<void>|null,_retrySilent:false,_retrySentenceId:'',_pendingMark:false,
  _session:'',_queue:Promise.resolve() as Promise<void>,_retry:null as (()=>Promise<void>)|null,_position:'',_savedPosition:'',_positionTimer:0 as ReturnType<typeof setTimeout>|0,_observer:null as WechatMiniprogram.IntersectionObserver|null,
- onLoad(query:Record<string,string|undefined>){this.setData({id:query.id||''});},
+ onLoad(query:Record<string,string|undefined>){syncTheme(this);this.setData({id:query.id||''});},
  async onShow(){
   syncTheme(this);this._visible=true;await this._queue;if(this._loadPromise)await this._loadPromise;
   if(!this._visible)return;
@@ -77,7 +77,7 @@ Page({
   const audio=this._audio;this._audio=null;
   if(this._audioTimer)clearTimeout(this._audioTimer);this._audioTimer=0;
   if(audio){audio.stop();audio.destroy();}
-  if(this.data.audioSentenceId)this.setData({audioSentenceId:'',audioState:'idle'});
+  if(this.data.audioSentenceId)this.setData({audioSentenceId:'',audioState:'idle',audioError:''});
  },
  playAudio(event:WechatMiniprogram.BaseEvent){
   const id=event.currentTarget.dataset.id as string;
@@ -85,22 +85,27 @@ Page({
   const sentence=this.data.sentences.find(s=>s.id===id);
   if(!sentence?.audioUrl)return;
   const src=audioUrl(sentence.audioUrl);if(!src)return;
-  this.stopAudio();this.setData({audioSentenceId:id,audioState:'loading'});
+  this.stopAudio();this.setData({audioSentenceId:id,audioState:'loading',audioError:''});
   try{
    const audio=wx.createInnerAudioContext();this._audio=audio;
    const current=()=>this._audio===audio;
    const clearTimer=()=>{if(this._audioTimer)clearTimeout(this._audioTimer);this._audioTimer=0;};
-   const failed=()=>{if(!current())return;this.stopAudio();this.setData({audioSentenceId:id,audioState:'error'});};
-   const loading=()=>{if(!current())return;clearTimer();this.setData({audioState:'loading'});this._audioTimer=setTimeout(failed,15000);};
+   const failed=(result?:WechatMiniprogram.InnerAudioContextOnErrorListenerResult)=>{
+    if(!current())return;
+    const reason=result?.errCode===10002?'网络错误，请检查网络和音频域名配置':result?.errCode===10003?'音频文件错误':result?.errCode===10004?'音频格式错误':result?.errCode===10001?'系统音频错误':'音频加载超时或播放失败';
+    const code=result?.errCode?`（${result.errCode}）`:'';
+    this.stopAudio();this.setData({audioSentenceId:id,audioState:'error',audioError:`${reason}${code}，点击喇叭重试`});
+   };
+   const loading=()=>{if(!current())return;clearTimer();this.setData({audioState:'loading'});this._audioTimer=setTimeout(()=>failed(),15000);};
    audio.onPlay(()=>{if(current()){clearTimer();this.setData({audioState:'playing'});}});
    audio.onTimeUpdate(()=>{if(current()&&audio.currentTime>0){clearTimer();if(this.data.audioState!=='playing')this.setData({audioState:'playing'});}});
    audio.onWaiting(loading);audio.onError(failed);
    audio.onEnded(()=>{if(current())this.stopAudio();});
    audio.onStop(()=>{if(current())this.stopAudio();});
    audio.onPause(()=>{if(current())this.stopAudio();});
-   audio.obeyMuteSwitch=false;audio.loop=false;audio.autoplay=false;
+   audio.loop=false;audio.autoplay=false;
    loading();audio.src=src;audio.play();
-  }catch{this.stopAudio();this.setData({audioSentenceId:id,audioState:'error'});}
+  }catch{this.stopAudio();this.setData({audioSentenceId:id,audioState:'error',audioError:'播放器启动失败，点击喇叭重试'});}
  },
  login(){wx.switchTab({url:'/pages/me/me'});}
 });

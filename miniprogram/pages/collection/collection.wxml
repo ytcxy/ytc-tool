@@ -1,7 +1,10 @@
-<view class="page theme-{{theme}}"><view class="eyebrow">COLLECTION</view><view class="hero-title">{{title}}</view><view class="muted">{{description}}</view><view class="section-title">全部 {{total}} 集</view>
+<page-meta page-style="background-color: {{theme === 'dark' ? '#101612' : '#f5f4ee'}}; color-scheme: {{theme}};" root-background-color="{{theme === 'dark' ? '#101612' : '#f5f4ee'}}" background-color="{{theme === 'dark' ? '#101612' : '#f5f4ee'}}" background-color-top="{{theme === 'dark' ? '#101612' : '#f5f4ee'}}" background-color-bottom="{{theme === 'dark' ? '#101612' : '#f5f4ee'}}" />
+<app-nav title="合集目录" back theme="{{theme}}" />
+<view class="page theme-{{theme}}">
+ <view class="eyebrow">COLLECTION</view><view class="hero-title">{{title}}</view><view class="muted">{{description}}</view><view class="section-title">全部 {{total}} 集</view>
  <view wx:if="{{progressError}}" class="error">学习状态未加载：{{progressError}}</view>
  <view wx:if="{{error}}" class="error">{{error}}<button class="plain" bindtap="load">重新加载</button></view>
- <view wx:for="{{items}}" wx:key="id" class="card row" data-id="{{item.id}}" bindtap="open"><view class="number">{{item.sequence < 10 ? '0' + item.sequence : item.sequence}}</view><view class="grow"><view class="title">{{item.title}}</view><view class="muted">{{item.sentenceCount}} 条表达 · {{item.state}}</view></view><text class="link">›</text></view>
+ <view wx:for="{{items}}" wx:key="id" class="card row" data-id="{{item.id}}" bindtap="open" hover-class="none"><view class="number">{{item.sequence < 10 ? '0' + item.sequence : item.sequence}}</view><view class="grow"><view class="title">{{item.title}}</view><view class="muted">{{item.sentenceCount}} 条表达 · {{item.state}}</view></view><text class="link">›</text></view>
  <view wx:if="{{loading}}" class="empty">正在加载…</view><view wx:elif="{{!items.length && !error}}" class="empty">这个合集还没有发布内容。</view>
  <button wx:if="{{items.length < total}}" class="secondary" bindtap="more" loading="{{loading}}" disabled="{{loading}}">加载更多单集</button>
 </view>
