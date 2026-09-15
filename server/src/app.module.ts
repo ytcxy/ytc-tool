@@ -1,3 +1,5 @@
+import { AudioService } from './audio/audio.service';
+import { AudioController } from './audio/audio.controller';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { resolve } from 'node:path';
@@ -16,7 +18,7 @@ import { UsersService } from './users/users.service';
 import { UsersController } from './users/users.controller';
 @Module({
  imports:[ConfigModule.forRoot({isGlobal:true,envFilePath:resolve(__dirname,'../.env'),validate:validateConfig})],
- controllers:[HealthController,AuthController,CatalogController,ProgressController,UsersController],
- providers:[DatabaseService,AuthService,AuthGuard,WechatService,CatalogService,ProgressService,UsersService],
+ controllers:[AudioController,HealthController,AuthController,CatalogController,ProgressController,UsersController],
+ providers:[AudioService,DatabaseService,AuthService,AuthGuard,WechatService,CatalogService,ProgressService,UsersService],
 })
 export class AppModule {}

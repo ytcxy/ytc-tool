@@ -69,6 +69,7 @@ for(const mode of ['success','envfail','createfail','healthfail','catalogfail','
   assert.equal(result.status,mode==='success'?0:1,result.stderr);
   const end=JSON.parse(readFileSync(state));assert.equal(end.containers['ytc-tool-api'].running,true);
   assert.equal(end.containers['ytc-tool-api'].fresh,mode==='success');
+  if(mode==='success'){const create=end.calls.find(c=>c[0]==='create');assert.ok(create.includes('AUDIO_SOURCE=database'));assert.ok(create.includes('type=bind,source='+base+'/audio,target=/app/audio,readonly'));}
   assert.equal(readlinkSync(join(base,'current')),mode==='success'?join(base,'releases',version):old);
   assert.equal(readFileSync(join(old,'server.env'),'utf8'),'old-secret');
   if(['envfail','checksumfail'].includes(mode))assert.ok(!end.calls.some(c=>['rename','stop','create'].includes(c[0])));

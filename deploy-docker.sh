@@ -55,7 +55,7 @@ mkdir -p "$stage/server" "$stage/miniprogram"
 cp package.json package-lock.json "$stage/"
 cp miniprogram/package.json "$stage/miniprogram/"
 cp server/package.json server/tsconfig.json server/nest-cli.json "$stage/server/"
-cp -R server/src "$stage/server/"
+cp -R server/src server/scripts server/migrations "$stage/server/"
 cat > "$stage/Dockerfile" <<'DOCKERFILE'
 FROM public.ecr.aws/docker/library/node:22-bookworm-slim AS build
 WORKDIR /app
@@ -74,6 +74,8 @@ COPY miniprogram/package.json ./miniprogram/package.json
 COPY server/package.json ./server/package.json
 RUN npm ci --omit=dev --workspace server --ignore-scripts --no-audit --no-fund && npm cache clean --force
 COPY --from=build /app/server/dist ./server/dist
+COPY --from=build /app/server/scripts ./server/scripts
+COPY --from=build /app/server/migrations ./server/migrations
 RUN mkdir -p /app/uploads && chown node:node /app/uploads
 USER node
 WORKDIR /app/server
@@ -98,12 +100,16 @@ fi
 docker run --rm --network host -e PORT="$port" "$image" node -e '
 const s=require("node:net").createServer();s.on("error",()=>process.exit(1));s.listen(Number(process.env.PORT),"127.0.0.1",()=>s.close());
 '
+mkdir -p /opt/ytc-tool/audio/files
+chmod 755 /opt/ytc-tool/audio /opt/ytc-tool/audio/files
 docker create --name "$name" --label ytc-tool.managed=true \
  --restart unless-stopped --init --network host --env-file "$env_file" \
  --security-opt no-new-privileges:true --cap-drop ALL \
  --log-opt max-size=10m --log-opt max-file=3 \
  -e NODE_ENV=production -e PORT="$port" -e BIND_HOST=127.0.0.1 \
  -e TRUST_LOOPBACK_PROXY=true -e UPLOAD_DIR=/app/uploads \
+ -e AUDIO_SOURCE=database -e AUDIO_DIR=/app/audio \
+ --mount type=bind,source=/opt/ytc-tool/audio,target=/app/audio,readonly \
  --mount type=volume,source=ytc-tool-uploads,target=/app/uploads "$image" >/dev/null
 new_created=true
 docker start "$name" >/dev/null

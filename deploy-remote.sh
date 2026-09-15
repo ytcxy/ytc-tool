@@ -63,7 +63,7 @@ mkdir -p "$context/server" "$context/miniprogram"
 cp package.json package-lock.json "$context/"
 cp miniprogram/package.json "$context/miniprogram/"
 cp server/package.json server/tsconfig.json server/nest-cli.json "$context/server/"
-cp -R server/src "$context/server/"
+cp -R server/src server/scripts server/migrations "$context/server/"
 cp deploy/Dockerfile "$context/Dockerfile"
 docker buildx build --platform "$platform" --pull --load -t "$image" "$context"
 actual_platform=$(docker image inspect --format '{{.Os}}/{{.Architecture}}' "$image")

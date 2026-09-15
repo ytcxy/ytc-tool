@@ -1,4 +1,5 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable, NotFoundException, Optional } from '@nestjs/common';
+import { AudioService, AudioSentence } from '../audio/audio.service';
 import { RowDataPacket } from 'mysql2/promise';
 import { DatabaseService } from '../database.service';
 // These predicates use fixed SQL aliases, never user-controlled input.
@@ -7,7 +8,7 @@ export const visibleEpisode = `e.is_del=0 AND e.status=1 AND ${visibleCollection
 export const visibleSentence = `s.is_del=0 AND ${visibleEpisode}`;
 @Injectable()
 export class CatalogService {
- constructor(private readonly db: DatabaseService) {}
+ constructor(private readonly db: DatabaseService, @Optional() private readonly audio?:AudioService) {}
  async collections(offset: number, limit: number) {
   const [items] = await this.db.pool.query<RowDataPacket[]>(`SELECT c.id,c.title,c.description,
     (SELECT COUNT(*) FROM el_episodes e WHERE e.collection_id=c.id AND e.is_del=0 AND e.status=1) AS episodeCount
@@ -41,13 +42,16 @@ export class CatalogService {
  }
  async sentences(episodeId: string) {
   await this.episode(episodeId);
-  const [items] = await this.db.pool.execute<RowDataPacket[]>(`SELECT s.id,s.sequence,s.zh,s.en,s.context,s.speaker
+  const [items] = await this.db.pool.execute<RowDataPacket[]>(`SELECT s.id,s.sequence,s.zh,s.en,s.context,s.speaker,
+    s.source_key AS sentenceKey,e.source_key AS episodeKey,c.source_key AS collectionKey
     FROM el_sentences s JOIN el_episodes e ON e.id=s.episode_id JOIN el_collections c ON c.id=e.collection_id
     WHERE s.episode_id=? AND ${visibleSentence} ORDER BY s.sequence,s.id LIMIT 200`, [episodeId]);
-  return { items };
+  const audioUrls=await this.audio?.urls(items as AudioSentence[]);
+  return { items:items.map(item=>{const {sentenceKey,episodeKey,collectionKey,...publicItem}=item;return {...publicItem,audioUrl:audioUrls?.get(item.id)??null};}) };
  }
  async sentence(sentenceId: string) {
-  const [rows] = await this.db.pool.execute<RowDataPacket[]>(`SELECT s.id,s.episode_id AS episodeId
+  const [rows] = await this.db.pool.execute<RowDataPacket[]>(`SELECT s.id,s.episode_id AS episodeId,s.en,
+    s.source_key AS sentenceKey,e.source_key AS episodeKey,c.source_key AS collectionKey
     FROM el_sentences s JOIN el_episodes e ON e.id=s.episode_id JOIN el_collections c ON c.id=e.collection_id
     WHERE s.id=? AND ${visibleSentence}`, [sentenceId]);
   if (!rows.length) throw new NotFoundException('条目不存在或尚未发布');

@@ -68,7 +68,7 @@ bash deploy-remote.sh \
   --env-file server/.env.production
 ```
 
-命令末尾加 `--plan` 可仅检查配置。正式执行会测试、构建镜像、上传镜像与配置、更新远程容器并健康检查；失败尝试回退。SSH 密码在终端输入。
+命令末尾加 `--plan` 可仅检查配置。正式执行会测试、构建后端镜像、上传镜像与配置、更新远程容器并健康检查；失败尝试回退。SSH 密码在终端输入。
 
 部署**不会建表、导入内容或上传小程序**。保持 1Panel 代理 `eng.yutc.top` → `http://127.0.0.1:3000`，部署后检查：
 
@@ -90,6 +90,7 @@ npm run content:check --workspace server
 
 以上检查不连接真实数据库。修改补写内容后，运行 `npm run content:build --workspace server` 重新生成清单；来源文件和编辑方法见 [内容说明](docs/dialogue-completion.md)。
 
+- [前 50 集英文音频与上传、数据库更新](docs/audio.md)（745 句；独立挂载，脚本预览后导入）
 - [项目规范](AGENTS.md) · [数据库设计](docs/database-design.md) · [接口说明](docs/api.md)
 - [完整对话稿](docs/dialogues-completed.md) · [内容说明](docs/dialogue-completion.md)
 - [数据库初始化与部署排查](docs/operations.md)

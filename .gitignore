@@ -11,3 +11,7 @@ coverage/
 server/uploads/
 
 .deploy-docker.lock
+
+# Generated speech stays local and is uploaded by sync-audio.sh.
+server/audio/files/
+server/audio/generation-checkpoint.json

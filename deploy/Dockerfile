@@ -15,6 +15,8 @@ COPY miniprogram/package.json ./miniprogram/package.json
 COPY server/package.json ./server/package.json
 RUN npm ci --omit=dev --workspace server --ignore-scripts --no-audit --no-fund && npm cache clean --force
 COPY --from=build /app/server/dist ./server/dist
+COPY --from=build /app/server/scripts ./server/scripts
+COPY --from=build /app/server/migrations ./server/migrations
 RUN mkdir -p /app/uploads && chown node:node /app/uploads
 USER node
 WORKDIR /app/server

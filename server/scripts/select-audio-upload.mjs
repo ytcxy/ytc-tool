@@ -1,0 +1,10 @@
+import { readFileSync,mkdirSync,copyFileSync } from 'node:fs';
+import { join } from 'node:path';
+const [source,bundle,list,target]=process.argv.slice(2);
+const manifest=JSON.parse(readFileSync(join(bundle,'manifest.json'),'utf8'));
+const allowed=new Set(manifest.entries.map(e=>e.file));
+const files=readFileSync(list,'utf8').split(/\r?\n/).filter(Boolean);
+if(new Set(files).size!==files.length||files.some(f=>!allowed.has(f)||!/^[a-f0-9]{64}\.(wav|mp3)$/.test(f)))throw Error('Invalid missing-file response');
+mkdirSync(target);
+for(const file of files)copyFileSync(join(source,'files',file),join(target,file));
+console.log(`Uploading ${files.length} missing audio files (skipping ${allowed.size-files.length}).`);

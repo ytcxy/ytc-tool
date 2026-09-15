@@ -12,7 +12,8 @@
 | GET | /api/collections | 合集分页列表 |
 | GET | /api/collections/:id/episodes | 单集分页列表 |
 | GET | /api/episodes/:id | 单集信息 |
-| GET | /api/episodes/:id/sentences | 双语条目，最多 200 条，含 speaker（0 你 / 1 AI） |
+| GET | /api/episodes/:id/sentences | 双语条目，最多 200 条，含 speaker（0 你 / 1 AI）和 audioUrl（无音频为 null） |
+| GET | /api/sentences/:id/audio?version=SHA256 | 公开逐句音频，校验内容及完整父级可见性，支持 Range；200 / 206 / 400 / 404 / 416 |
 | GET | /api/me/collections/:id/progress | 当前用户的合集学习状态 |
 | GET / PUT | /api/me/episodes/:id/progress | 查询 / 保存位置和完成标记 |
 | PUT | /api/me/sentences/:id/progress | 自评状态 |

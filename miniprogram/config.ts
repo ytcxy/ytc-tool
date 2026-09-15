@@ -5,7 +5,7 @@ export const APP_ENV: AppEnv = 'prod';
 
 const API_BASE_URLS: Record<AppEnv, string> = {
   // 真机调试需要手机与电脑连接同一网络；电脑 IP 变化时更新这里。
-  dev: 'http://192.168.1.51:3000/api',
+  dev: 'http://192.168.1.5:3000/api',
   prod: 'https://eng.yutc.top/api',
 };
 

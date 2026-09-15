@@ -1,0 +1,2 @@
+
+.profile-card{align-items:center}.profile-name{display:flex;align-items:center;min-height:112rpx}.profile-name .title{overflow-wrap:anywhere}.profile-edit{flex:0 0 auto;width:auto;margin:0;padding:14rpx 12rpx}

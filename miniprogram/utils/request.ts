@@ -20,6 +20,7 @@ export function requireLogin():boolean{
  if(getToken())return true;
  wx.showModal({title:'登录后保存学习进度',content:'可以继续浏览内容。登录后可同步掌握状态和学习位置。',confirmText:'去登录',success:r=>{if(r.confirm)wx.switchTab({url:'/pages/me/me'});}});return false;
 }
+export const audioUrl=(path:string)=>/^\/sentences\/[1-9][0-9]*\/audio\?version=[a-f0-9]{64}$/.test(path)?API_BASE_URL+path:'';
 export const avatarUrl=(path:string|null)=>path?API_BASE_URL+path:'';
 export function uploadAvatar(filePath:string):Promise<{avatarPath:string|null}>{
  const token=getToken();
