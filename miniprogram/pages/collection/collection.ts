@@ -1,10 +1,11 @@
 import { request,getToken,errorMessage } from '../../utils/request';
+import { syncTheme,themeState } from '../../utils/theme';
 import { Episode } from '../../types';
 Page({
- data:{id:'',title:'合集目录',description:'',items:[] as Episode[],total:0,page:1,loading:false,error:'',progressError:''},
+ data:{...themeState(),id:'',title:'合集目录',description:'',items:[] as Episode[],total:0,page:1,loading:false,error:'',progressError:''},
  _progress:{} as Record<string,string>,
  onLoad(query:Record<string,string|undefined>){this.setData({id:query.id||''});},
- onShow(){this.load();},
+ onShow(){syncTheme(this);this.load();},
  async load(){
   if(this.data.loading)return;this.setData({loading:true,error:'',progressError:''});this._progress={};
   if(getToken())try{const result=await request<{items:{id:string;completedAt:string|null}[]}>(`/me/collections/${this.data.id}/progress`);for(const p of result.items)this._progress[p.id]=p.completedAt?'已完成':'学习中';}catch(e){this.setData({progressError:errorMessage(e)});}

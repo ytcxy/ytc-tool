@@ -1,8 +1,9 @@
 import { request,uploadAvatar,avatarUrl,errorMessage,getToken } from '../../utils/request';
+import { syncTheme,themeState } from '../../utils/theme';
 import { Profile } from '../../types';
 Page({
- data:{nickname:'',avatar:'',loading:true,saving:false,error:'',uploading:false},
- onLoad(){this.load();},
+ data:{...themeState(),nickname:'',avatar:'',loading:true,saving:false,error:'',uploading:false},
+ onLoad(){syncTheme(this);this.load();},
  async load(){if(!getToken()){wx.switchTab({url:'/pages/me/me'});return;}this.setData({loading:true,error:''});try{const p=await request<Profile>('/me');this.setData({nickname:p.nickname,avatar:avatarUrl(p.avatarPath)});}catch(e){this.setData({error:errorMessage(e)});}finally{this.setData({loading:false});}},
  async choose(event:WechatMiniprogram.CustomEvent<{avatarUrl:string}>){if(this.data.uploading)return;this.setData({uploading:true,error:''});try{const result=await uploadAvatar(event.detail.avatarUrl);this.setData({avatar:avatarUrl(result.avatarPath)});wx.showToast({title:'头像已保存'});}catch(e){this.setData({error:errorMessage(e)});}finally{this.setData({uploading:false});}},
  input(event:WechatMiniprogram.Input){this.setData({nickname:event.detail.value});},

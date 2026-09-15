@@ -15,7 +15,7 @@ function episodePage() {
  const players:any[]=[];
  const wx={createInnerAudioContext:()=>{const callbacks:Record<string,()=>void>={};const audio:any={callbacks,currentTime:0,stopped:false,destroyed:false,play(){},stop(){this.stopped=true;callbacks.Stop?.();},destroy(){this.destroyed=true;}};
  for(const event of ['Play','TimeUpdate','Waiting','Error','Ended','Stop','Pause'])audio['on'+event]=(cb:()=>void)=>{callbacks[event]=cb;};players.push(audio);return audio;},showToast:(options:{title:string})=>toasts.push(options.title),nextTick:()=>{},pageScrollTo:()=>{},switchTab:()=>{}};
- const api={audioUrl:(path:string)=>'https://example.test/api'+path,getToken:()=>token,requireLogin:()=>!!token,errorMessage:(e:Error)=>e.message,request:async(path:string,method:string,body:unknown)=>{writes.push({path,body});if(gate)await gate;if(fail)throw new Error('offline');
+ const api={themeState:()=>({theme:'light',themeMode:'system'}),syncTheme:()=>{},audioUrl:(path:string)=>'https://example.test/api'+path,getToken:()=>token,requireLogin:()=>!!token,errorMessage:(e:Error)=>e.message,request:async(path:string,method:string,body:unknown)=>{writes.push({path,body});if(gate)await gate;if(fail)throw new Error('offline');
  if(!method){
   if(path.endsWith('/sentences'))return {items:[{id:'9007199254740995',sequence:1,speaker:0,zh:'你好',en:'Hi.',context:''}]};
   if(path.endsWith('/progress'))return {completed:false,lastSentenceId:null,sentences:[]};

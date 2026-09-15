@@ -1,1 +1,1 @@
-.avatar-button{padding:0;width:112rpx;border-radius:50%;margin:10rpx auto;background:transparent}.nickname{font-size:34rpx;height:100rpx;border-bottom:2rpx solid #d8e0cf}
+.avatar-button{padding:0;width:112rpx;border-radius:50%;margin:10rpx auto;background:transparent}.nickname{font-size:34rpx;height:100rpx;border-bottom:2rpx solid var(--context-border)}

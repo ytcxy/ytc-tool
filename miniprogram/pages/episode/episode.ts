@@ -1,13 +1,14 @@
 import { request,getToken,requireLogin,errorMessage,audioUrl } from '../../utils/request';
+import { syncTheme,themeState } from '../../utils/theme';
 import { Sentence,Episode,EpisodeProgress,Status } from '../../types';
 Page({
- data:{audioSentenceId:'',audioState:'idle',id:'',episode:null as Episode|null,sentences:[] as Sentence[],loading:true,error:'',saveError:'',progressError:'',saving:false,savingSentenceId:'',loggedIn:false,mastered:0,visibleCount:0,onlyUnmastered:false,allRevealed:false,completed:false,lastSentenceId:''},
+ data:{...themeState(),audioSentenceId:'',audioState:'idle',id:'',episode:null as Episode|null,sentences:[] as Sentence[],loading:true,error:'',saveError:'',progressError:'',saving:false,savingSentenceId:'',loggedIn:false,mastered:0,visibleCount:0,onlyUnmastered:false,allRevealed:false,completed:false,lastSentenceId:''},
  _audio:null as WechatMiniprogram.InnerAudioContext|null,_audioTimer:0 as ReturnType<typeof setTimeout>|0,
  _visible:false,_loadPromise:null as Promise<void>|null,_retrySilent:false,_retrySentenceId:'',_pendingMark:false,
  _session:'',_queue:Promise.resolve() as Promise<void>,_retry:null as (()=>Promise<void>)|null,_position:'',_savedPosition:'',_positionTimer:0 as ReturnType<typeof setTimeout>|0,_observer:null as WechatMiniprogram.IntersectionObserver|null,
  onLoad(query:Record<string,string|undefined>){this.setData({id:query.id||''});},
  async onShow(){
-  this._visible=true;await this._queue;if(this._loadPromise)await this._loadPromise;
+  syncTheme(this);this._visible=true;await this._queue;if(this._loadPromise)await this._loadPromise;
   if(!this._visible)return;
   if(this.data.episode&&!this.data.error&&getToken()===this._session){this.observe();return;}
   await this.load();

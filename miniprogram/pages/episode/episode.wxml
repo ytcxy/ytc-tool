@@ -1,4 +1,4 @@
-<view class="page">
+<view class="page theme-{{theme}}">
  <view wx:if="{{error}}" class="error">{{error}}<button class="plain" bindtap="load">重新加载</button></view>
  <view wx:if="{{loading}}" class="empty">正在准备复习内容…</view>
  <block wx:if="{{episode && !loading}}">
@@ -14,7 +14,7 @@
    <view class="row sentence-head {{item.audioUrl ? 'has-audio' : ''}}"><text class="number">{{item.speaker === 1 ? 'AI' : '你'}} · {{item.sequence < 10 ? '0' + item.sequence : item.sequence}}</text></view>
     <view role="button" wx:if="{{item.audioUrl}}" class="speaker-button {{audioSentenceId === item.id ? 'speaker-' + audioState : ''}}" hover-class="none" data-id="{{item.id}}" bindtap="playAudio" aria-label="{{audioSentenceId === item.id ? (audioState === 'loading' ? '取消加载英文音频' : audioState === 'playing' ? '停止朗读英文' : '播放失败，点击重试') : '朗读英文'}}">
      <view wx:if="{{audioSentenceId === item.id && audioState === 'loading'}}" class="speaker-spinner"></view>
-     <image wx:else class="speaker-icon" src="/assets/icons/speaker.svg" mode="aspectFit" aria-hidden="true" />
+     <image wx:else class="speaker-icon" src="{{theme === 'dark' ? '/assets/icons/speaker-dark.svg' : '/assets/icons/speaker.svg'}}" mode="aspectFit" aria-hidden="true" />
      <view wx:if="{{audioSentenceId === item.id && audioState === 'error'}}" class="speaker-error-dot">!</view>
     </view>
    <view wx:if="{{audioSentenceId === item.id && audioState === 'error'}}" class="speaker-error-note">播放失败，点击喇叭重试</view>

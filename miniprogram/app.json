@@ -9,15 +9,16 @@
   ],
   "window": {
     "navigationBarTitleText": "拾句英语",
-    "navigationBarBackgroundColor": "#f5f4ee",
-    "navigationBarTextStyle": "black",
-    "backgroundColor": "#f5f4ee"
+    "navigationBarBackgroundColor": "@navBgColor",
+    "navigationBarTextStyle": "@navTextStyle",
+    "backgroundColor": "@pageBgColor",
+    "backgroundTextStyle": "@pageTextStyle"
   },
   "tabBar": {
-    "color": "#777d73",
-    "selectedColor": "#245b43",
-    "backgroundColor": "#ffffff",
-    "borderStyle": "white",
+    "color": "@tabTextColor",
+    "selectedColor": "@tabSelectedColor",
+    "backgroundColor": "@tabBgColor",
+    "borderStyle": "@tabBorderStyle",
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -29,6 +30,8 @@
       }
     ]
   },
+  "darkmode": true,
+  "themeLocation": "theme.json",
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

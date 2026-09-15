@@ -1,8 +1,9 @@
 import { request,getToken,errorMessage } from '../../utils/request';
+import { syncTheme,themeState } from '../../utils/theme';
 import { Collection,Summary,Episode } from '../../types';
 Page({
- data:{loading:true,error:'',progressError:'',items:[] as Collection[],recent:null as Episode|null,page:1,total:0},
- onShow(){this.load();},
+ data:{...themeState(),loading:true,error:'',progressError:'',items:[] as Collection[],recent:null as Episode|null,page:1,total:0},
+ onShow(){syncTheme(this);this.load();},
  async load(){
   this.setData({loading:true,error:'',recent:null,progressError:''});
   try{const result=await request<{items:Collection[];total:number}>('/collections?limit=20');this.setData({items:result.items,total:result.total,page:1});}

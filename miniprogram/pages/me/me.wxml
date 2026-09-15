@@ -1,4 +1,12 @@
-<view class="page"><view class="eyebrow">MY PRACTICE</view><view class="hero-title">每一点进步，<view>都值得记下来。</view></view>
+<view class="page theme-{{theme}}"><view class="eyebrow">MY PRACTICE</view><view class="hero-title">每一点进步，<view>都值得记下来。</view></view>
+ <view class="appearance card">
+  <view class="row"><view><view class="title">夜间模式</view><view class="muted">选择喜欢的阅读亮度</view></view><text class="appearance-mark">{{theme === 'dark' ? '☾' : '☼'}}</text></view>
+  <view class="theme-options" role="radiogroup" aria-label="显示主题">
+   <button class="theme-option {{themeMode === 'system' ? 'theme-selected' : ''}}" data-mode="system" bindtap="theme" role="radio" aria-checked="{{themeMode === 'system'}}">跟随系统</button>
+   <button class="theme-option {{themeMode === 'light' ? 'theme-selected' : ''}}" data-mode="light" bindtap="theme" role="radio" aria-checked="{{themeMode === 'light'}}">浅色</button>
+   <button class="theme-option {{themeMode === 'dark' ? 'theme-selected' : ''}}" data-mode="dark" bindtap="theme" role="radio" aria-checked="{{themeMode === 'dark'}}">深色</button>
+  </view>
+ </view>
  <view wx:if="{{error}}" class="error">{{error}}<button wx:if="{{loggedIn}}" class="plain" bindtap="load">重试</button></view>
  <view wx:if="{{!loggedIn}}" class="card stack"><view class="title">让练习有迹可循</view><view class="muted stack">登录后保存掌握状态、学习位置和复习记录。头像昵称可以稍后填写。</view><button class="primary stack" bindtap="login" loading="{{loggingIn}}" disabled="{{loggingIn}}">微信登录</button><view class="muted stack">我们使用微信身份标识区分账号，保存你的资料与学习记录。</view></view>
  <view wx:if="{{loading}}" class="empty">正在读取学习记录…</view>
