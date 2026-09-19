@@ -6,7 +6,7 @@
 
 七张表统一使用 `id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY`、`created_at DATETIME(3)`、`updated_at DATETIME(3)`、`is_del TINYINT UNSIGNED DEFAULT 0`。
 
-created_at 默认 CURRENT_TIMESTAMP(3)；updated_at 默认及自动更新均为 CURRENT_TIMESTAMP(3)。数据库连接设置 UTC 时区，避免应用写入时间与默认值时区不一致。is_del 为 0 未删除、1 已删除，不使用 deleted_at。所有外键均为 BIGINT UNSIGNED，无级联物理删除。
+created_at 默认 CURRENT_TIMESTAMP(3)；updated_at 默认及自动更新均为 CURRENT_TIMESTAMP(3)。数据库连接会话设置北京时间（UTC+08:00），使默认值和应用写入的业务时间一致。切换前写入的旧记录不作转换。is_del 为 0 未删除、1 已删除，不使用 deleted_at。所有外键均为 BIGINT UNSIGNED，无级联物理删除。
 
 数字 ID 在 TypeScript、JSON 和 URL 中以十进制字符串处理。内容清单的 sourceKey 对应数据库 source_key，永久保留供幂等导入；不会把它直接作为数据库主键或公开资源 ID。
 

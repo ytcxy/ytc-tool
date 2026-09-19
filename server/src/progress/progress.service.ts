@@ -43,9 +43,9 @@ export class ProgressService {
    await connection.beginTransaction();
    await this.ensureEpisodeProgress(connection, userId, episodeId);
    if (hasPosition) await connection.execute(`UPDATE el_episode_progress
-     SET last_sentence_id=?,last_studied_at=UTC_TIMESTAMP(3) WHERE user_id=? AND episode_id=? AND is_del=0`, [sentenceId, userId, episodeId]);
+     SET last_sentence_id=?,last_studied_at=NOW(3) WHERE user_id=? AND episode_id=? AND is_del=0`, [sentenceId, userId, episodeId]);
    if (hasCompleted) await connection.execute(`UPDATE el_episode_progress
-     SET completed_at=IF(?,UTC_TIMESTAMP(3),NULL),last_studied_at=UTC_TIMESTAMP(3)
+     SET completed_at=IF(?,NOW(3),NULL),last_studied_at=NOW(3)
      WHERE user_id=? AND episode_id=? AND is_del=0`, [body.completed === true, userId, episodeId]);
    await connection.commit();
    return { ok: true };
@@ -65,9 +65,9 @@ export class ProgressService {
    const [rows] = await connection.execute<RowDataPacket[]>(
     'SELECT is_del FROM el_sentence_progress WHERE user_id=? AND sentence_id=? FOR UPDATE', [userId, sentenceId]);
    if (rows[0].is_del !== 0) throw new ConflictException('条目记录已删除，需要管理员确认后恢复');
-   await connection.execute(`UPDATE el_sentence_progress SET status=?,last_reviewed_at=UTC_TIMESTAMP(3)
+   await connection.execute(`UPDATE el_sentence_progress SET status=?,last_reviewed_at=NOW(3)
      WHERE user_id=? AND sentence_id=? AND is_del=0`, [code, userId, sentenceId]);
-   await connection.execute(`UPDATE el_episode_progress SET last_sentence_id=?,last_studied_at=UTC_TIMESTAMP(3)
+   await connection.execute(`UPDATE el_episode_progress SET last_sentence_id=?,last_studied_at=NOW(3)
      WHERE user_id=? AND episode_id=? AND is_del=0`, [sentenceId, userId, sentence.episodeId]);
    await connection.commit();
    return { ok: true, status };

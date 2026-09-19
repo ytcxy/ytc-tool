@@ -1,0 +1,808 @@
+{
+  "sourceKey": "forced-english-system",
+  "title": "穿越进英语强制学习系统里",
+  "description": "根据用户提供的前六集截图整理的生活英语对话；中文为整理译文，集标题按场景拟定。",
+  "sourceUrl": "https://www.bilibili.com/video/BV1hSYt6EEWs",
+  "sortOrder": 2,
+  "status": 1,
+  "episodes": [
+    {
+      "sourceKey": "forced-english-system-e001",
+      "sequence": 1,
+      "title": "初识室友与添加微信",
+      "sourceUrl": null,
+      "status": 1,
+      "sentences": [
+        {
+          "sourceKey": "forced-english-system-e001-s001",
+          "sequence": 1,
+          "zh": "嗨，你叫什么名字？",
+          "en": "Hi, what's your name?",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e001-s002",
+          "sequence": 2,
+          "zh": "我叫丹尼。你呢？",
+          "en": "My name is Danny. And you?",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e001-s003",
+          "sequence": 3,
+          "zh": "我叫奥利。很高兴认识你。",
+          "en": "I'm Ollie. Nice to meet you.",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e001-s004",
+          "sequence": 4,
+          "zh": "我也很高兴认识你。",
+          "en": "Nice to meet you too.",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e001-s005",
+          "sequence": 5,
+          "zh": "我可以加你微信吗？",
+          "en": "Can I add you on WeChat?",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e001-s006",
+          "sequence": 6,
+          "zh": "我没有微信。",
+          "en": "I don't have WeChat.",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e001-s007",
+          "sequence": 7,
+          "zh": "哦，那就算了。",
+          "en": "Oh, never mind then.",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e001-s008",
+          "sequence": 8,
+          "zh": "我现在就下载。",
+          "en": "I'll download it right now.",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e001-s009",
+          "sequence": 9,
+          "zh": "太好了！",
+          "en": "Awesome!",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e001-s010",
+          "sequence": 10,
+          "zh": "我来扫你的二维码吧。",
+          "en": "Let me scan yours.",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e001-s011",
+          "sequence": 11,
+          "zh": "这是你的头像吗？太可爱了。",
+          "en": "Is this your profile picture? It's so cute.",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e001-s012",
+          "sequence": 12,
+          "zh": "谢谢。你的头像也很酷。",
+          "en": "Thanks. Yours is really cool too.",
+          "context": "角色：丹尼（截图标为奥利，按对话逻辑校正）。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e001-s013",
+          "sequence": 13,
+          "zh": "我们现在是朋友了！",
+          "en": "We're friends now!",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e001-s014",
+          "sequence": 14,
+          "zh": "还是室友呢！",
+          "en": "And roommates too!",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        }
+      ]
+    },
+    {
+      "sourceKey": "forced-english-system-e002",
+      "sequence": 2,
+      "title": "认识名人与雕像",
+      "sourceUrl": null,
+      "status": 1,
+      "sentences": [
+        {
+          "sourceKey": "forced-english-system-e002-s001",
+          "sequence": 1,
+          "zh": "我听说你特别聪明，什么都知道。",
+          "en": "I heard you're super smart and know everything.",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e002-s002",
+          "sequence": 2,
+          "zh": "没错。",
+          "en": "Yep.",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e002-s003",
+          "sequence": 3,
+          "zh": "这个人是谁？",
+          "en": "Who's this guy?",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e002-s004",
+          "sequence": 4,
+          "zh": "这是哥白尼。",
+          "en": "It's Copernicus.",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e002-s005",
+          "sequence": 5,
+          "zh": "哦，我还以为是牛顿呢。",
+          "en": "Oh, I thought it was Newton.",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e002-s006",
+          "sequence": 6,
+          "zh": "这座雕像在哪里？",
+          "en": "Where is this statue?",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e002-s007",
+          "sequence": 7,
+          "zh": "在波兰的托伦。",
+          "en": "It's in Toruń, Poland.",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e002-s008",
+          "sequence": 8,
+          "zh": "他们是谁？",
+          "en": "Who are they?",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e002-s009",
+          "sequence": 9,
+          "zh": "他们是马克思和恩格斯。",
+          "en": "They're Marx and Engels.",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e002-s010",
+          "sequence": 10,
+          "zh": "他们关系好吗？",
+          "en": "Are they close?",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e002-s011",
+          "sequence": 11,
+          "zh": "是的，他们曾是很要好的朋友。",
+          "en": "Yeah, they were really good friends.",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e002-s012",
+          "sequence": 12,
+          "zh": "这座雕像在哪个国家？",
+          "en": "What country is this statue in?",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e002-s013",
+          "sequence": 13,
+          "zh": "在德国柏林。",
+          "en": "It's in Berlin, Germany.",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e002-s014",
+          "sequence": 14,
+          "zh": "哇！你真的特别聪明！",
+          "en": "Wow! You really are super smart!",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        }
+      ]
+    },
+    {
+      "sourceKey": "forced-english-system-e003",
+      "sequence": 3,
+      "title": "制作蔬菜沙拉",
+      "sourceUrl": null,
+      "status": 1,
+      "sentences": [
+        {
+          "sourceKey": "forced-english-system-e003-s001",
+          "sequence": 1,
+          "zh": "你喜欢做饭吗？",
+          "en": "Do you like cooking?",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s002",
+          "sequence": 2,
+          "zh": "是的，我喜欢。",
+          "en": "Yeah, I do.",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s003",
+          "sequence": 3,
+          "zh": "我刚做了份沙拉！",
+          "en": "I just made a salad!",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s004",
+          "sequence": 4,
+          "zh": "哇！",
+          "en": "Wow!",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s005",
+          "sequence": 5,
+          "zh": "我放了生菜、芹菜、黄瓜、卷心菜、胡萝卜和西兰花。",
+          "en": "I put in lettuce, celery, cucumber, cabbage, carrot, and broccoli.",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s006",
+          "sequence": 6,
+          "zh": "这么多新鲜蔬菜！",
+          "en": "So many fresh veggies!",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s007",
+          "sequence": 7,
+          "zh": "尝尝吧。",
+          "en": "Try it.",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s008",
+          "sequence": 8,
+          "zh": "嗯……有点淡。我加点盐。",
+          "en": "Hmm... it's a little bland. I'll add some salt.",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s009",
+          "sequence": 9,
+          "zh": "再尝尝。",
+          "en": "Try it again.",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s010",
+          "sequence": 10,
+          "zh": "嗯……现在有点太咸了。我加点水。",
+          "en": "Hmm... now it's a little too salty. I'll add some water.",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s011",
+          "sequence": 11,
+          "zh": "再尝尝。",
+          "en": "Try it again.",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s012",
+          "sequence": 12,
+          "zh": "现在又有点淡了。我再加点盐。",
+          "en": "Now it's a little bland again. I'll add some more salt.",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s013",
+          "sequence": 13,
+          "zh": "再尝尝。",
+          "en": "Try it again.",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s014",
+          "sequence": 14,
+          "zh": "我真受够了。我不想吃了！",
+          "en": "I'm so over this. I don't want to eat it anymore!",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s015",
+          "sequence": 15,
+          "zh": "哈哈哈！",
+          "en": "Hahaha!",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s016",
+          "sequence": 16,
+          "zh": "我讨厌吃蔬菜！",
+          "en": "I hate eating vegetables!",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        }
+      ]
+    },
+    {
+      "sourceKey": "forced-english-system-e004",
+      "sequence": 4,
+      "title": "看日落与发朋友圈",
+      "sourceUrl": null,
+      "status": 1,
+      "sentences": [
+        {
+          "sourceKey": "forced-english-system-e004-s001",
+          "sequence": 1,
+          "zh": "快看日落！",
+          "en": "Look at the sunset!",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e004-s002",
+          "sequence": 2,
+          "zh": "真漂亮！",
+          "en": "It's so pretty!",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e004-s003",
+          "sequence": 3,
+          "zh": "是啊！太美了！",
+          "en": "Yeah! It's amazing!",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e004-s004",
+          "sequence": 4,
+          "zh": "我要把它发到朋友圈。",
+          "en": "I'll post it on Moments.",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e004-s005",
+          "sequence": 5,
+          "zh": "你发了吗？我去点个赞。",
+          "en": "Did you post it? I'll go like it.",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e004-s006",
+          "sequence": 6,
+          "zh": "发了。",
+          "en": "Yep.",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e004-s007",
+          "sequence": 7,
+          "zh": "怎么我什么都看不到？",
+          "en": "How come I can't see anything?",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e004-s008",
+          "sequence": 8,
+          "zh": "啊？我已经发了呀。",
+          "en": "Huh? I posted it.",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e004-s009",
+          "sequence": 9,
+          "zh": "哦，我这儿没信号。",
+          "en": "Oh, I don't have any signal.",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e004-s010",
+          "sequence": 10,
+          "zh": "这里信号挺差的。",
+          "en": "The signal's pretty bad here.",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e004-s011",
+          "sequence": 11,
+          "zh": "哦，现在看到了！",
+          "en": "Oh, I see it now!",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e004-s012",
+          "sequence": 12,
+          "zh": "你已经有12个赞了！",
+          "en": "You already have 12 likes!",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e004-s013",
+          "sequence": 13,
+          "zh": "还有这么多评论！",
+          "en": "And so many comments!",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e004-s014",
+          "sequence": 14,
+          "zh": "我也要留条评论！",
+          "en": "I'll leave a comment too!",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e004-s015",
+          "sequence": 15,
+          "zh": "谢谢！",
+          "en": "Thank you!",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        }
+      ]
+    },
+    {
+      "sourceKey": "forced-english-system-e005",
+      "sequence": 5,
+      "title": "认识邻居与搭顺风车",
+      "sourceUrl": null,
+      "status": 1,
+      "sentences": [
+        {
+          "sourceKey": "forced-english-system-e005-s001",
+          "sequence": 1,
+          "zh": "奥利！",
+          "en": "Ollie!",
+          "context": "原角色：欧文。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s002",
+          "sequence": 2,
+          "zh": "欧文！",
+          "en": "Owen!",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s003",
+          "sequence": 3,
+          "zh": "这是我们的邻居欧文。",
+          "en": "This is our neighbor, Owen.",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s004",
+          "sequence": 4,
+          "zh": "这位是我的新室友丹尼。",
+          "en": "And this is my new roommate, Danny.",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s005",
+          "sequence": 5,
+          "zh": "嗨！很高兴认识你。",
+          "en": "Hi! Nice to meet you.",
+          "context": "原角色：欧文。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s006",
+          "sequence": 6,
+          "zh": "我也很高兴认识你。",
+          "en": "Nice to meet you too.",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s007",
+          "sequence": 7,
+          "zh": "你们要去哪儿？",
+          "en": "Where are you guys going?",
+          "context": "原角色：欧文。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s008",
+          "sequence": 8,
+          "zh": "我们要去超市。",
+          "en": "We’re going to the supermarket.",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s009",
+          "sequence": 9,
+          "zh": "奥利想买些香肠。",
+          "en": "Ollie wants some sausages.",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s010",
+          "sequence": 10,
+          "zh": "上车吧！我载你们一程。",
+          "en": "Get in! Let me give you guys a ride.",
+          "context": "原角色：欧文。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s011",
+          "sequence": 11,
+          "zh": "好啊！",
+          "en": "Sure!",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s012",
+          "sequence": 12,
+          "zh": "周六来我家吧。我要办个烧烤聚会。",
+          "en": "Come over to my place on Saturday. I’m going to have a barbecue.",
+          "context": "原角色：欧文。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s013",
+          "sequence": 13,
+          "zh": "听起来不错！",
+          "en": "Sounds great!",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s014",
+          "sequence": 14,
+          "zh": "你可以让我们在这里下车。",
+          "en": "You can drop us off here.",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s015",
+          "sequence": 15,
+          "zh": "好的！",
+          "en": "Sure!",
+          "context": "原角色：欧文。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s016",
+          "sequence": 16,
+          "zh": "再见，奥利！再见，丹尼！",
+          "en": "Bye, Ollie! Bye, Danny!",
+          "context": "原角色：欧文。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s017",
+          "sequence": 17,
+          "zh": "再见，欧文！",
+          "en": "Bye, Owen!",
+          "context": "原角色：奥利 & 丹尼。",
+          "speaker": 0
+        }
+      ]
+    },
+    {
+      "sourceKey": "forced-english-system-e006",
+      "sequence": 6,
+      "title": "参加邻居的烧烤聚会",
+      "sourceUrl": null,
+      "status": 1,
+      "sentences": [
+        {
+          "sourceKey": "forced-english-system-e006-s001",
+          "sequence": 1,
+          "zh": "嗨，欧文！",
+          "en": "Hey, Owen!",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s002",
+          "sequence": 2,
+          "zh": "嗨！你们来啦！",
+          "en": "Hey! You guys are here!",
+          "context": "原角色：欧文。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s003",
+          "sequence": 3,
+          "zh": "我们带了西瓜、草莓和芒果。",
+          "en": "We brought watermelons, strawberries, and mangoes.",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s004",
+          "sequence": 4,
+          "zh": "太好了！我最喜欢西瓜！",
+          "en": "Awesome! Watermelon is my favorite!",
+          "context": "原角色：欧文。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s005",
+          "sequence": 5,
+          "zh": "进来吧！麦迪也在。",
+          "en": "Come in! Maddie’s here too.",
+          "context": "原角色：欧文。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s006",
+          "sequence": 6,
+          "zh": "奥利，这位是谁？",
+          "en": "Ollie, who’s this?",
+          "context": "原角色：麦迪。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s007",
+          "sequence": 7,
+          "zh": "这是我的新室友丹尼。",
+          "en": "This is my new roommate, Danny.",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s008",
+          "sequence": 8,
+          "zh": "嗨，丹尼！我叫麦迪。我住在隔壁。",
+          "en": "Hi, Danny! I’m Maddie. I live next door.",
+          "context": "原角色：麦迪。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s009",
+          "sequence": 9,
+          "zh": "嗨，麦迪！很高兴认识你。",
+          "en": "Hi, Maddie! Nice to meet you.",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s010",
+          "sequence": 10,
+          "zh": "我也很高兴认识你。",
+          "en": "Nice to meet you too.",
+          "context": "原角色：麦迪。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s011",
+          "sequence": 11,
+          "zh": "来吧！我们开始烤吧！",
+          "en": "Come on! Let’s start grilling!",
+          "context": "原角色：欧文。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s012",
+          "sequence": 12,
+          "zh": "我们有牛肉、羊肉、猪肉、鸡肉、鸭肉和虾。",
+          "en": "We’ve got beef, lamb, pork, chicken, duck, and shrimp.",
+          "context": "原角色：欧文。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s013",
+          "sequence": 13,
+          "zh": "哦……丹尼对虾过敏。",
+          "en": "Oh... Danny’s allergic to shrimp.",
+          "context": "原角色：奥利。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s014",
+          "sequence": 14,
+          "zh": "啊？那太遗憾了。",
+          "en": "Huh? That’s too bad.",
+          "context": "原角色：欧文。",
+          "speaker": 1
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s015",
+          "sequence": 15,
+          "zh": "没关系。其他的我都能吃。",
+          "en": "It’s okay. I can eat everything else.",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s016",
+          "sequence": 16,
+          "zh": "我最喜欢牛肉！",
+          "en": "Beef is my favorite!",
+          "context": "原角色：丹尼。",
+          "speaker": 0
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s017",
+          "sequence": 17,
+          "zh": "那我们先烤点牛肉吧！",
+          "en": "Then let’s grill some beef first!",
+          "context": "原角色：欧文。",
+          "speaker": 1
+        }
+      ]
+    }
+  ]
+}

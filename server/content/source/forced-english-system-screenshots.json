@@ -1,0 +1,630 @@
+{
+  "collectionSourceKey": "forced-english-system",
+  "sourceUrl": "https://www.bilibili.com/video/BV1hSYt6EEWs",
+  "basis": "用户提供的六张截图，按上传顺序对应第1至6集；未核实视频分集链接或视频完整性。",
+  "translation": "中文由助手翻译，不是视频中文字幕转录。英文仅合并换行、规范空格，保留原词句和原角色标注。",
+  "reviewStatus": "待用户审核",
+  "speakerMapping": {
+    "0": "丹尼（你），含奥利与丹尼共同台词",
+    "1": "奥利、欧文、麦迪（由AI扮演）"
+  },
+  "episodes": [
+    {
+      "episodeSourceKey": "forced-english-system-e001",
+      "screenshot": 1,
+      "sentences": [
+        {
+          "sourceKey": "forced-english-system-e001-s001",
+          "sourceUtterance": 1,
+          "originalSpeaker": "奥利",
+          "originalEn": "Hi, what's your name?"
+        },
+        {
+          "sourceKey": "forced-english-system-e001-s002",
+          "sourceUtterance": 2,
+          "originalSpeaker": "丹尼",
+          "originalEn": "My name is Danny. And you?"
+        },
+        {
+          "sourceKey": "forced-english-system-e001-s003",
+          "sourceUtterance": 3,
+          "originalSpeaker": "奥利",
+          "originalEn": "I'm Ollie. Nice to meet you."
+        },
+        {
+          "sourceKey": "forced-english-system-e001-s004",
+          "sourceUtterance": 4,
+          "originalSpeaker": "丹尼",
+          "originalEn": "Nice to meet you too."
+        },
+        {
+          "sourceKey": "forced-english-system-e001-s005",
+          "sourceUtterance": 5,
+          "originalSpeaker": "奥利",
+          "originalEn": "Can I add you on WeChat?"
+        },
+        {
+          "sourceKey": "forced-english-system-e001-s006",
+          "sourceUtterance": 6,
+          "originalSpeaker": "丹尼",
+          "originalEn": "I don't have WeChat."
+        },
+        {
+          "sourceKey": "forced-english-system-e001-s007",
+          "sourceUtterance": 7,
+          "originalSpeaker": "奥利",
+          "originalEn": "Oh, never mind then."
+        },
+        {
+          "sourceKey": "forced-english-system-e001-s008",
+          "sourceUtterance": 8,
+          "originalSpeaker": "丹尼",
+          "originalEn": "I'll download it right now."
+        },
+        {
+          "sourceKey": "forced-english-system-e001-s009",
+          "sourceUtterance": 9,
+          "originalSpeaker": "奥利",
+          "originalEn": "Awesome!"
+        },
+        {
+          "sourceKey": "forced-english-system-e001-s010",
+          "sourceUtterance": 10,
+          "originalSpeaker": "奥利",
+          "originalEn": "Let me scan yours."
+        },
+        {
+          "sourceKey": "forced-english-system-e001-s011",
+          "sourceUtterance": 11,
+          "originalSpeaker": "奥利",
+          "originalEn": "Is this your profile picture? It's so cute."
+        },
+        {
+          "sourceKey": "forced-english-system-e001-s012",
+          "sourceUtterance": 12,
+          "originalSpeaker": "奥利",
+          "originalEn": "Thanks. Yours is really cool too.",
+          "editedSpeaker": "丹尼",
+          "speakerCorrectionReason": "上一句奥利赞美对方头像，本句感谢并回赞，应由丹尼回应；按用户授权作编辑校正，未与视频核实。"
+        },
+        {
+          "sourceKey": "forced-english-system-e001-s013",
+          "sourceUtterance": 13,
+          "originalSpeaker": "丹尼",
+          "originalEn": "We're friends now!"
+        },
+        {
+          "sourceKey": "forced-english-system-e001-s014",
+          "sourceUtterance": 14,
+          "originalSpeaker": "奥利",
+          "originalEn": "And roommates too!"
+        }
+      ],
+      "sourceFile": "codex-clipboard-607a82ce-e4d5-4f2e-b133-cfe8ad054369.png",
+      "sha256": "226807cbe5a796e2d0dc74744eeba894bc3a72f63c8408b5970efa25e49e9e0c"
+    },
+    {
+      "episodeSourceKey": "forced-english-system-e002",
+      "screenshot": 2,
+      "sentences": [
+        {
+          "sourceKey": "forced-english-system-e002-s001",
+          "sourceUtterance": 1,
+          "originalSpeaker": "奥利",
+          "originalEn": "I heard you're super smart and know everything."
+        },
+        {
+          "sourceKey": "forced-english-system-e002-s002",
+          "sourceUtterance": 2,
+          "originalSpeaker": "丹尼",
+          "originalEn": "Yep."
+        },
+        {
+          "sourceKey": "forced-english-system-e002-s003",
+          "sourceUtterance": 3,
+          "originalSpeaker": "奥利",
+          "originalEn": "Who's this guy?"
+        },
+        {
+          "sourceKey": "forced-english-system-e002-s004",
+          "sourceUtterance": 4,
+          "originalSpeaker": "丹尼",
+          "originalEn": "It's Copernicus."
+        },
+        {
+          "sourceKey": "forced-english-system-e002-s005",
+          "sourceUtterance": 5,
+          "originalSpeaker": "奥利",
+          "originalEn": "Oh, I thought it was Newton."
+        },
+        {
+          "sourceKey": "forced-english-system-e002-s006",
+          "sourceUtterance": 6,
+          "originalSpeaker": "奥利",
+          "originalEn": "Where is this statue?"
+        },
+        {
+          "sourceKey": "forced-english-system-e002-s007",
+          "sourceUtterance": 7,
+          "originalSpeaker": "丹尼",
+          "originalEn": "It's in Toruń, Poland."
+        },
+        {
+          "sourceKey": "forced-english-system-e002-s008",
+          "sourceUtterance": 8,
+          "originalSpeaker": "奥利",
+          "originalEn": "Who are they?"
+        },
+        {
+          "sourceKey": "forced-english-system-e002-s009",
+          "sourceUtterance": 9,
+          "originalSpeaker": "丹尼",
+          "originalEn": "They're Marx and Engels."
+        },
+        {
+          "sourceKey": "forced-english-system-e002-s010",
+          "sourceUtterance": 10,
+          "originalSpeaker": "奥利",
+          "originalEn": "Are they close?"
+        },
+        {
+          "sourceKey": "forced-english-system-e002-s011",
+          "sourceUtterance": 11,
+          "originalSpeaker": "丹尼",
+          "originalEn": "Yeah, they were really good friends."
+        },
+        {
+          "sourceKey": "forced-english-system-e002-s012",
+          "sourceUtterance": 12,
+          "originalSpeaker": "奥利",
+          "originalEn": "What country is this statue in?"
+        },
+        {
+          "sourceKey": "forced-english-system-e002-s013",
+          "sourceUtterance": 13,
+          "originalSpeaker": "丹尼",
+          "originalEn": "It's in Berlin, Germany."
+        },
+        {
+          "sourceKey": "forced-english-system-e002-s014",
+          "sourceUtterance": 14,
+          "originalSpeaker": "奥利",
+          "originalEn": "Wow! You really are super smart!"
+        }
+      ],
+      "sourceFile": "codex-clipboard-c47a109a-f87e-4990-b630-60511f57bcf8.png",
+      "sha256": "a8cf202875bb06c4e0def4ea970b11e7cdc0e40c6aa7c3cf06b318f91ece7318"
+    },
+    {
+      "episodeSourceKey": "forced-english-system-e003",
+      "screenshot": 3,
+      "sentences": [
+        {
+          "sourceKey": "forced-english-system-e003-s001",
+          "sourceUtterance": 1,
+          "originalSpeaker": "奥利",
+          "originalEn": "Do you like cooking?"
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s002",
+          "sourceUtterance": 2,
+          "originalSpeaker": "丹尼",
+          "originalEn": "Yeah, I do."
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s003",
+          "sourceUtterance": 3,
+          "originalSpeaker": "奥利",
+          "originalEn": "I just made a salad!"
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s004",
+          "sourceUtterance": 4,
+          "originalSpeaker": "丹尼",
+          "originalEn": "Wow!"
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s005",
+          "sourceUtterance": 5,
+          "originalSpeaker": "奥利",
+          "originalEn": "I put in lettuce, celery, cucumber, cabbage, carrot, and broccoli."
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s006",
+          "sourceUtterance": 6,
+          "originalSpeaker": "丹尼",
+          "originalEn": "So many fresh veggies!"
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s007",
+          "sourceUtterance": 7,
+          "originalSpeaker": "丹尼",
+          "originalEn": "Try it."
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s008",
+          "sourceUtterance": 8,
+          "originalSpeaker": "奥利",
+          "originalEn": "Hmm... it's a little bland. I'll add some salt."
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s009",
+          "sourceUtterance": 9,
+          "originalSpeaker": "丹尼",
+          "originalEn": "Try it again."
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s010",
+          "sourceUtterance": 10,
+          "originalSpeaker": "奥利",
+          "originalEn": "Hmm... now it's a little too salty. I'll add some water."
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s011",
+          "sourceUtterance": 11,
+          "originalSpeaker": "丹尼",
+          "originalEn": "Try it again."
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s012",
+          "sourceUtterance": 12,
+          "originalSpeaker": "奥利",
+          "originalEn": "Now it's a little bland again. I'll add some more salt."
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s013",
+          "sourceUtterance": 13,
+          "originalSpeaker": "丹尼",
+          "originalEn": "Try it again."
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s014",
+          "sourceUtterance": 14,
+          "originalSpeaker": "奥利",
+          "originalEn": "I'm so over this. I don't want to eat it anymore!"
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s015",
+          "sourceUtterance": 15,
+          "originalSpeaker": "丹尼",
+          "originalEn": "Hahaha!"
+        },
+        {
+          "sourceKey": "forced-english-system-e003-s016",
+          "sourceUtterance": 16,
+          "originalSpeaker": "奥利",
+          "originalEn": "I hate eating vegetables!"
+        }
+      ],
+      "sourceFile": "codex-clipboard-99c7bd64-9336-4bbe-b80f-8adc79a0ce78.png",
+      "sha256": "ae697d043fbd525e3ecb814f3030c687167fd131a3b2918289439c2c989d2c48"
+    },
+    {
+      "episodeSourceKey": "forced-english-system-e004",
+      "screenshot": 4,
+      "sentences": [
+        {
+          "sourceKey": "forced-english-system-e004-s001",
+          "sourceUtterance": 1,
+          "originalSpeaker": "奥利",
+          "originalEn": "Look at the sunset!"
+        },
+        {
+          "sourceKey": "forced-english-system-e004-s002",
+          "sourceUtterance": 2,
+          "originalSpeaker": "丹尼",
+          "originalEn": "It's so pretty!"
+        },
+        {
+          "sourceKey": "forced-english-system-e004-s003",
+          "sourceUtterance": 3,
+          "originalSpeaker": "奥利",
+          "originalEn": "Yeah! It's amazing!"
+        },
+        {
+          "sourceKey": "forced-english-system-e004-s004",
+          "sourceUtterance": 4,
+          "originalSpeaker": "奥利",
+          "originalEn": "I'll post it on Moments."
+        },
+        {
+          "sourceKey": "forced-english-system-e004-s005",
+          "sourceUtterance": 5,
+          "originalSpeaker": "丹尼",
+          "originalEn": "Did you post it? I'll go like it."
+        },
+        {
+          "sourceKey": "forced-english-system-e004-s006",
+          "sourceUtterance": 6,
+          "originalSpeaker": "奥利",
+          "originalEn": "Yep."
+        },
+        {
+          "sourceKey": "forced-english-system-e004-s007",
+          "sourceUtterance": 7,
+          "originalSpeaker": "丹尼",
+          "originalEn": "How come I can't see anything?"
+        },
+        {
+          "sourceKey": "forced-english-system-e004-s008",
+          "sourceUtterance": 8,
+          "originalSpeaker": "奥利",
+          "originalEn": "Huh? I posted it."
+        },
+        {
+          "sourceKey": "forced-english-system-e004-s009",
+          "sourceUtterance": 9,
+          "originalSpeaker": "丹尼",
+          "originalEn": "Oh, I don't have any signal."
+        },
+        {
+          "sourceKey": "forced-english-system-e004-s010",
+          "sourceUtterance": 10,
+          "originalSpeaker": "奥利",
+          "originalEn": "The signal's pretty bad here."
+        },
+        {
+          "sourceKey": "forced-english-system-e004-s011",
+          "sourceUtterance": 11,
+          "originalSpeaker": "丹尼",
+          "originalEn": "Oh, I see it now!"
+        },
+        {
+          "sourceKey": "forced-english-system-e004-s012",
+          "sourceUtterance": 12,
+          "originalSpeaker": "丹尼",
+          "originalEn": "You already have 12 likes!"
+        },
+        {
+          "sourceKey": "forced-english-system-e004-s013",
+          "sourceUtterance": 13,
+          "originalSpeaker": "丹尼",
+          "originalEn": "And so many comments!"
+        },
+        {
+          "sourceKey": "forced-english-system-e004-s014",
+          "sourceUtterance": 14,
+          "originalSpeaker": "丹尼",
+          "originalEn": "I'll leave a comment too!"
+        },
+        {
+          "sourceKey": "forced-english-system-e004-s015",
+          "sourceUtterance": 15,
+          "originalSpeaker": "奥利",
+          "originalEn": "Thank you!"
+        }
+      ],
+      "sourceFile": "codex-clipboard-4a81aa62-7231-47cf-a5f3-917d050a4ebd.png",
+      "sha256": "14b37b50acb7aeaa9917b1aca891c9306dddbd74a2ca428875b92daad3237977"
+    },
+    {
+      "episodeSourceKey": "forced-english-system-e005",
+      "screenshot": 5,
+      "sentences": [
+        {
+          "sourceKey": "forced-english-system-e005-s001",
+          "sourceUtterance": 1,
+          "originalSpeaker": "欧文",
+          "originalEn": "Ollie!"
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s002",
+          "sourceUtterance": 2,
+          "originalSpeaker": "奥利",
+          "originalEn": "Owen!"
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s003",
+          "sourceUtterance": 3,
+          "originalSpeaker": "奥利",
+          "originalEn": "This is our neighbor, Owen."
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s004",
+          "sourceUtterance": 4,
+          "originalSpeaker": "奥利",
+          "originalEn": "And this is my new roommate, Danny."
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s005",
+          "sourceUtterance": 5,
+          "originalSpeaker": "欧文",
+          "originalEn": "Hi! Nice to meet you."
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s006",
+          "sourceUtterance": 6,
+          "originalSpeaker": "丹尼",
+          "originalEn": "Nice to meet you too."
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s007",
+          "sourceUtterance": 7,
+          "originalSpeaker": "欧文",
+          "originalEn": "Where are you guys going?"
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s008",
+          "sourceUtterance": 8,
+          "originalSpeaker": "奥利",
+          "originalEn": "We’re going to the supermarket."
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s009",
+          "sourceUtterance": 9,
+          "originalSpeaker": "丹尼",
+          "originalEn": "Ollie wants some sausages."
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s010",
+          "sourceUtterance": 10,
+          "originalSpeaker": "欧文",
+          "originalEn": "Get in! Let me give you guys a ride."
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s011",
+          "sourceUtterance": 11,
+          "originalSpeaker": "奥利",
+          "originalEn": "Sure!"
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s012",
+          "sourceUtterance": 12,
+          "originalSpeaker": "欧文",
+          "originalEn": "Come over to my place on Saturday. I’m going to have a barbecue."
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s013",
+          "sourceUtterance": 13,
+          "originalSpeaker": "奥利",
+          "originalEn": "Sounds great!"
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s014",
+          "sourceUtterance": 14,
+          "originalSpeaker": "奥利",
+          "originalEn": "You can drop us off here."
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s015",
+          "sourceUtterance": 15,
+          "originalSpeaker": "欧文",
+          "originalEn": "Sure!"
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s016",
+          "sourceUtterance": 16,
+          "originalSpeaker": "欧文",
+          "originalEn": "Bye, Ollie! Bye, Danny!"
+        },
+        {
+          "sourceKey": "forced-english-system-e005-s017",
+          "sourceUtterance": 17,
+          "originalSpeaker": "奥利 & 丹尼",
+          "originalEn": "Bye, Owen!"
+        }
+      ],
+      "sourceFile": "codex-clipboard-a896c761-ddff-4536-b7f9-0e296d1c27a3.png",
+      "sha256": "faf2772614c6ae282f8394b36fc6d4eee4b5c5a17e7a1754efce5f6ad9299f67"
+    },
+    {
+      "episodeSourceKey": "forced-english-system-e006",
+      "screenshot": 6,
+      "sentences": [
+        {
+          "sourceKey": "forced-english-system-e006-s001",
+          "sourceUtterance": 1,
+          "originalSpeaker": "奥利",
+          "originalEn": "Hey, Owen!"
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s002",
+          "sourceUtterance": 2,
+          "originalSpeaker": "欧文",
+          "originalEn": "Hey! You guys are here!"
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s003",
+          "sourceUtterance": 3,
+          "originalSpeaker": "奥利",
+          "originalEn": "We brought watermelons, strawberries, and mangoes."
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s004",
+          "sourceUtterance": 4,
+          "originalSpeaker": "欧文",
+          "originalEn": "Awesome! Watermelon is my favorite!"
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s005",
+          "sourceUtterance": 5,
+          "originalSpeaker": "欧文",
+          "originalEn": "Come in! Maddie’s here too."
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s006",
+          "sourceUtterance": 6,
+          "originalSpeaker": "麦迪",
+          "originalEn": "Ollie, who’s this?"
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s007",
+          "sourceUtterance": 7,
+          "originalSpeaker": "奥利",
+          "originalEn": "This is my new roommate, Danny."
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s008",
+          "sourceUtterance": 8,
+          "originalSpeaker": "麦迪",
+          "originalEn": "Hi, Danny! I’m Maddie. I live next door."
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s009",
+          "sourceUtterance": 9,
+          "originalSpeaker": "丹尼",
+          "originalEn": "Hi, Maddie! Nice to meet you."
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s010",
+          "sourceUtterance": 10,
+          "originalSpeaker": "麦迪",
+          "originalEn": "Nice to meet you too."
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s011",
+          "sourceUtterance": 11,
+          "originalSpeaker": "欧文",
+          "originalEn": "Come on! Let’s start grilling!"
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s012",
+          "sourceUtterance": 12,
+          "originalSpeaker": "欧文",
+          "originalEn": "We’ve got beef, lamb, pork, chicken, duck, and shrimp."
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s013",
+          "sourceUtterance": 13,
+          "originalSpeaker": "奥利",
+          "originalEn": "Oh... Danny’s allergic to shrimp."
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s014",
+          "sourceUtterance": 14,
+          "originalSpeaker": "欧文",
+          "originalEn": "Huh? That’s too bad."
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s015",
+          "sourceUtterance": 15,
+          "originalSpeaker": "丹尼",
+          "originalEn": "It’s okay. I can eat everything else."
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s016",
+          "sourceUtterance": 16,
+          "originalSpeaker": "丹尼",
+          "originalEn": "Beef is my favorite!"
+        },
+        {
+          "sourceKey": "forced-english-system-e006-s017",
+          "sourceUtterance": 17,
+          "originalSpeaker": "欧文",
+          "originalEn": "Then let’s grill some beef first!"
+        }
+      ],
+      "sourceFile": "codex-clipboard-88cca1c8-5400-474b-a99e-ef0421ad76cc.png",
+      "sha256": "e94b5f3aa242bcb6d78f36c8515fe1dbe6578399c3c97f5d1e1ab854cd894a24"
+    }
+  ],
+  "notes": [
+    "第1集第12句截图标为奥利，按上一句赞美头像、下一句回应感谢的对话逻辑校正为丹尼，练习角色同步设为你（speaker=0）；此为编辑推断，尚未核实视频。",
+    "第3集第7句 Try it. 原标为丹尼，保留。",
+    "第5集一行含奥利 You can drop us off here. 与欧文 Sure!，拆成第14、15条。",
+    "第5集第17条是奥利与丹尼共同台词，保留一条；练习时由你说。",
+    "第6张截图欧文的中文名写作欧文（部分字形易混），统一人物名为欧文；英文 Owen 保留。",
+    "集标题为编辑拟定；单集 sourceUrl 留空，避免推测分P地址。",
+    "sourceKey 为本次首次分配，后续重排或校对不得重算。"
+  ]
+}

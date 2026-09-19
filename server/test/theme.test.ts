@@ -97,3 +97,35 @@ test('custom navigation and tab bar replace native chrome during route transitio
   assert.match(tabBar, /tab-bar-\{\{theme\}\}/);
   assert.match(navigation, /nav-\{\{theme\}\}/);
 });
+
+test('custom tab bar follows the visible route and accepts taps despite stale selection', () => {
+  let definition: any;
+  let route = 'pages/me/me';
+  const navigations: string[] = [];
+  const source = readFileSync(resolve(__dirname, '../../miniprogram/custom-tab-bar/index.ts'), 'utf8');
+  const compiled = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText;
+  vm.runInNewContext(compiled, {
+    exports: {}, require: () => ({ themeState: () => ({ theme: 'dark' }), subscribeTheme: () => () => {} }),
+    Component: (options: unknown) => { definition = options; },
+    getCurrentPages: () => [{ route }],
+    wx: { switchTab: ({ url }: { url: string }) => navigations.push(url) },
+    WeakMap,
+  });
+  const bar: any = { data: { ...definition.data }, setData(values: Record<string, unknown>) { Object.assign(this.data, values); } };
+  for (const [name, method] of Object.entries(definition.methods)) bar[name] = (method as Function).bind(bar);
+  definition.lifetimes.attached.call(bar);
+  assert.equal(bar.data.selected, 1);
+  bar.data.selected = 0;
+  bar.switchTab({ currentTarget: { dataset: { index: 0 } } });
+  assert.deepEqual(navigations, ['/pages/index/index']);
+  route = 'pages/index/index';
+  definition.pageLifetimes.show.call(bar);
+  assert.equal(bar.data.selected, 0);
+  bar.switchTab({ currentTarget: { dataset: { index: 1 } } });
+  assert.deepEqual(navigations, ['/pages/index/index', '/pages/me/me']);
+  route = 'pages/me/me';
+  definition.pageLifetimes.show.call(bar);
+  assert.equal(bar.data.selected, 1);
+  bar.switchTab({ currentTarget: { dataset: { index: 1 } } });
+  assert.equal(navigations.length, 2);
+});

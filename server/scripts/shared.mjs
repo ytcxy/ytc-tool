@@ -87,10 +87,10 @@ export async function connect(explicitDatabase) {
  const db = await mysql.createConnection({
   host: process.env.DB_HOST, port: Number(process.env.DB_PORT || 3306), database,
   user: process.env.DB_USER, password: process.env.DB_PASSWORD, connectTimeout: 8000,
-  multipleStatements: false, supportBigNumbers: true, bigNumberStrings: true, timezone: 'Z',
+  multipleStatements: false, supportBigNumbers: true, bigNumberStrings: true, timezone: '+08:00',
  });
  try {
-  await db.query("SET time_zone = '+00:00'");
+  await db.query("SET time_zone = '+08:00'");
   const [rows] = await db.query('SELECT DATABASE() AS databaseName');
   if (rows[0].databaseName !== database) throw new Error('Connected database does not match requested target');
   console.log(JSON.stringify({ database: rows[0].databaseName }));

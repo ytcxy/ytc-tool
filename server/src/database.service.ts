@@ -17,14 +17,14 @@ export class DatabaseService implements OnModuleDestroy {
       charset: 'utf8mb4',
       supportBigNumbers: true,
       bigNumberStrings: true,
-      timezone: 'Z',
+      timezone: '+08:00',
       connectionLimit: 10,
       queueLimit: 20,
       connectTimeout: 5000,
       multipleStatements: false,
     });
     pool.on('connection', (connection) => {
-      connection.query("SET time_zone = '+00:00'", (error: Error | null) => {
+      connection.query("SET time_zone = '+08:00'", (error: Error | null) => {
         if (error) connection.destroy();
       });
     });

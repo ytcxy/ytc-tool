@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>街角偶遇 · 第 05 集 | 拾句英语</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <header class="brand"><a href="./">拾句<span>英语</span></a><span class="edition">原声学习 · 网页样例</span></header>
+  <main>
+    <section class="watch" aria-label="原视频与播放验证">
+      <div class="eyebrow">EVERYDAY CONVERSATIONS / 005</div>
+      <h1>街角偶遇<span>认识新朋友，搭一程顺风车。</span></h1>
+      <div class="player-wrap" id="player-wrap"><div class="placeholder">点击下方「加载视频」开始</div></div>
+      <div class="player-actions"><button id="load" class="primary">加载视频</button><a href="https://www.bilibili.com/video/BV1KCeA6gEya" target="_blank" rel="noopener noreferrer">打开 B 站原视频 ↗</a></div>
+      <p id="player-status" role="status">视频由 B 站提供，本页不下载或转存视频。</p>
+      <details class="calibration">
+        <summary>播放验证与时间校准</summary>
+        <p>当前使用此前提供的视频链接，是否对应第 5 集尚待确认。每句暂按 5 秒间隔设置演示时间，尚未与原话对齐；可手动调整。</p>
+        <form id="seek-form"><label for="seek">测试起播时间（秒或 分:秒）</label><div class="input-row"><input id="seek" value="0" required inputmode="decimal" autocomplete="off"><button type="submit">跳转播放</button></div></form>
+        <div class="quick"><button data-seek="0">0 秒</button><button data-seek="15">15 秒</button><button data-seek="30">30 秒</button></div>
+        <label class="check"><input id="edit-times" type="checkbox"> 显示逐句时间校准</label>
+        <p>手动调整仅在当前页面生效，刷新后恢复 5 秒间隔的演示时间。点击播放会重新加载 B 站播放器；不能自动在句末暂停。目标时间需在视频时长内。</p>
+      </details>
+      <p class="footnote">微信内若没有自动播放，请轻点播放器。网页无法读取 B 站播放状态；即使框架加载完成，也不代表视频播放成功。</p>
+    </section>
+    <section class="transcript" aria-labelledby="dialogue-title">
+      <div class="transcript-head"><div><div class="eyebrow">LISTEN · THINK · SPEAK</div><h2 id="dialogue-title">这次聊什么 <small>17 句</small></h2></div><button id="toggle-all" aria-pressed="false">展开全部英文</button></div>
+      <p class="intro">先看中文试着表达，再展开英文对照。点击中文即可尝试播放；每句间隔 5 秒，仅为演示时间，未与原话对齐。</p>
+      <div id="sentences"></div>
+      <noscript>请启用 JavaScript 以查看对话与播放器。</noscript>
+      <footer>英文依据你提供的第 5 集截图 · 中文为本页翻译<br>场景标题为编辑拟定，台词尚未与视频逐句核对。</footer>
+    </section>
+  </main>
+</body>
+</html>

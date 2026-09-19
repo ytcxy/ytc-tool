@@ -53,12 +53,12 @@ test('login stores the exact numeric user ID and updates only the last-login act
  const f=authFixture(false);const result=await f.service.login('code');
  assert.equal(result.token.length,64);
  assert.equal(f.calls.find(c=>c.sql.includes('INSERT INTO el_sessions'))?.values[1],'9007199254740993');
- assert.ok(f.calls.some(c=>c.sql.includes('last_login_at=UTC_TIMESTAMP(3)')));
+ assert.ok(f.calls.some(c=>c.sql.includes('last_login_at=NOW(3)')));
 });
 test('authentication requires both live session and live user plus expiry and revocation',async()=>{
  let sql='';const db={pool:{execute:async(q:string)=>{sql=q;return [[],[]];}}} as unknown as DatabaseService;
  await assert.rejects(new AuthService(db,{} as WechatService).authenticate('Bearer '+'a'.repeat(64)));
- for(const predicate of ['s.is_del=0','u.is_del=0','s.revoked_at IS NULL','s.expires_at>UTC_TIMESTAMP(3)'])assert.ok(sql.includes(predicate));
+ for(const predicate of ['s.is_del=0','u.is_del=0','s.revoked_at IS NULL','s.expires_at>NOW(3)'])assert.ok(sql.includes(predicate));
 });
 for(const deletedTable of ['episode','sentence'])test(`deleted ${deletedTable} progress rejects writes instead of restoring`,async()=>{
  const calls:string[]=[];let rolledBack=false;
