@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>拾句英语 · 内容管理</title><link rel="stylesheet" href="/admin/style.css"><script src="/admin/app.js" defer></script></head>
+<body>
+<section id="login" class="login-layout" hidden>
+ <div class="login-story"><div class="wordmark">拾句<span>英语</span></div><p class="eyebrow">CONTENT WORKSPACE / 内容工作台</p><h1>让每一句，<br>都有所收获。</h1><p>整理日常表达，连接真实语境。<br>在这里，照顾好每一份学习内容。</p><div class="story-bottom">SHIJU ENGLISH <span>一句一句，慢慢积累。</span></div></div>
+ <div class="login-panel"><form id="login-form"><p class="eyebrow">欢迎回来</p><h2>登录管理端</h2><p class="muted">使用已开通的管理账号和密码。</p><label>管理账号<input name="username" required autocomplete="username" pattern="[a-z][a-z0-9_-]{2,39}" maxlength="40" placeholder="例如 admin"></label><label>密码<input name="password" type="password" required minlength="6" maxlength="128" autocomplete="current-password" placeholder="输入管理密码"></label><p id="login-error" class="error" role="alert" hidden></p><button type="submit" class="primary wide">登录工作台 <span>→</span></button><p class="login-note">仅限已授权用户访问</p></form></div>
+</section>
+<div id="workspace" class="workspace" hidden>
+ <aside><a id="home-link" class="wordmark" href="/admin/">拾句<span>英语</span></a><p class="eyebrow sidebar-label">管理工作台</p><nav id="navigation" aria-label="管理导航"></nav><div class="sidebar-bottom"><span class="status-dot"></span> 内容与学习，井然有序<p>SHIJU / WORKSPACE</p></div></aside>
+ <div class="main-wrap"><header><span class="header-label">内容管理中心</span><div class="account"><span id="account-name"></span><button id="password-button" class="text-button">修改密码</button><button id="logout-button" class="text-button">退出</button></div></header>
+ <main><div class="navigation-trail"><button id="back-button" type="button" disabled>← 返回</button><div id="breadcrumbs" class="breadcrumbs"></div></div><div class="page-heading"><div><p id="section-number" class="eyebrow"></p><h1 id="page-title"></h1><p id="page-description" class="muted"></p></div><div class="heading-actions"><button id="import-button" hidden>导入 JSON</button><button id="create-button" class="primary" hidden>＋ 新增</button></div></div>
+ <form id="filters" class="filters"></form><div id="page-error" class="error" role="alert" hidden></div><div id="batch-actions" class="batch-actions" hidden></div><div id="list" aria-live="polite"></div><div id="pagination" class="pagination"></div>
+ </main><footer>拾句英语 <span>每一次整理，都是更好的学习体验。</span></footer></div>
+</div>
+<dialog id="editor"><form id="editor-form"><div class="dialog-heading"><div><p class="eyebrow">工作台 / 编辑</p><h2 id="editor-title"></h2></div><button type="button" id="close-editor" class="icon-button" aria-label="关闭">×</button></div><p id="editor-note" class="muted"></p><div id="editor-fields"></div><p id="editor-error" class="error" role="alert" hidden></p><div class="dialog-actions"><button type="button" id="cancel-editor">取消</button><button type="submit" id="save-editor" class="primary">保存</button></div></form></dialog>
+<div id="toast" class="toast" role="status" hidden></div>
+</body></html>

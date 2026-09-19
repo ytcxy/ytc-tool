@@ -1,3 +1,11 @@
+import { AdminImportService } from './admin/admin-import.service';
+import { AdminAuthService } from './admin/admin-auth.service';
+import { AdminGuard } from './admin/admin.guard';
+import { AdminContentService } from './admin/admin-content.service';
+import { AdminUsersService } from './admin/admin-users.service';
+import { AdminController } from './admin/admin.controller';
+import { AdminAuthController } from './admin/admin-auth.controller';
+import { AdminAudioController } from './admin/admin-audio.controller';
 import { AudioService } from './audio/audio.service';
 import { AudioController } from './audio/audio.controller';
 import { Module } from '@nestjs/common';
@@ -18,7 +26,7 @@ import { UsersService } from './users/users.service';
 import { UsersController } from './users/users.controller';
 @Module({
  imports:[ConfigModule.forRoot({isGlobal:true,envFilePath:resolve(__dirname,'../.env'),validate:validateConfig})],
- controllers:[AudioController,HealthController,AuthController,CatalogController,ProgressController,UsersController],
- providers:[AudioService,DatabaseService,AuthService,AuthGuard,WechatService,CatalogService,ProgressService,UsersService],
+ controllers:[AdminController,AdminAuthController,AdminAudioController,AudioController,HealthController,AuthController,CatalogController,ProgressController,UsersController],
+ providers:[AdminImportService,AdminAuthService,AdminGuard,AdminContentService,AdminUsersService,AudioService,DatabaseService,AuthService,AuthGuard,WechatService,CatalogService,ProgressService,UsersService],
 })
 export class AppModule {}

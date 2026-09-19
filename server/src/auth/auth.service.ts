@@ -34,7 +34,7 @@ export class AuthService {
   const hash = tokenHash(header.slice(7));
   const [rows] = await this.db.pool.execute<RowDataPacket[]>(`SELECT s.user_id
     FROM el_sessions s JOIN el_users u ON u.id=s.user_id
-    WHERE s.token_hash=? AND s.is_del=0 AND u.is_del=0
+    WHERE s.token_hash=? AND s.session_type='miniapp' AND s.is_del=0 AND u.is_del=0
       AND s.revoked_at IS NULL AND s.expires_at>NOW(3)`, [hash]);
   if (!rows.length) throw new UnauthorizedException('登录已过期或账号不可用，请重新登录');
   return { id: rows[0].user_id, tokenHash: hash };

@@ -113,3 +113,8 @@ created_at 默认 CURRENT_TIMESTAMP(3)；updated_at 默认及自动更新均为 
 ## 人物名显示
 
 `el_sentences.speaker_name VARCHAR(80) NOT NULL DEFAULT ''` 保存人物名，API/清单对应 `speakerName`。空字符串兼容旧合集的你/AI；多人台词可保存“奥利、丹尼”。已有库运行 004_sentence_speaker_name.sql 对应的迁移脚本，不重建表、不重置 ID 或进度。新后端部署前必须完成此迁移。
+
+
+## 网页管理扩展（005）
+
+`005_web_admin.sql` 为增量迁移：`el_users` 增加唯一可空的 `admin_username`、`admin_password_hash`、默认 0 的 `is_admin` 和 `admin_must_change_password`；`el_sessions` 增加 `session_type`，默认 miniapp，管理会话为 admin。新增 `el_admin_audit_logs`，保留统一公共字段及操作者外键，记录目标类型/ID、动作和 JSON 差异；密码与令牌不进入审计。部署新版前必须应用迁移，详情见 [管理端说明](web-admin.md)。
