@@ -109,3 +109,7 @@ created_at 默认 CURRENT_TIMESTAMP(3)；updated_at 默认及自动更新均为 
 ## 验证边界
 
 隔离测试覆盖字段规范、ID 精度、枚举映射、关联过滤和导入行为。尚未执行真实 MySQL DDL 或 DML 验证，不能将替身测试视为已完成数据库迁移。获得授权后应在测试库验证约束、实际导入和重复导入。
+
+## 人物名显示
+
+`el_sentences.speaker_name VARCHAR(80) NOT NULL DEFAULT ''` 保存人物名，API/清单对应 `speakerName`。空字符串兼容旧合集的你/AI；多人台词可保存“奥利、丹尼”。已有库运行 004_sentence_speaker_name.sql 对应的迁移脚本，不重建表、不重置 ID 或进度。新后端部署前必须完成此迁移。

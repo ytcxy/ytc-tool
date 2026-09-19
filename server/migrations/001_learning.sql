@@ -78,6 +78,7 @@ CREATE TABLE el_sentences (
   source_key VARCHAR(80) CHARACTER SET ascii COLLATE ascii_bin NOT NULL COMMENT '单集内稳定导入标识',
   sequence INT UNSIGNED NOT NULL COMMENT '单集内排序',
   speaker TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '角色：0-你，1-AI',
+  speaker_name VARCHAR(80) NOT NULL DEFAULT '' COMMENT '人物名；空值沿用你/AI',
   zh TEXT NOT NULL COMMENT '中文',
   en TEXT NOT NULL COMMENT '参考英文',
   context VARCHAR(500) NOT NULL DEFAULT '' COMMENT '场景与角色提示',

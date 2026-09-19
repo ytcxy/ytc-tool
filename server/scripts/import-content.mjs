@@ -9,7 +9,7 @@ export async function readSnapshot(db, sourceKey) {
  const [episodes] = await db.execute(`SELECT id,collection_id AS collectionId,source_key AS sourceKey,title,sequence,
    source_url AS sourceUrl,status,is_del FROM el_episodes WHERE collection_id=?`, [collection.id]);
  const [sentences] = await db.execute(`SELECT s.id,s.episode_id AS episodeId,e.source_key AS episodeSourceKey,
-   s.source_key AS sourceKey,s.sequence,s.zh,s.en,s.context,s.speaker,s.is_del FROM el_sentences s
+   s.source_key AS sourceKey,s.sequence,s.zh,s.en,s.context,s.speaker,s.speaker_name AS speakerName,s.is_del FROM el_sentences s
    JOIN el_episodes e ON e.id=s.episode_id WHERE e.collection_id=?`, [collection.id]);
  return { collection, episodes, sentences };
 }
@@ -43,7 +43,7 @@ export function buildPlan(input, snapshot) {
    incomingSentences.add(key);
    const before = oldSentences.get(key);
    if (!before) plan.sentencesAdded++;
-   else compare('sentence', key, before, sentence, ['sequence', 'zh', 'en', 'context', 'speaker']);
+   else compare('sentence', key, before, { ...sentence, speakerName: sentence.speakerName ?? '' }, ['sequence', 'zh', 'en', 'context', 'speaker', 'speakerName']);
   }
  }
  for (const e of snapshot.episodes) if (e.is_del === 0 && !incomingEpisodes.has(e.sourceKey)) missing.push({ type: 'episode', sourceKey: e.sourceKey });
@@ -104,9 +104,9 @@ export async function applyContent(db, input, { acceptChanges = false, onPlan = 
     const [existing] = await db.execute('SELECT source_key AS sourceKey,is_del FROM el_sentences WHERE episode_id=? FOR UPDATE', [episodeId]);
     const incomingKeys = new Set(episode.sentences.map(s => s.sourceKey));
     for (const row of existing) if (incomingKeys.has(row.sourceKey)) ensureLive(row);
-    const values = episode.sentences.map(s => [episodeId, s.sourceKey, s.sequence, s.zh, s.en, s.context, s.speaker]);
-    await db.query(`INSERT INTO el_sentences(episode_id,source_key,sequence,zh,en,context,speaker) VALUES ?
-      ON DUPLICATE KEY UPDATE sequence=VALUES(sequence),zh=VALUES(zh),en=VALUES(en),context=VALUES(context),speaker=VALUES(speaker)`, [values]);
+    const values = episode.sentences.map(s => [episodeId, s.sourceKey, s.sequence, s.zh, s.en, s.context, s.speaker, s.speakerName ?? '']);
+    await db.query(`INSERT INTO el_sentences(episode_id,source_key,sequence,zh,en,context,speaker,speaker_name) VALUES ?
+      ON DUPLICATE KEY UPDATE sequence=VALUES(sequence),zh=VALUES(zh),en=VALUES(en),context=VALUES(context),speaker=VALUES(speaker),speaker_name=VALUES(speaker_name)`, [values]);
     await db.commit();
    } catch (error) { await db.rollback(); throw error; }
   }

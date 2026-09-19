@@ -46,7 +46,9 @@ export function validateContent(data) {
     if (typeof s.context !== 'string' || s.context.length > 500) throw new Error('Invalid context');
     const speaker = s.speaker === undefined ? 0 : s.speaker;
     if (speaker !== 0 && speaker !== 1) throw new Error('Invalid speaker: expected 0 or 1');
-    return { ...s, speaker };
+    const speakerName = s.speakerName ?? '';
+    if (typeof speakerName !== 'string' || speakerName.length > 80 || (speakerName && speakerName.trim() !== speakerName)) throw new Error('Invalid speakerName');
+    return { ...s, speaker, ...(s.speakerName === undefined ? {} : { speakerName }) };
    }) };
   }),
  };

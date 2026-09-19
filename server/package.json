@@ -20,7 +20,9 @@
     "audio:validate": "node --import tsx scripts/validate-audio.ts",
     "audio:plan": "node scripts/sync-audio.mjs",
     "audio:import": "node scripts/sync-audio.mjs --apply",
-    "audio:generate": "python3 scripts/generate-audio.py"
+    "audio:generate": "python3 scripts/generate-audio.py",
+    "db:speaker-name:plan": "node scripts/migrate-speaker-name.mjs",
+    "db:speaker-name:migrate": "node scripts/migrate-speaker-name.mjs --apply"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.0",

@@ -55,11 +55,11 @@ function memoryDatabase() {
   async query(query, values) {
    assert.match(query, /^INSERT INTO el_sentences/);calls.push({ sql: query, values });
    if (failBulk) throw new Error('simulated write failure');
-   for (const [episodeId, sourceKey, sequence, zh, en, context, speaker] of values[0]) {
+   for (const [episodeId, sourceKey, sequence, zh, en, context, speaker, speakerName] of values[0]) {
     assert.ok(state.episodes.some(e => e.id === episodeId));
     const row = state.sentences.find(s => s.episodeId === episodeId && s.sourceKey === sourceKey);
-    if (row) Object.assign(row, { sequence, zh, en, context, speaker });
-    else state.sentences.push({ id: allocate(), episodeId, sourceKey, sequence, zh, en, context, speaker, is_del: 0 });
+    if (row) Object.assign(row, { sequence, zh, en, context, speaker, speakerName });
+    else state.sentences.push({ id: allocate(), episodeId, sourceKey, sequence, zh, en, context, speaker, speakerName, is_del: 0 });
    }
    return [{}];
   },
@@ -152,4 +152,22 @@ test('inserting AI turns and reordering originals preserves IDs and progress ref
  assert.ok(db.calls.every(c=>!c.sql.includes('el_sentence_progress')&&!c.sql.includes('el_episode_progress')));
  const repeated=await applyContent(db,data);
  assert.equal(repeated.sentencesAdded,0);assert.equal(repeated.changes.length,0);
+});
+
+test('character names update independently, preserve IDs, and reimport without changes', async () => {
+ const db = memoryDatabase(), data = content();
+ await applyContent(db, data);
+ const id = db.state.sentences[0].id;
+ data.episodes[0].sentences[0].speakerName = '奥利、丹尼';
+ const plan = buildPlan(data, await readSnapshot(db, data.sourceKey));
+ assert.deepEqual(plan.changes[0].diff, { speakerName: { before: '', after: '奥利、丹尼' } });
+ await assert.rejects(applyContent(db, data), /Review changes/);
+ await applyContent(db, data, { acceptChanges: true });
+ assert.equal(db.state.sentences[0].id, id);
+ assert.equal(db.state.sentences[0].speakerName, '奥利、丹尼');
+ assert.equal((await applyContent(db, data)).changes.length, 0);
+ for (const name of [123, 'x'.repeat(81), ' 丹尼', ' ']) {
+  data.episodes[0].sentences[0].speakerName = name;
+  assert.throws(() => validateContent(data), /speakerName/);
+ }
 });

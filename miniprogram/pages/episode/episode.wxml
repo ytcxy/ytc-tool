@@ -13,7 +13,7 @@
   <view class="toolbar"><button class="plain" bindtap="toggleAll">{{allRevealed ? '全部隐藏' : '全部显示'}}</button><button class="plain" bindtap="filter">{{onlyUnmastered ? '显示全部内容' : '只看未掌握'}}</button></view>
   <view wx:if="{{saveError}}" class="error sync">{{saveError}}<button class="plain" bindtap="retry" disabled="{{saving}}">重试同步</button></view>
   <view wx:for="{{sentences}}" wx:key="id" id="s-{{item.id}}" data-id="{{item.id}}" class="card sentence" hidden="{{onlyUnmastered && item.status === 'mastered'}}">
-   <view class="row sentence-head {{item.audioUrl ? 'has-audio' : ''}}"><text class="number">{{item.speaker === 1 ? 'AI' : '你'}} · {{item.sequence < 10 ? '0' + item.sequence : item.sequence}}</text></view>
+   <view class="row sentence-head {{item.audioUrl ? 'has-audio' : ''}}"><text class="number">{{item.speakerName || (item.speaker === 1 ? 'AI' : '你')}} · {{item.sequence < 10 ? '0' + item.sequence : item.sequence}}</text></view>
     <view role="button" wx:if="{{item.audioUrl}}" class="speaker-button {{audioSentenceId === item.id ? 'speaker-' + audioState : ''}}" hover-class="none" data-id="{{item.id}}" bindtap="playAudio" aria-label="{{audioSentenceId === item.id ? (audioState === 'loading' ? '取消加载英文音频' : audioState === 'playing' ? '停止朗读英文' : '播放失败，点击重试') : '朗读英文'}}">
      <view wx:if="{{audioSentenceId === item.id && audioState === 'loading'}}" class="speaker-spinner"></view>
      <image wx:else class="speaker-icon" src="{{theme === 'dark' ? '/assets/icons/speaker-dark.svg' : '/assets/icons/speaker.svg'}}" mode="aspectFit" aria-hidden="true" />
@@ -27,6 +27,6 @@
   </view>
   <view wx:if="{{!visibleCount}}" class="empty">{{onlyUnmastered ? '这一集的表达都已掌握，做得不错。' : '本集内容还在准备中。'}}</view>
   <button wx:if="{{sentences.length}}" class="primary stack" loading="{{saving && !savingSentenceId}}" disabled="{{saving || !!saveError || !!progressError}}" bindtap="complete">{{completed ? '撤销本集完成标记' : '标记本集已完成'}}</button>
-  <view class="footer-note">英文是一种参考表达，能表达原意同样很好。AI 台词为学习补写，并非原视频逐字稿。</view>
+  <view class="footer-note">英文是一种参考表达，能表达原意同样很好。</view>
  </block>
 </view>

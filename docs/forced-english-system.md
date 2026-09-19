@@ -4,7 +4,7 @@
 
 来源：[用户提供的视频链接](https://www.bilibili.com/video/BV1hSYt6EEWs)。未取得各集独立链接。
 
-默认练习角色：你扮演丹尼，AI 扮演其他角色；共同台词保留一条，由你练习。`context` 保留原人物名，`speaker` 只是练习角色映射，不表示英文为 AI 补写。
+默认练习角色：你扮演丹尼，AI 扮演其他角色；共同台词保留一条，由你练习。`speakerName` 独立保存人物名，卡片优先显示人物名；`context` 不再重复展示角色或校对说明。`speaker` 只是练习角色映射，不表示英文为 AI 补写。
 
 ## 核对事项
 
@@ -162,3 +162,15 @@ npm run content:import --workspace server -- --file=content/forced-english-syste
 ```
 
 若预览涉及已存在记录的修改，审阅差异后才添加 `--accept-changes`。路径相对于 server/；省略 `--file` 时仍处理原 daily-200 清单。生产库操作需另行授权。
+
+## 人物名字段升级
+
+已存在的数据库先预览并执行字段迁移，再预览内容差异：
+
+```bash
+npm run db:speaker-name:plan --workspace server -- --database=ytc-tool
+npm run db:speaker-name:migrate --workspace server -- --database=ytc-tool
+npm run content:plan --workspace server -- --file=content/forced-english-system.json --database=ytc-tool
+```
+
+审阅后用同一文件执行 `content:import` 并附带 `--accept-changes`。生产库将目标替换为 `ytc-tool-prod`。迁移必须早于新版后端部署；小程序需重新编译上传才会显示人物名。人物名仅影响显示，原 speaker、sourceKey、句子 ID、中英文与学习进度保留。

@@ -101,7 +101,7 @@ export class ProgressService {
   const from = `FROM el_sentence_progress p JOIN el_sentences s ON s.id=p.sentence_id
     JOIN el_episodes e ON e.id=s.episode_id JOIN el_collections c ON c.id=e.collection_id
     WHERE p.user_id=? AND p.status=1 AND p.is_del=0 AND ${visibleSentence}`;
-  const [items] = await this.db.pool.query<RowDataPacket[]>(`SELECT s.id,s.zh,s.en,s.context,s.speaker,s.sequence,
+  const [items] = await this.db.pool.query<RowDataPacket[]>(`SELECT s.id,s.zh,s.en,s.context,s.speaker,s.speaker_name AS speakerName,s.sequence,
     e.id AS episodeId,e.title AS episodeTitle,e.sequence AS episodeSequence,c.title AS collectionTitle
     ${from} ORDER BY c.sort_order,c.id,e.sequence,e.id,s.sequence,s.id LIMIT ? OFFSET ?`, [userId, limit, offset]);
   const [counts] = await this.db.pool.execute<RowDataPacket[]>(`SELECT COUNT(*) AS total ${from}`, [userId]);
