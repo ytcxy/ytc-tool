@@ -1,0 +1,233 @@
+{
+  "sourceFile": "pre5.mp4",
+  "selectedFile": "03-讨厌的蔬菜.mp4",
+  "videoSha256": "399a2b9438f4d64a9b64f12dd787231b7207ede10ba39b0037c37a7f7f574096",
+  "selectedSourceRangeMs": [
+    120053,
+    155689
+  ],
+  "subtitleSourceRangeMs": [
+    155689,
+    191324
+  ],
+  "method": "带字幕重播按 200ms 采样 OCR，对照既有台词按出现顺序匹配；单遍音轨 -30dB/80ms 静音间隙辅助选择起止边界并预留头尾。10ms 步长音轨包络互相关确认两遍相对时间一致。",
+  "review": "已核对字幕、音轨对齐与静音间隙；未人工逐句试听、未微信真机验证。",
+  "alignment": {
+    "episode": 3,
+    "bestEnvelopeCorrelation": 0.9999884906148212,
+    "subtitleAudioOffsetMs": 0
+  },
+  "ocr": "0.1\t\n0.3\t\n0.5\t\n0.7\t\n0.9\t\n1.1\t\n1.3\t\n1.5\t\n1.7\t\n1.9\tDo you like cooking? | VKEX110153\n2.1\tDo you like cooking? | KEX110153\n2.3\tDo you like cooking?\n2.5\tDo you like cooking?\n2.7\tDo you like cooking? | ЕX0053\n2.9\tDo you like cooking? | REX*0053\n3.1\t\n3.3\tYeah, 1 do. | LEL, TOEXX\n3.5\tYeah, I do. | LEL,TOEXX\n3.7\tYeah, 1 do. | LELTREXX\n3.9\tYeah, I'do. | EL TEX\n4.1\tYeah, I do. | EL0EX\n4.3\t\n4.5\t\n4.7\tjust made a salad! | FENUТYDIE!\n4.9\tl just made a salad! | FNUNTYIDE!\n5.1\tI just made a salad! | #RUNT YDILE!\n5.3\tIjust made a salad!\n5.5\tIjust made a salad!\n5.7\tI just made a salady\n5.9\tI just made a salady\n6.1\tI just made a salad! | EUTDIE!\n6.3\tWow. | ДE !\n6.5\tWow!\n6.7\tWow!\n6.9\tWow!\n7.1\tI put in lettuce, celery, cucumber cabbage, | carrots, and broccoli,\n7.3\tI put in lettuce, celery, cucumber cabbage, | carrots, and broccoli,\n7.5\tI put in lettuce, celery, cucumber cabbage, | carrots, and broccoli,\n7.7\tI put in lettuce, celery, cucumber, cabbage, | carrots, and broccoli,\n7.9\tI put in lettuce, celery, cucumber cabbage, | carrots, and broccoli,\n8.1\tI put in lettuce, celery, cucumber, cabbage, | carrots, and broccoli.\n8.3\tI put in lettuce, celery, cucumber cabbage, | carrots, and broccoli.\n8.5\tI put in lettuce, celery, cucumber cabbage, | carrots, and broccoli.\n8.7\tI put in lettuce, celery, cucumber cabbage, | carrots, and broccoli,\n8.9\tI put in lettuce, celery, cucumber cabbage, | carrots, and broccoli.\n9.1\tI put in lettuce, celery, cucumber cabbage, | carrots, and broccoli.\n9.3\tI put in lettuce, celery, cucumber cabbage, | carrots, and broccoli.\n9.5\tI put in lettuce, celery, cucumber cabbage, | carrots, and broccoli,\n9.7\tI put in lettuce, celery, cucumber cabbage, | carrots, and broccoli,\n9.9\tI put in lettuce, celery, cucumber cabbage, | carrots, and broccoli,\n10.1\tI put in lettuce, celery, cucumber cabbage, | carrots, and broccoli,\n10.3\tI put in lettuce, celery, cucumber cabbage, | carrots, and broccoli,\n10.5\tI put in lettuce, celery, cucumber cabbage, | carrots, and broccoli,\n10.7\tI put in lettuce, celery, cucumber cabbage, | carrots, and broccoli,\n10.9\tI put in lettuce, celery, cucumber cabbage, | carrots, and broccoli,\n11.1\tI put in lettuce, celery, cucumber cabbage, | carrots, and broccoli,\n11.3\t\n11.5\tSo many fresh veggies! | 173M#*0*021\n11.7\tSo many fresh veggies! | 73MH*0!\n11.9\tSo many fresh veggies! | 73MH*0!\n12.1\tSo many fresh veggies! | 73MH*0!\n12.3\tSo many fresh veggies! | 73H#H*D!\n12.5\tSo many fresh veggies! | 73M4H*0!\n12.7\tSo many fresh veggies! | 73M#H*0!\n12.9\tSo many fresh veggies! | 73M4H*0!\n13.1\t\n13.3\tTry it.\n13.5\tTry it.\n13.7\tTry it.\n13.9\tTry it.\n14.1\t\n14.3\t\n14.5\t\n14.7\t\n14.9\tHmm... it's a little bland. l'ul add some salt.\n15.1\tHmm.. it's a little bland. l'ul add some salt.\n15.3\tHmm.. it's a little bland. l'ul add some salt.\n15.5\tHmm... it's a little bland. l'ul add some salt.\n15.7\tHmm.. it's a little bland. l'ul add some salt. | g…FHж?, ™Лa#\n15.9\tHmm... it's a little bland. l'ul add some salt.\n16.1\tHmm... it's a little bland. l'ul add some salt.\n16.3\tHmm... it's a little bland. l'ul add some salt.\n16.5\tHmm... it's a little bland. Tul add some salt. | E…NH×T,#ừЛH#\n16.7\tHmm... it's a little bland, T'll add some salt.\n16.9\tHmm... it's a little bland, T'll add some salt.\n17.1\tHmm.. it's a little bland. Tul add some salt.\n17.3\tHmm... it's a little bland. Tul add some salt.\n17.5\tHmm... it's a little bland, T'ul add some salt.\n17.7\t\n17.9\t\n18.1\t\n18.3\tTry it again. | F22\n18.5\tTry it again. | F22\n18.7\tTry it again. | 122\n18.9\tTry it again. | H22\n19.1\tTry it again.\n19.3\t\n19.5\t\n19.7\tHmm. now it's a little salty, l'ul add some | water. | XHAŁaT,wak\n19.9\tHmm... now it's a little salty, Iuadd some | water. | XHAŁaT,wak\n20.1\tHmm. now it's a little salty, I'u add some | water. | XHAŁaT,wak\n20.3\tHmm.. now it's a little salty, l'ul add some | water. | XHAŁaT,wak\n20.5\tHmm.. now it's a little salty, l'u add some | water. | XHAŁT,wak\n20.7\tHmm.. now it's a little salty, T'ul add some | water. | XHAŁAT,wak\n20.9\tHтт.. now it's a little salty, Fil add some | water. | XHAŁ&T,łak\n21.1\tHтт... now it's a little salty, Fil add some | water. | XHAŁAT,łak\n21.3\tHmт... now it's a little salty, THl add some | water. | XHAŁaT,łak\n21.5\tHmm... now it's a little salty, Til add some | water. | XHAŁT,wak\n21.7\tHmmo now it's a little salty, T'il add some | Water.\n21.9\tHmm.. now it's a little salty, Fil add some | Water.\n22.1\tHmm... now it's a little salty, Tul add some | Water.\n22.3\tHmm.. now it's a little salty, Fil add some | Water.\n22.5\tHmm.. now it's a little salty, Fil add some | Water.\n22.7\t\n22.9\t\n23.1\t\n23.3\tTry it again. | F2X\n23.5\tTry it again. | F2X\n23.7\tTry it again.\n23.9\tTry it again.\n24.1\t\n24.3\t\n24.5\t\n24.7\t\n24.9\tNow it's a little bland again. Til add some | more salt.\n25.1\tNow it's a little bland again. TIl add some | more salt.\n25.3\tNow it's a little bland again. Til add some | more salt.\n25.5\tNow it's a little bland again. TIl add some | more salt.\n25.7\tNow it's a little bland again. TIl add some | more salt. | ХFAж?, wР\n25.9\tNow it's arlittle bland again. TIl add some | more salt.\n26.1\tNow it's a little bland again. Tll add some | more salt. | ХAAXT, WnЙ\n26.3\tNow it's a little bland again. Tll add some | more salt. | ХAAXT, RnЙ\n26.5\tNow it's a little bland again. Tll add some | more salt. | Х#AXT, ₩FÃ#\n26.7\tNow it's a little bland again. TIl add somes | more salt.\n26.9\tNow it's a little bland again. Tll add some- | more salt. | ХFHXT, ₩#ЛH\n27.1\tNow it's a little bland again. Tll add some | more salt. | ХFHXT, ₩#ЛH\n27.3\t\n27.5\t\n27.7\t\n27.9\t\n28.1\tTry it again.\n28.3\tTry it again. | F2X\n28.5\tTry it again. | F2X\n28.7\tTry it again. | F2X\n28.9\t\n29.1\t\n29.3\t\n29.5\t\n29.7\t\n29.9\t\n30.1\t\n30.3\t\n30.5\tI'm so over this. I dont want to eat it | anymorel | (BT,#TEIŽT!\n30.7\tI'm so over this. 1 dont want to eat it | anymore! | (3A#TEIZT!\n30.9\tI'm so over this. I don't want to eat it | anymore | TA#TEIZT!\n31.1\tI'm so over this, I don't want to eat it | anymore | T,ETEIZT!\n31.3\tI'm so over this, I don't want to eat it | anymore | ฿T, #TAIZT!\n31.5\tI'm so over this. I don't want to eat it | anymore | GTA BTHIZT!\n31.7\tI'm so over this, 1 don't want to eat it | anymore. | TA #ТIZT!\n31.9\tI'm so over this. I dontt want to eat it | anymore. | ฿T, BAEIZT!\n32.1\tI'm so over this. I don't want to eat it | anymore | ฿T,#ZAIZT!\n32.3\tI'm so over this. I don't want to eat it | anymores | T, BAEIZT!\n32.5\tI'm so over this. 1 don't want to eat it | anymores | BT,BTEIZT!\n32.7\tI'm so over this. I don't want to eat it | anymores | ฿T,REIŻTI\n32.9\tI'm so over this. I dont want to eat it | anymore | T, BTEIZT!\n33.1\tI'm so over this. I don't want to eat it | anymores | BT,BNEIZT!\n33.3\tHahaha! | lâ là tô là là\n33.5\tHahaha! | là là là là là\n33.7\tHanana! | là là tê là là\n33.9\tHahaha! | là tà tô là là\n34.1\tHahaha! | Tà tà lô lô Lâ\n34.3\tI hate eating vegetables! | HIFIZA!\n34.5\tI hate eating vegetables! | BNFIZ!\n34.7\tI hate eating vegetables! | IEWFIZR!\n34.9\tI hate eating vegetables! | IEWFIZMR!\n35.1\tI hate eating vegetables! | IEWFIZR!\n35.3\tI hate eating vegetables! | IEWFIZMR!\n35.5\tI hate eating vegetables!\n",
+  "silence": [
+    "silence_start: 0",
+    "silence_end: 1.866271 | silence_duration: 1.866271",
+    "silence_start: 2.17525",
+    "silence_end: 2.264542 | silence_duration: 0.0892917",
+    "silence_start: 2.615042",
+    "silence_end: 3.311708 | silence_duration: 0.696667",
+    "silence_start: 3.523604",
+    "silence_end: 3.701292 | silence_duration: 0.177687",
+    "silence_start: 4.114958",
+    "silence_end: 4.389083 | silence_duration: 0.274125",
+    "silence_start: 4.410875",
+    "silence_end: 4.812312 | silence_duration: 0.401438",
+    "silence_start: 5.955271",
+    "silence_end: 6.377687 | silence_duration: 0.422417",
+    "silence_start: 6.919208",
+    "silence_end: 7.205188 | silence_duration: 0.285979",
+    "silence_start: 7.277104",
+    "silence_end: 7.360125 | silence_duration: 0.0830208",
+    "silence_start: 8.001229",
+    "silence_end: 8.130583 | silence_duration: 0.129354",
+    "silence_start: 8.590854",
+    "silence_end: 8.701542 | silence_duration: 0.110687",
+    "silence_start: 8.702729",
+    "silence_end: 8.791729 | silence_duration: 0.089",
+    "silence_start: 9.219625",
+    "silence_end: 9.389667 | silence_duration: 0.170042",
+    "silence_start: 10.109792",
+    "silence_end: 10.198562 | silence_duration: 0.0887708",
+    "silence_start: 10.585958",
+    "silence_end: 10.667396 | silence_duration: 0.0814375",
+    "silence_start: 10.891438",
+    "silence_end: 11.326354 | silence_duration: 0.434917",
+    "silence_start: 11.836292",
+    "silence_end: 11.970437 | silence_duration: 0.134146",
+    "silence_start: 12.168792",
+    "silence_end: 12.260292 | silence_duration: 0.0915",
+    "silence_start: 12.713833",
+    "silence_end: 13.2955 | silence_duration: 0.581667",
+    "silence_start: 13.663667",
+    "silence_end: 13.918687 | silence_duration: 0.255021",
+    "silence_start: 13.922021",
+    "silence_end: 14.026729 | silence_duration: 0.104708",
+    "silence_start: 14.030896",
+    "silence_end: 14.571708 | silence_duration: 0.540813",
+    "silence_start: 14.597187",
+    "silence_end: 14.836396 | silence_duration: 0.239208",
+    "silence_start: 15.2245",
+    "silence_end: 15.472458 | silence_duration: 0.247958",
+    "silence_start: 16.260292",
+    "silence_end: 16.452625 | silence_duration: 0.192333",
+    "silence_start: 17.158417",
+    "silence_end: 17.390187 | silence_duration: 0.231771",
+    "silence_start: 17.418604",
+    "silence_end: 17.571292 | silence_duration: 0.152688",
+    "silence_start: 17.602417",
+    "silence_end: 17.700187 | silence_duration: 0.0977708",
+    "silence_start: 17.760188",
+    "silence_end: 17.840771 | silence_duration: 0.0805833",
+    "silence_start: 17.888375",
+    "silence_end: 18.297708 | silence_duration: 0.409333",
+    "silence_start: 19.100854",
+    "silence_end: 19.759229 | silence_duration: 0.658375",
+    "silence_start: 20.122229",
+    "silence_end: 20.291062 | silence_duration: 0.168833",
+    "silence_start: 21.453312",
+    "silence_end: 21.643979 | silence_duration: 0.190667",
+    "silence_start: 22.401875",
+    "silence_end: 22.823271 | silence_duration: 0.421396",
+    "silence_start: 22.83225",
+    "silence_end: 23.118979 | silence_duration: 0.286729",
+    "silence_start: 23.79425",
+    "silence_end: 24.008625 | silence_duration: 0.214375",
+    "silence_start: 24.012062",
+    "silence_end: 24.452625 | silence_duration: 0.440562",
+    "silence_start: 24.452687",
+    "silence_end: 24.829896 | silence_duration: 0.377208",
+    "silence_start: 26.907812",
+    "silence_end: 27.275208 | silence_duration: 0.367396",
+    "silence_start: 27.277437",
+    "silence_end: 27.363625 | silence_duration: 0.0861875",
+    "silence_start: 27.441021",
+    "silence_end: 27.525583 | silence_duration: 0.0845625",
+    "silence_start: 27.583208",
+    "silence_end: 28.010146 | silence_duration: 0.426937",
+    "silence_start: 28.660167",
+    "silence_end: 29.020021 | silence_duration: 0.359854",
+    "silence_start: 29.024646",
+    "silence_end: 29.552 | silence_duration: 0.527354",
+    "silence_start: 29.712542",
+    "silence_end: 29.958187 | silence_duration: 0.245646",
+    "silence_start: 30.373146",
+    "silence_end: 30.505771 | silence_duration: 0.132625",
+    "silence_start: 30.627979",
+    "silence_end: 30.804479 | silence_duration: 0.1765",
+    "silence_start: 31.495104",
+    "silence_end: 31.74825 | silence_duration: 0.253146",
+    "silence_start: 33.165292",
+    "silence_end: 33.266792 | silence_duration: 0.1015",
+    "silence_start: 33.334396",
+    "silence_end: 33.439333 | silence_duration: 0.104938",
+    "silence_start: 33.514917",
+    "silence_end: 33.627688 | silence_duration: 0.112771",
+    "silence_start: 33.698271",
+    "silence_end: 33.816458 | silence_duration: 0.118188",
+    "silence_start: 33.911687",
+    "silence_end: 34.081979 | silence_duration: 0.170292",
+    "silence_start: 34.177604",
+    "silence_end: 34.281542 | silence_duration: 0.103938",
+    "silence_start: 34.473271",
+    "silence_end: 34.57175 | silence_duration: 0.0984792",
+    "silence_start: 35.485437",
+    "silence_end: 35.648 | silence_duration: 0.162562"
+  ],
+  "clips": [
+    {
+      "sentenceKey": "forced-english-system-e003-s001",
+      "textHash": "990bd451f9d68d62add1981f6fe8df78a974be96cfc3a8b625a41043dfb1b67c",
+      "startMs": 1780,
+      "endMs": 2800
+    },
+    {
+      "sentenceKey": "forced-english-system-e003-s002",
+      "textHash": "490934daab2c73acf6a283e15a81dac3cea4c7ba78bc1d22edad8dddfa6ca02b",
+      "startMs": 3220,
+      "endMs": 4250
+    },
+    {
+      "sentenceKey": "forced-english-system-e003-s003",
+      "textHash": "cf6d45ad2e61a408b08b6839c5e7ab91fe238861de89c53f35276756c288de10",
+      "startMs": 4680,
+      "endMs": 6100
+    },
+    {
+      "sentenceKey": "forced-english-system-e003-s004",
+      "textHash": "c4670eee98ba564e106d572c50b453c63affc2be48250fb337a22c2581ef8141",
+      "startMs": 6280,
+      "endMs": 7010
+    },
+    {
+      "sentenceKey": "forced-english-system-e003-s005",
+      "textHash": "a0df7f7ffb40932c681e888ab04d3f81b3db09d53393bac571c35ea6348f09d4",
+      "startMs": 7100,
+      "endMs": 11050
+    },
+    {
+      "sentenceKey": "forced-english-system-e003-s006",
+      "textHash": "63d5dbf9dccb1c569804464a849f57f4e7c3f48936fd96a45a5c6a4dd8b4a736",
+      "startMs": 11240,
+      "endMs": 12900
+    },
+    {
+      "sentenceKey": "forced-english-system-e003-s007",
+      "textHash": "ae1b20554f1f7bc90773a7862c6daf19869c5226ce888b6617e821578b56769c",
+      "startMs": 13200,
+      "endMs": 13800
+    },
+    {
+      "sentenceKey": "forced-english-system-e003-s008",
+      "textHash": "1c676fb9d4ac11a5d9c41447cb2ebb7ed2d7c7f98acb64ed159aab73ebd7078d",
+      "startMs": 14740,
+      "endMs": 17750
+    },
+    {
+      "sentenceKey": "forced-english-system-e003-s009",
+      "textHash": "adbfc2082883551088f5f3a544e0121ccbf1a216f813954f00b3fed22ecbb169",
+      "startMs": 18200,
+      "endMs": 19220
+    },
+    {
+      "sentenceKey": "forced-english-system-e003-s010",
+      "textHash": "c7598f65fa4be888cae13c44aa85654ca3c0849468fbeafab843811eb3db2ba2",
+      "startMs": 19650,
+      "endMs": 22600
+    },
+    {
+      "sentenceKey": "forced-english-system-e003-s011",
+      "textHash": "adbfc2082883551088f5f3a544e0121ccbf1a216f813954f00b3fed22ecbb169",
+      "startMs": 23020,
+      "endMs": 23930
+    },
+    {
+      "sentenceKey": "forced-english-system-e003-s012",
+      "textHash": "4afee1e023049bc1cc16c7f1e1f3a22ca5d94cc14802f7a9756829c8c91eb82f",
+      "startMs": 24720,
+      "endMs": 27100
+    },
+    {
+      "sentenceKey": "forced-english-system-e003-s013",
+      "textHash": "adbfc2082883551088f5f3a544e0121ccbf1a216f813954f00b3fed22ecbb169",
+      "startMs": 27900,
+      "endMs": 28800
+    },
+    {
+      "sentenceKey": "forced-english-system-e003-s014",
+      "textHash": "1658df3792e44faf8405e4447cab3f166a0269cafd0a400e21ce0751e1fbd057",
+      "startMs": 30300,
+      "endMs": 33200
+    },
+    {
+      "sentenceKey": "forced-english-system-e003-s015",
+      "textHash": "7db1c75ee44fa07d23a7242229458b5e4a4ce6fcefe101922842a8f18e1ae3f5",
+      "startMs": 33200,
+      "endMs": 34220
+    },
+    {
+      "sentenceKey": "forced-english-system-e003-s016",
+      "textHash": "d61b622bfdbeef3aba0e63c133e70410f085ee19c27e8bb7efd25c7c18343db8",
+      "startMs": 34220,
+      "endMs": 35635
+    }
+  ]
+}

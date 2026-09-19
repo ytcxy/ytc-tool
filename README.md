@@ -94,3 +94,7 @@ npm run content:check --workspace server
 - [项目规范](AGENTS.md) · [数据库设计](docs/database-design.md) · [接口说明](docs/api.md)
 - [完整对话稿](docs/dialogues-completed.md) · [内容说明](docs/dialogue-completion.md)
 - [数据库初始化与部署排查](docs/operations.md)
+
+## 前五集视频学习
+
+第二个合集前五集支持顶部固定视频、紧凑台词列表和点击逐句播放。视频文件独立安装，视频信息与逐句时间轴存入数据库，不进入小程序包或后端镜像；建表与导入预览、资源安装及尚未完成的真机验收见 [视频说明](docs/video.md)。

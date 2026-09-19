@@ -22,7 +22,10 @@
     "audio:import": "node scripts/sync-audio.mjs --apply",
     "audio:generate": "python3 scripts/generate-audio.py",
     "db:speaker-name:plan": "node scripts/migrate-speaker-name.mjs",
-    "db:speaker-name:migrate": "node scripts/migrate-speaker-name.mjs --apply"
+    "db:speaker-name:migrate": "node scripts/migrate-speaker-name.mjs --apply",
+    "video:install": "node --import tsx scripts/install-video.ts",
+    "video:plan": "node --import tsx scripts/sync-video.ts",
+    "video:import": "node --import tsx scripts/sync-video.ts --apply"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.0",

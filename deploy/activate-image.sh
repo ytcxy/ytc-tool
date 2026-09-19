@@ -41,7 +41,7 @@ gzip -dc image.tar.gz | docker load
 bash "$stage/verify-image.sh" "$image" "$image_id"
 [[ $(docker image inspect --format '{{.Os}}/{{.Architecture}}' "$image") == "$platform" ]] || { echo 'Image platform mismatch'; exit 1; }
 install -d -m 700 "$base" "$base/releases"
-install -d -m 755 "$base/audio" "$base/audio/files"
+install -d -m 755 "$base/audio" "$base/audio/files" "$base/video" "$base/video/files"
 mkdir -m 700 "$release"
 install -m 600 server.env "$release/server.env"
 printf '%s\n' "$image" > "$release/image.txt"
@@ -65,8 +65,9 @@ docker create --pull=never --name "$name" --label ytc-tool.managed=true \
  --security-opt no-new-privileges:true --cap-drop ALL \
  --log-opt max-size=10m --log-opt max-file=3 \
  -e NODE_ENV=production -e PORT="$port" -e BIND_HOST=127.0.0.1 \
- -e TRUST_LOOPBACK_PROXY=true -e UPLOAD_DIR=/app/uploads -e AUDIO_SOURCE=database -e AUDIO_DIR=/app/audio \
+ -e TRUST_LOOPBACK_PROXY=true -e UPLOAD_DIR=/app/uploads -e AUDIO_SOURCE=database -e AUDIO_DIR=/app/audio -e VIDEO_DIR=/app/video \
  --mount type=bind,source="$base/audio",target=/app/audio,readonly \
+ --mount type=bind,source="$base/video",target=/app/video,readonly \
  --mount type=volume,source=ytc-tool-uploads,target=/app/uploads "$image" >/dev/null
 new_created=true
 docker start "$name" >/dev/null

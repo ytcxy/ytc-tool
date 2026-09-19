@@ -60,14 +60,15 @@ Page({
    const index=this.data.sentences.findIndex(s=>s.id===id);
    if(index>=0)this.setData({[`sentences[${index}].status`]:status});
    if(this.data.onlyUnmastered&&status==='mastered'&&this.data.audioSentenceId===id)this.stopAudio();
+   if(this.data.onlyUnmastered&&status==='mastered'&&this.data.episode?.video)this.selectComponent('#episode-video')?.stop();
    this._savedPosition=id;this.recount();
   },false,id);
   void this._queue.finally(()=>{this._pendingMark=false;});
  },
  complete(){if(this.data.saving||this.data.saveError||!requireLogin())return;const completed=!this.data.completed;this.enqueue(async()=>{await request(`/me/episodes/${this.data.id}/progress`,'PUT',{completed});this.setData({completed});});},
- resume(){this.setData({onlyUnmastered:false});this.recount();wx.nextTick(()=>wx.pageScrollTo({selector:'#s-'+this.data.lastSentenceId,duration:250,offsetTop:-20}));},
+ resume(){if(this.data.episode?.video){this.videoShowAll();wx.nextTick(()=>this.selectComponent('#episode-video')?.bringToSentence(this.data.lastSentenceId));return;}this.setData({onlyUnmastered:false});this.recount();wx.nextTick(()=>wx.pageScrollTo({selector:'#s-'+this.data.lastSentenceId,duration:250,offsetTop:-20}));},
  observe(){
-  this._observer?.disconnect();if(!this._visible||this.data.loading||!getToken()||getToken()!==this._session||this.data.progressError)return;
+  this._observer?.disconnect();if(this.data.episode?.video||!this._visible||this.data.loading||!getToken()||getToken()!==this._session||this.data.progressError)return;
   this._observer=this.createIntersectionObserver({observeAll:true,thresholds:[0.5]});
   this._observer.relativeToViewport().observe('.sentence',(r)=>{if(r.intersectionRatio>=0.5&&r.dataset.id)this.recordPosition(String(r.dataset.id));});
  },
@@ -107,5 +108,9 @@ Page({
    loading();audio.src=src;audio.play();
   }catch{this.stopAudio();this.setData({audioSentenceId:id,audioState:'error',audioError:'播放器启动失败，点击喇叭重试'});}
  },
+ videoPosition(event:WechatMiniprogram.CustomEvent<{id:string}>){this.recordPosition(event.detail.id);},
+ videoReveal(event:WechatMiniprogram.CustomEvent<{id:string}>){this.toggle({...event,currentTarget:{...event.currentTarget,dataset:event.detail}});},
+ videoMark(event:WechatMiniprogram.CustomEvent<{id:string;status:Status}>){this.mark({...event,currentTarget:{...event.currentTarget,dataset:event.detail}});},
+ videoShowAll(){this.setData({onlyUnmastered:false});this.recount();},
  login(){wx.switchTab({url:'/pages/me/me'});}
 });

@@ -1,3 +1,5 @@
+import { VideoService } from './video/video.service';
+import { VideoController } from './video/video.controller';
 import { AudioService } from './audio/audio.service';
 import { AudioController } from './audio/audio.controller';
 import { Module } from '@nestjs/common';
@@ -18,7 +20,7 @@ import { UsersService } from './users/users.service';
 import { UsersController } from './users/users.controller';
 @Module({
  imports:[ConfigModule.forRoot({isGlobal:true,envFilePath:resolve(__dirname,'../.env'),validate:validateConfig})],
- controllers:[AudioController,HealthController,AuthController,CatalogController,ProgressController,UsersController],
- providers:[AudioService,DatabaseService,AuthService,AuthGuard,WechatService,CatalogService,ProgressService,UsersService],
+ controllers:[VideoController,AudioController,HealthController,AuthController,CatalogController,ProgressController,UsersController],
+ providers:[VideoService,AudioService,DatabaseService,AuthService,AuthGuard,WechatService,CatalogService,ProgressService,UsersService],
 })
 export class AppModule {}

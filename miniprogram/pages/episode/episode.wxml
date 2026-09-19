@@ -1,4 +1,9 @@
 <page-meta page-style="background-color: {{theme === 'dark' ? '#101612' : '#f5f4ee'}}; color-scheme: {{theme}};" root-background-color="{{theme === 'dark' ? '#101612' : '#f5f4ee'}}" background-color="{{theme === 'dark' ? '#101612' : '#f5f4ee'}}" background-color-top="{{theme === 'dark' ? '#101612' : '#f5f4ee'}}" background-color-bottom="{{theme === 'dark' ? '#101612' : '#f5f4ee'}}" />
+<view wx:if="{{episode.video && !loading && !error}}" class="video-page theme-{{theme}}">
+ <app-nav title="第{{episode.sequence}}集 · {{episode.title}}" back theme="{{theme}}" />
+ <episode-video id="episode-video" episode="{{episode}}" sentences="{{sentences}}" only-unmastered="{{onlyUnmastered}}" all-revealed="{{allRevealed}}" logged-in="{{loggedIn}}" completed="{{completed}}" saving="{{saving}}" saving-sentence-id="{{savingSentenceId}}" save-error="{{saveError}}" progress-error="{{progressError}}" last-sentence-id="{{lastSentenceId}}" mastered="{{mastered}}" bindvideostart="stopAudio" bindposition="videoPosition" bindreveal="videoReveal" bindrevealall="toggleAll" bindfilter="filter" bindshowall="videoShowAll" bindmark="videoMark" bindresume="resume" bindlogin="login" bindcomplete="complete" bindretrysave="retry" bindreload="load" />
+</view>
+<block wx:else>
 <app-nav title="单集复习" back theme="{{theme}}" />
 <view class="page theme-{{theme}}">
  <view wx:if="{{error}}" class="error">{{error}}<button class="plain" bindtap="load">重新加载</button></view>
@@ -30,3 +35,5 @@
   <view class="footer-note">英文是一种参考表达，能表达原意同样很好。</view>
  </block>
 </view>
+
+</block>

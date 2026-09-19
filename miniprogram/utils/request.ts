@@ -32,3 +32,5 @@ export function uploadAvatar(filePath:string):Promise<{avatarPath:string|null}>{
   },fail(){reject(new ApiError('头像上传失败，请重试'));}
  }));
 }
+
+export const videoUrl=(path:string)=>/^\/episodes\/[1-9][0-9]*\/video\?version=[a-f0-9]{64}$/.test(path)?API_BASE_URL+path:'';

@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "单集复习"
+  "navigationBarTitleText": "单集复习",
+  "usingComponents": {
+    "episode-video": "/components/episode-video/index"
+  }
 }

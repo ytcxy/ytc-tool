@@ -1,0 +1,229 @@
+{
+  "sourceFile": "pre5.mp4",
+  "selectedFile": "05-搭欧文的车.mp4",
+  "videoSha256": "6bff686a9dff3b51706c72de872ad72e844a08f88085512bb2e84d8e85359379",
+  "selectedSourceRangeMs": [
+    271271,
+    312746
+  ],
+  "subtitleSourceRangeMs": [
+    312746,
+    354221
+  ],
+  "method": "带字幕重播按 200ms 采样 OCR，对照既有台词按出现顺序匹配；单遍音轨 -30dB/80ms 静音间隙辅助选择起止边界并预留头尾。10ms 步长音轨包络互相关确认两遍相对时间一致。",
+  "review": "已核对字幕、音轨对齐与静音间隙；未人工逐句试听、未微信真机验证。",
+  "alignment": {
+    "episode": 5,
+    "bestEnvelopeCorrelation": 0.9999715283301472,
+    "subtitleAudioOffsetMs": 0
+  },
+  "ocr": "0.1\t\n0.3\t\n0.5\t\n0.7\t\n0.9\t\n1.1\t\n1.3\t\n1.5\t\n1.7\t\n1.9\t\n2.1\t\n2.3\t\n2.5\t\n2.7\t\n2.9\t\n3.1\tollie! | BEAU!\n3.3\tOllie! | BEAU!\n3.5\tOllie! | BEAU!\n3.7\tOllie! | BEAU!\n3.9\t\n4.1\tOwen. | BX!\n4.3\tOwen. | KX!\n4.5\tOwen. | EX!\n4.7\tOwen. | KX!\n4.9\t\n5.1\tThis is our neighbor, Owen.\n5.3\tThis is our neighbor, Owen.\n5.5\tThis is our neighbor, Owen.\n5.7\tThis is our neighbor, Owen.\n5.9\tThis is our neighbor, Owen.\n6.1\tThis is our neighbor, Owen.\n6.3\tThis is our neighbor, Owen.\n6.5\tThis is our neighbor, Owen.\n6.7\tAnd this is my new roommate,Danny. | iXE™*ËДЯE\n6.9\tAnd this is my new roommate,Danny. | XE™ЖЁДЯE\n7.1\tAnd this is my new roommate,Danny. | iXÆ™ЖЁДЯE\n7.3\tAnd this is my new roommate,Danny.\n7.5\tAnd this is my new roommate,Danny.\n7.7\tAnd this is my new roommate,Danny. | iXÆ™ЖËДЯE\n7.9\tAnd this is my new roommate,Danny. | iXÆ™ЖËДЯE\n8.1\tAnd this is my new roommate,Danny. | iXÆ™ЖËДЯE\n8.3\tAnd this is my new roommate,Danny. | iXÆ™ЖËДЯE\n8.5\tAnd this is my new roommate,Danny. | iXÆ™ЖËДЯE\n8.7\tHi! | VRI7\n8.9\tHi! | VRI7\n9.1\tVRI7\n9.3\tHi! | VR*7\n9.5\tNice to meet you.\n9.7\tNice to meet you.\n9.9\tNice to meet you.\n10.1\tNice to meet you.\n10.3\tNice to meet you. | ЕБЖЛ\n10.5\t\n10.7\t\n10.9\tNice to meet you too.\n11.1\tNice to meet you too.\n11.3\tNice to meet you too.\n11.5\tNice to meet you too.\n11.7\tNice to meet you too.\n11.9\tNice to meet you too.\n12.1\t\n12.3\t\n12.5\t\n12.7\tWhere are you guys going?\n12.9\tWhere are you guys going?\n13.1\tWhere are you guys going?\n13.3\tWhere are you guys going?\n13.5\tWhere are you guys going?\n13.7\tWhere are you guys going?\n13.9\t\n14.1\tWelre going to the supermarket.\n14.3\tWelre going to the supermarket. | #iÆŒEТ\n14.5\tWelre going to the supermarket.\n14.7\tWelre going to the supermarket.\n14.9\tWe're going to the supermarket.\n15.1\tWe're going to the supermarket.\n15.3\tWe're going to the supermarket.\n15.5\tWe're going to the supermarket.\n15.7\tWe're going to the supermarket.\n15.9\t\n16.1\tOllie wants some sausages. | BUEIZSM\n16.3\tOllie wants some sausages. | BUUEIZSM\n16.5\tollie wants some sausages. | BUUEIZSM\n16.7\tOllie wants some sausages. | BLFLZSM\n16.9\tollie wants some sausages. | BLFLZSM\n17.1\tollie wants some sausages. | BLFLZASM\n17.3\tollie wants some sausages.\n17.5\tOllie wants some sausages. | FFIZSM\n17.7\tOllie wants some sausages. | BUEZM\n17.9\tGet in!\n18.1\tGet in!\n18.3\tGet in!\n18.5\tGet in!\n18.7\tLet me give you guys a ride.\n18.9\tLet me give you guys a ride. | #*RI-F\n19.1\tLet me give you guys a ride.\n19.3\tLet me give you guys a ride.\n19.5\tLet me give you guys a ride.\n19.7\tLet me give you guys a ride.\n19.9\tLet me give you guys a ride.\n20.1\tSure.\n20.3\tSure.\n20.5\tSure.\n20.7\tSure!\n20.9\t\n21.1\t\n21.3\t\n21.5\t\n21.7\t\n21.9\t\n22.1\t\n22.3\t\n22.5\t\n22.7\t\n22.9\t\n23.1\t\n23.3\t\n23.5\t\n23.7\t\n23.9\t\n24.1\t\n24.3\t\n24.5\tCome over to my place on Saturday. | AAЖIAhI\n24.7\tCome over to my place on Saturday. | AAЖRhI\n24.9\tCome over to my place on Saturday. | AA*wRh\n25.1\tCome over to my place on Saturday. | AAЖWRh\n25.3\tCome over to my place on Saturday. | AAЖŁRhI\n25.5\tCome over to my place on Saturday. | AAЖŁRhI\n25.7\tCome over to my place on Saturday. | AAЖIЯhI\n25.9\tCome over to my place on Saturday. | AA*wRh\n26.1\tCome over to my place on Saturday. | AAЖRhI\n26.3\tI'm going to have a barbecue.\n26.5\tI'm going to have a barbecue.\n26.7\tI'm going to have a barbecue.\n26.9\tI'm going to have a barbecue.\n27.1\tI'm going to have a barbecue.\n27.3\tI'm going to have a barbecue.\n27.5\tI'm going to have a barbecue.\n27.7\tI'm going to have a barbecue.\n27.9\tI'm going to have a barbecue.\n28.1\tSounds great! | $705\n28.3\tSounds great! | $705\n28.5\tSounds great! | $705\n28.7\tSounds great! | $705\n28.9\tSounds great! | $705\n29.1\t\n29.3\t\n29.5\t\n29.7\t\n29.9\t\n30.1\t\n30.3\t\n30.5\t\n30.7\t\n30.9\tYou can drop us off here.\n31.1\tYou can drop us off here.\n31.3\tYou can drop us off here.\n31.5\tYou can drop us off here.\n31.7\tYou can drop us off here.\n31.9\tYou can drop us off here.\n32.1\tYou can drop us off here.\n32.3\t\n32.5\t\n32.7\tSure!\n32.9\tSure!\n33.1\tSure!\n33.3\tSure!\n33.5\t\n33.7\t\n33.9\t\n34.1\t\n34.3\t\n34.5\t\n34.7\t\n34.9\t\n35.1\t\n35.3\t\n35.5\t\n35.7\t\n35.9\t\n36.1\t\n36.3\t\n36.5\t\n36.7\t\n36.9\t\n37.1\t\n37.3\t\n37.5\t\n37.7\t\n37.9\t\n38.1\t\n38.3\t\n38.5\t\n38.7\t\n38.9\tBye, Ollie!\n39.1\tBye, Ollie!\n39.3\tBye, Ollie!\n39.5\tBye, Ollie!\n39.7\tBye, Danny!\n39.9\tBye, Danny!\n40.1\tBye, Danny!\n40.3\tBye, Danny!\n40.5\tBye, Danny- | ЛЛЯЕ\n40.7\tBуe, Owen!\n40.9\tBye, Owen.\n41.1\tBye, Owen.\n41.3\tBye, Owen. | AЛИХ\n",
+  "silence": [
+    "silence_start: 0.0646458",
+    "silence_end: 0.163604 | silence_duration: 0.0989583",
+    "silence_start: 2.548479",
+    "silence_end: 2.737625 | silence_duration: 0.189146",
+    "silence_start: 2.738167",
+    "silence_end: 2.845021 | silence_duration: 0.106854",
+    "silence_start: 2.856854",
+    "silence_end: 3.046021 | silence_duration: 0.189167",
+    "silence_start: 3.744979",
+    "silence_end: 4.129667 | silence_duration: 0.384687",
+    "silence_start: 4.751333",
+    "silence_end: 5.22675 | silence_duration: 0.475417",
+    "silence_start: 6.406583",
+    "silence_end: 6.697417 | silence_duration: 0.290833",
+    "silence_start: 7.867167",
+    "silence_end: 7.993875 | silence_duration: 0.126708",
+    "silence_start: 8.384875",
+    "silence_end: 8.871625 | silence_duration: 0.48675",
+    "silence_start: 9.166375",
+    "silence_end: 9.407771 | silence_duration: 0.241396",
+    "silence_start: 10.182562",
+    "silence_end: 10.805667 | silence_duration: 0.623104",
+    "silence_start: 11.807083",
+    "silence_end: 12.316187 | silence_duration: 0.509104",
+    "silence_start: 12.389104",
+    "silence_end: 12.77975 | silence_duration: 0.390646",
+    "silence_start: 13.702917",
+    "silence_end: 14.128958 | silence_duration: 0.426042",
+    "silence_start: 14.953062",
+    "silence_end: 15.036854 | silence_duration: 0.0837917",
+    "silence_start: 15.317604",
+    "silence_end: 15.425979 | silence_duration: 0.108375",
+    "silence_start: 15.573229",
+    "silence_end: 16.157875 | silence_duration: 0.584646",
+    "silence_start: 17.219188",
+    "silence_end: 17.302979 | silence_duration: 0.0837917",
+    "silence_start: 17.441833",
+    "silence_end: 18.098875 | silence_duration: 0.657042",
+    "silence_start: 18.473104",
+    "silence_end: 18.663937 | silence_duration: 0.190833",
+    "silence_start: 19.778292",
+    "silence_end: 20.135375 | silence_duration: 0.357083",
+    "silence_start: 20.631354",
+    "silence_end: 20.79675 | silence_duration: 0.165396",
+    "silence_start: 20.948083",
+    "silence_end: 21.100792 | silence_duration: 0.152708",
+    "silence_start: 21.575417",
+    "silence_end: 21.763292 | silence_duration: 0.187875",
+    "silence_start: 21.891125",
+    "silence_end: 21.981667 | silence_duration: 0.0905417",
+    "silence_start: 22.283979",
+    "silence_end: 22.481542 | silence_duration: 0.197563",
+    "silence_start: 22.815562",
+    "silence_end: 23.195021 | silence_duration: 0.379458",
+    "silence_start: 23.587875",
+    "silence_end: 23.675687 | silence_duration: 0.0878125",
+    "silence_start: 24.093312",
+    "silence_end: 24.258312 | silence_duration: 0.165",
+    "silence_start: 26.244458",
+    "silence_end: 26.410438 | silence_duration: 0.165979",
+    "silence_start: 27.432104",
+    "silence_end: 27.547583 | silence_duration: 0.115479",
+    "silence_start: 27.826646",
+    "silence_end: 28.088042 | silence_duration: 0.261396",
+    "silence_start: 28.088271",
+    "silence_end: 28.173437 | silence_duration: 0.0851667",
+    "silence_start: 28.453542",
+    "silence_end: 28.536687 | silence_duration: 0.0831458",
+    "silence_start: 28.913958",
+    "silence_end: 28.996625 | silence_duration: 0.0826667",
+    "silence_start: 29.039687",
+    "silence_end: 29.238667 | silence_duration: 0.198979",
+    "silence_start: 30.574354",
+    "silence_end: 30.67275 | silence_duration: 0.0983958",
+    "silence_start: 30.673187",
+    "silence_end: 30.801458 | silence_duration: 0.128271",
+    "silence_start: 30.841958",
+    "silence_end: 30.9565 | silence_duration: 0.114542",
+    "silence_start: 31.744542",
+    "silence_end: 31.862854 | silence_duration: 0.118313",
+    "silence_start: 32.227625",
+    "silence_end: 32.466625 | silence_duration: 0.239",
+    "silence_start: 35.174437",
+    "silence_end: 35.413917 | silence_duration: 0.239479",
+    "silence_start: 35.413958",
+    "silence_end: 35.544312 | silence_duration: 0.130354",
+    "silence_start: 35.545063",
+    "silence_end: 35.796229 | silence_duration: 0.251167",
+    "silence_start: 35.926917",
+    "silence_end: 36.104479 | silence_duration: 0.177562",
+    "silence_start: 36.272125",
+    "silence_end: 36.809958 | silence_duration: 0.537833",
+    "silence_start: 37.089396",
+    "silence_end: 37.826917 | silence_duration: 0.737521",
+    "silence_start: 38.090271",
+    "silence_end: 38.32225 | silence_duration: 0.231979",
+    "silence_start: 38.694229",
+    "silence_end: 38.918062 | silence_duration: 0.223833",
+    "silence_start: 39.497917",
+    "silence_end: 39.756979 | silence_duration: 0.259062",
+    "silence_start: 40.336792",
+    "silence_end: 40.707563 | silence_duration: 0.370771"
+  ],
+  "clips": [
+    {
+      "sentenceKey": "forced-english-system-e005-s001",
+      "textHash": "6988e8612c28e08e17a0a15ba23c421e058df05d3ef1275e2239a41d1363a8ba",
+      "startMs": 2950,
+      "endMs": 3880
+    },
+    {
+      "sentenceKey": "forced-english-system-e005-s002",
+      "textHash": "d55ebea4ef80e8f80865fa458d4c7b9fab7f5c6c80ccff68bda993dbc60ada5c",
+      "startMs": 4030,
+      "endMs": 4880
+    },
+    {
+      "sentenceKey": "forced-english-system-e005-s003",
+      "textHash": "1a6dbd67baf09635423e4f95919a59676db560b3a3478b4291b7bdde50694e18",
+      "startMs": 5120,
+      "endMs": 6540
+    },
+    {
+      "sentenceKey": "forced-english-system-e005-s004",
+      "textHash": "c7a3600e69ccb7d00d47e0de463326d45a497fee89775c4cfdbf3e66c6947e91",
+      "startMs": 6600,
+      "endMs": 8530
+    },
+    {
+      "sentenceKey": "forced-english-system-e005-s005",
+      "textHash": "86d0419387c8b811b509157d77c71ba25fe9debecc57ef87cab935bc4880305c",
+      "startMs": 8770,
+      "endMs": 10320
+    },
+    {
+      "sentenceKey": "forced-english-system-e005-s006",
+      "textHash": "e57ea6d94d5206b6a3c549c58ca609be9f4fd25617ed794917fb93ea1c951be3",
+      "startMs": 10700,
+      "endMs": 11960
+    },
+    {
+      "sentenceKey": "forced-english-system-e005-s007",
+      "textHash": "0836733b19437dc26528f7300cf9ca029b1e5846287786f725ae9bd28c3e381d",
+      "startMs": 12670,
+      "endMs": 13840
+    },
+    {
+      "sentenceKey": "forced-english-system-e005-s008",
+      "textHash": "e40af1b4f128e48fd2a9576143351f50fe3170b0604ec3d01fdf1ca38d43a8f1",
+      "startMs": 14020,
+      "endMs": 15720
+    },
+    {
+      "sentenceKey": "forced-english-system-e005-s009",
+      "textHash": "7b8d8a81fe79ccfd516d1b96a897037413b3b8be364190b0a9c216679cd546d1",
+      "startMs": 16050,
+      "endMs": 17600
+    },
+    {
+      "sentenceKey": "forced-english-system-e005-s010",
+      "textHash": "efbe3d9ce61e600ab8905930bc75bb3cf23b8bedf0b1f6577d69a40686b71fd6",
+      "startMs": 17950,
+      "endMs": 19900
+    },
+    {
+      "sentenceKey": "forced-english-system-e005-s011",
+      "textHash": "96f90319c2df0b7742060da099492a15924556e84025fabd661aaf408ff08f48",
+      "startMs": 20030,
+      "endMs": 20800
+    },
+    {
+      "sentenceKey": "forced-english-system-e005-s012",
+      "textHash": "06f9b92a3b65c752df0b4f35f35ea8484b8523d1003567dfdbccd9601a69df67",
+      "startMs": 24300,
+      "endMs": 27930
+    },
+    {
+      "sentenceKey": "forced-english-system-e005-s013",
+      "textHash": "3e95e8821dcce844d88477414119b3b252afbaaea53e5eaae9db4668d8903e94",
+      "startMs": 28030,
+      "endMs": 29200
+    },
+    {
+      "sentenceKey": "forced-english-system-e005-s014",
+      "textHash": "5649b11fabf6d7ab3f0c584b0f3c6e7c12c4cbe8160a77875f4dc9a9d8f80a94",
+      "startMs": 30850,
+      "endMs": 32340
+    },
+    {
+      "sentenceKey": "forced-english-system-e005-s015",
+      "textHash": "32bc22a3191f12ea56ca00a3bac0c6adc659ad5827d97a452674c364dac57b38",
+      "startMs": 32500,
+      "endMs": 33500
+    },
+    {
+      "sentenceKey": "forced-english-system-e005-s016",
+      "textHash": "e39315f5edc6cd007c6fa9c4895bc1a8642da7f7cd786112fef204e1bbc3d3c6",
+      "startMs": 38820,
+      "endMs": 40480
+    },
+    {
+      "sentenceKey": "forced-english-system-e005-s017",
+      "textHash": "6874b128c5b7c58bbd8fd78211bdfd2d35fa42847af0dda5a26b42140d74bcf2",
+      "startMs": 40600,
+      "endMs": 41475
+    }
+  ]
+}

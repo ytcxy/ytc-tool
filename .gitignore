@@ -15,3 +15,6 @@ server/uploads/
 # Generated speech stays local and is uploaded by sync-audio.sh.
 server/audio/files/
 server/audio/generation-checkpoint.json
+
+# Video binaries are installed independently of application images.
+server/video/files/

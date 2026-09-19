@@ -1,0 +1,32 @@
+<view class="video-lesson">
+ <view class="player-wrap">
+  <video id="lesson-video" class="lesson-player" src="{{src}}" controls="{{false}}" autoplay="{{false}}" loop="{{false}}" object-fit="contain" show-center-play-btn="{{false}}" enable-progress-gesture="{{false}}" bindloadedmetadata="loaded" bindseekcomplete="seekComplete" bindplay="playing" bindwaiting="waiting" bindtimeupdate="timeUpdate" bindended="ended" binderror="playbackError" aria-label="本集视频" />
+  <cover-view wx:if="{{!src}}" class="player-intro"><cover-view class="intro-title">{{episode.title}}</cover-view><cover-view class="intro-hint">点击下方台词，播放对应片段</cover-view></cover-view>
+ </view>
+ <view class="video-controls">
+  <button class="plain whole-button" bindtap="playWhole" aria-label="从头播放整集">▶ 整集播放</button>
+  <text class="play-time">{{timeLabel}} / {{durationLabel}}</text>
+  <button wx:if="{{state === 'playing' || state === 'loading'}}" class="plain" bindtap="pause">{{state === 'loading' ? '取消加载' : '暂停'}}</button>
+  <text wx:else class="play-mode">{{mode === 'clip' ? '仅播本句' : '整集播放'}}</text>
+ </view>
+ <view wx:if="{{playError}}" class="compact-error">{{playError}}<button class="plain" bindtap="retryVideo">重试</button></view>
+ <view class="list-tools">
+  <text class="list-count">台词 {{sentences.length}}</text>
+  <button class="plain" bindtap="revealAll">{{allRevealed ? '隐藏英文' : '显示英文'}}</button>
+  <button class="plain {{onlyUnmastered ? 'tool-selected' : ''}}" bindtap="filter">{{onlyUnmastered ? '显示全部' : '只看未掌握'}}</button>
+ </view>
+ <view wx:if="{{saveError}}" class="compact-error">{{saveError}}<button class="plain" bindtap="retrySave" disabled="{{saving}}">重试同步</button></view>
+ <view wx:if="{{progressError}}" class="compact-error">进度加载失败<text>{{progressError}}</text><button class="plain" bindtap="reloadProgress">重试</button></view>
+ <scroll-view class="dialogue-scroll" scroll-y scroll-into-view="{{scrollTarget}}" scroll-with-animation bindtouchstart="manualScroll">
+  <view wx:if="{{lastSentenceId}}" class="resume-row"><button class="plain" bindtap="resume">回到上次学习位置 →</button></view>
+  <view wx:for="{{sentences}}" wx:key="id" id="video-s-{{item.id}}" hidden="{{onlyUnmastered && item.status === 'mastered'}}" class="dialogue-row {{activeId === item.id ? 'dialogue-active' : ''}}">
+   <view class="dialogue-heading"><text class="dialogue-speaker">{{item.sequence < 10 ? '0' + item.sequence : item.sequence}} · {{item.speakerName || (item.speaker === 1 ? 'AI' : '你')}}</text><button class="clip-button" data-id="{{item.id}}" bindtap="playSentence" disabled="{{!item.videoClip}}" aria-label="{{!item.videoClip ? '片段待标注' : activeId === item.id && state === 'playing' ? '暂停本句' : '播放本句'}}">{{!item.videoClip ? '待标注' : activeId === item.id && state === 'loading' ? '···' : activeId === item.id && state === 'playing' ? 'Ⅱ' : '▶'}}</button></view>
+   <view class="dialogue-zh">{{item.zh}}</view>
+   <view wx:if="{{item.revealed}}" class="dialogue-en">{{item.en}}</view>
+   <view class="dialogue-foot"><button class="plain reveal-small" data-id="{{item.id}}" bindtap="reveal">{{item.revealed ? '收起英文 ↑' : '查看英文 ↓'}}</button><button class="status-small status-{{item.status}}" data-id="{{item.id}}" bindtap="chooseStatus" disabled="{{saving || !!saveError || !!progressError}}">{{saving && savingSentenceId === item.id ? '保存中' : item.status === 'mastered' ? '✓ 已掌握' : item.status === 'learning' ? '◐ 还不熟' : '○ 未练习'}}</button></view>
+  </view>
+  <view wx:if="{{!sentences.length || (onlyUnmastered && mastered === sentences.length)}}" class="empty">{{sentences.length ? '这一集的表达都已掌握' : '本集台词还在准备中'}}</view>
+  <view class="lesson-footer"><text class="muted">已掌握 {{mastered}} / {{sentences.length}} 条</text><button wx:if="{{!loggedIn}}" class="plain" bindtap="login">登录，保存学习进度 →</button><button wx:else class="plain" bindtap="complete" disabled="{{!sentences.length || saving || !!saveError || !!progressError}}">{{completed ? '✓ 本集已完成 · 撤销' : '标记本集已完成'}}</button></view>
+ </scroll-view>
+ <button wx:if="{{activeId && !follow}}" class="back-current" bindtap="returnToCurrent">回到当前句 ↑</button>
+</view>

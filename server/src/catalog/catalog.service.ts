@@ -1,3 +1,4 @@
+import { VideoService, VideoIdentity, VideoSentence } from '../video/video.service';
 import { Injectable, NotFoundException, Optional } from '@nestjs/common';
 import { AudioService, AudioSentence } from '../audio/audio.service';
 import { RowDataPacket } from 'mysql2/promise';
@@ -8,7 +9,7 @@ export const visibleEpisode = `e.is_del=0 AND e.status=1 AND ${visibleCollection
 export const visibleSentence = `s.is_del=0 AND ${visibleEpisode}`;
 @Injectable()
 export class CatalogService {
- constructor(private readonly db: DatabaseService, @Optional() private readonly audio?:AudioService) {}
+ constructor(private readonly db: DatabaseService, @Optional() private readonly audio?:AudioService, @Optional() private readonly video?:VideoService) {}
  async collections(offset: number, limit: number) {
   const [items] = await this.db.pool.query<RowDataPacket[]>(`SELECT c.id,c.title,c.description,
     (SELECT COUNT(*) FROM el_episodes e WHERE e.collection_id=c.id AND e.is_del=0 AND e.status=1) AS episodeCount
@@ -32,13 +33,19 @@ export class CatalogService {
   const [total] = await this.db.pool.execute<RowDataPacket[]>(`SELECT COUNT(*) AS total ${from}`, [collectionId]);
   return { collection, items: items.map(item => ({ ...item, sentenceCount: Number(item.sentenceCount) })), total: Number(total[0].total) };
  }
- async episode(episodeId: string) {
+ async videoIdentity(episodeId: string) {
   const [rows] = await this.db.pool.execute<RowDataPacket[]>(`SELECT e.id,e.title,e.sequence,
-    e.collection_id AS collectionId,c.title AS collectionTitle,e.source_url AS sourceUrl
+    e.collection_id AS collectionId,c.title AS collectionTitle,e.source_url AS sourceUrl,
+    e.source_key AS episodeKey,c.source_key AS collectionKey
     FROM el_episodes e JOIN el_collections c ON c.id=e.collection_id
     WHERE e.id=? AND ${visibleEpisode}`, [episodeId]);
   if (!rows.length) throw new NotFoundException('单集不存在或尚未发布');
-  return rows[0];
+  return rows[0] as RowDataPacket & VideoIdentity;
+ }
+ async episode(episodeId:string){
+  const row=await this.videoIdentity(episodeId);
+  const {collectionKey,episodeKey,...episode}=row;
+  return {...episode,video:await this.video?.metadata(row)??null};
  }
  async sentences(episodeId: string) {
   await this.episode(episodeId);
@@ -47,7 +54,8 @@ export class CatalogService {
     FROM el_sentences s JOIN el_episodes e ON e.id=s.episode_id JOIN el_collections c ON c.id=e.collection_id
     WHERE s.episode_id=? AND ${visibleSentence} ORDER BY s.sequence,s.id LIMIT 200`, [episodeId]);
   const audioUrls=await this.audio?.urls(items as AudioSentence[]);
-  return { items:items.map(item=>{const {sentenceKey,episodeKey,collectionKey,...publicItem}=item;return {...publicItem,audioUrl:audioUrls?.get(item.id)??null};}) };
+  const clips=await this.video?.clips(items as VideoSentence[]);
+  return { items:items.map(item=>{const {sentenceKey,episodeKey,collectionKey,...publicItem}=item;return {...publicItem,audioUrl:audioUrls?.get(item.id)??null,videoClip:clips?.get(item.id)??null};}) };
  }
  async sentence(sentenceId: string) {
   const [rows] = await this.db.pool.execute<RowDataPacket[]>(`SELECT s.id,s.episode_id AS episodeId,s.en,

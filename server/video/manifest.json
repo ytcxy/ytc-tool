@@ -1,0 +1,516 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "collectionKey": "forced-english-system",
+      "episodeKey": "forced-english-system-e001",
+      "sha256": "b82122bba287065c20ebd5334522ba8c8041c59694dcb6e3aeeee18c0e8b1fec",
+      "file": "b82122bba287065c20ebd5334522ba8c8041c59694dcb6e3aeeee18c0e8b1fec.mp4",
+      "durationMs": 30030,
+      "clips": [
+        {
+          "sentenceKey": "forced-english-system-e001-s001",
+          "textHash": "15d64d4b982a8efddbef0931d69db44e39e8fb2a37b910bee7ece5e8905aae1e",
+          "startMs": 3500,
+          "endMs": 5100
+        },
+        {
+          "sentenceKey": "forced-english-system-e001-s002",
+          "textHash": "743a3e899f71aa31af9f75d8f978a0ec0ddeddcea56d61eb389d1f0d3ffafd06",
+          "startMs": 5200,
+          "endMs": 7210
+        },
+        {
+          "sentenceKey": "forced-english-system-e001-s003",
+          "textHash": "85a5e2847bc496bb74cc1f081f4743f5d37801f12ea9c78a8371c805fc6587bf",
+          "startMs": 7340,
+          "endMs": 9320
+        },
+        {
+          "sentenceKey": "forced-english-system-e001-s004",
+          "textHash": "e57ea6d94d5206b6a3c549c58ca609be9f4fd25617ed794917fb93ea1c951be3",
+          "startMs": 9410,
+          "endMs": 10950
+        },
+        {
+          "sentenceKey": "forced-english-system-e001-s005",
+          "textHash": "43ed394472486fcfdc38a1613365ce500c4c2118db81c58ef7ce10b576207bdb",
+          "startMs": 11180,
+          "endMs": 12800
+        },
+        {
+          "sentenceKey": "forced-english-system-e001-s006",
+          "textHash": "b758a2b0ff27583dbf3ff018eb8054cb3bd1e80d7f8bdf56761415b5970facca",
+          "startMs": 12920,
+          "endMs": 14400
+        },
+        {
+          "sentenceKey": "forced-english-system-e001-s007",
+          "textHash": "ac6b1da58a9fb87b9216cdec4ea5d31202d390a74a40693c6a342efe376d9395",
+          "startMs": 14880,
+          "endMs": 16800
+        },
+        {
+          "sentenceKey": "forced-english-system-e001-s008",
+          "textHash": "79e1e2555b66f189bc0ff70beaae7c5f38b7d00f8c3d4bd16663872fcd03a2ec",
+          "startMs": 17000,
+          "endMs": 18800
+        },
+        {
+          "sentenceKey": "forced-english-system-e001-s009",
+          "textHash": "06d2a67d62511fb459e1dc13f632083cb2542e9d6c6a142f55504f5fb4a1e2da",
+          "startMs": 18840,
+          "endMs": 19430
+        },
+        {
+          "sentenceKey": "forced-english-system-e001-s010",
+          "textHash": "81b2f1325fb1d33895d8636c6af33cc3f225bcead72a7575f76bce9cf101b0ac",
+          "startMs": 19470,
+          "endMs": 20580
+        },
+        {
+          "sentenceKey": "forced-english-system-e001-s011",
+          "textHash": "bd34604321588a708612bef71be285fedebe098dadd6138d2665f8ba420b1245",
+          "startMs": 20750,
+          "endMs": 23340
+        },
+        {
+          "sentenceKey": "forced-english-system-e001-s012",
+          "textHash": "bbf4ecc9856de77553432e1b9cfe92ed5a86fb7c9487461514fc313e145713d9",
+          "startMs": 23450,
+          "endMs": 25800
+        },
+        {
+          "sentenceKey": "forced-english-system-e001-s013",
+          "textHash": "51167d0da2778e8ddc9542e5ed2c009c809ed3c6042dbb9387ddc75efa7a705d",
+          "startMs": 25820,
+          "endMs": 26800
+        },
+        {
+          "sentenceKey": "forced-english-system-e001-s014",
+          "textHash": "cf61a4a5db17d124206c911c0c6569c1add3c1770aab6dffb0800a4ab52085ca",
+          "startMs": 26820,
+          "endMs": 28200
+        }
+      ],
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "collectionKey": "forced-english-system",
+      "episodeKey": "forced-english-system-e002",
+      "sha256": "9fd695ae9763020bb5e89256729b7f4ef082233c6b47a2c92a4eabedc63d3fd6",
+      "file": "9fd695ae9763020bb5e89256729b7f4ef082233c6b47a2c92a4eabedc63d3fd6.mp4",
+      "durationMs": 29997,
+      "width": 1280,
+      "height": 720,
+      "clips": [
+        {
+          "sentenceKey": "forced-english-system-e002-s001",
+          "textHash": "425a2ec09def5e39676a3a8cc324ea971302938bdcebc492267756cd14c1ee50",
+          "startMs": 2020,
+          "endMs": 4220
+        },
+        {
+          "sentenceKey": "forced-english-system-e002-s002",
+          "textHash": "c2214b9c94ff812b7e288c0a48302e95209a59c8b4f23bf13756629d6a90d6d8",
+          "startMs": 4700,
+          "endMs": 5150
+        },
+        {
+          "sentenceKey": "forced-english-system-e002-s003",
+          "textHash": "eeb3fc3300713f713ecec409f0372c23d84e584ae3c3a15410cc01118b79a3f3",
+          "startMs": 6180,
+          "endMs": 7200
+        },
+        {
+          "sentenceKey": "forced-english-system-e002-s004",
+          "textHash": "f7074f8c7dd52ef33c4fcb26904f0c392ad53a17147bb99a38400f7743b32b5f",
+          "startMs": 7890,
+          "endMs": 9020
+        },
+        {
+          "sentenceKey": "forced-english-system-e002-s005",
+          "textHash": "65df0dd2356baffee6aaea0b1fdc41edcd80851f9b6fe7109ec2a0a28be62841",
+          "startMs": 9280,
+          "endMs": 11300
+        },
+        {
+          "sentenceKey": "forced-english-system-e002-s006",
+          "textHash": "02076dc708696c39347b62b3d9e22fa9efb7723cb6db4c87c3239fa1bc2c6703",
+          "startMs": 11640,
+          "endMs": 12950
+        },
+        {
+          "sentenceKey": "forced-english-system-e002-s007",
+          "textHash": "fe4e097e3483afb1c1f05c9162c73f99833cb6cdd7cc377228484efa3afa1784",
+          "startMs": 13110,
+          "endMs": 14700
+        },
+        {
+          "sentenceKey": "forced-english-system-e002-s008",
+          "textHash": "eae68576e858916dffa98ed5a0fe0ea40f925acb29d54665512b7d0c69fe4aa1",
+          "startMs": 16050,
+          "endMs": 17000
+        },
+        {
+          "sentenceKey": "forced-english-system-e002-s009",
+          "textHash": "6986acaf627ca920567cf0e48c7d1175c72d818f37ad450b84100588437cde05",
+          "startMs": 17450,
+          "endMs": 18800
+        },
+        {
+          "sentenceKey": "forced-english-system-e002-s010",
+          "textHash": "203c95a969d1da8c8abd5131c34b9db8bfda3fc830f35042a31cdd45a5f7a90c",
+          "startMs": 19540,
+          "endMs": 20500
+        },
+        {
+          "sentenceKey": "forced-english-system-e002-s011",
+          "textHash": "9d6ccd04e6bfc6db0fd45e97b467eea9b9b92b36c25fa7da145184b7590a4a2e",
+          "startMs": 20850,
+          "endMs": 22900
+        },
+        {
+          "sentenceKey": "forced-english-system-e002-s012",
+          "textHash": "97d4d072a7a563cd6a373a69aba9907feb815a08be25f4c665e025d52f206067",
+          "startMs": 23200,
+          "endMs": 24920
+        },
+        {
+          "sentenceKey": "forced-english-system-e002-s013",
+          "textHash": "91d8fc6e4d55a0379d963e5f8bf77eed7002e679db5382c55dfd055b7cb20574",
+          "startMs": 25070,
+          "endMs": 26520
+        },
+        {
+          "sentenceKey": "forced-english-system-e002-s014",
+          "textHash": "f2efd50c748922d7a330e4d4743aaa3234836e7949167a9d1f70aea8ed67c049",
+          "startMs": 26700,
+          "endMs": 29000
+        }
+      ]
+    },
+    {
+      "collectionKey": "forced-english-system",
+      "episodeKey": "forced-english-system-e003",
+      "sha256": "399a2b9438f4d64a9b64f12dd787231b7207ede10ba39b0037c37a7f7f574096",
+      "file": "399a2b9438f4d64a9b64f12dd787231b7207ede10ba39b0037c37a7f7f574096.mp4",
+      "durationMs": 35636,
+      "width": 1280,
+      "height": 720,
+      "clips": [
+        {
+          "sentenceKey": "forced-english-system-e003-s001",
+          "textHash": "990bd451f9d68d62add1981f6fe8df78a974be96cfc3a8b625a41043dfb1b67c",
+          "startMs": 1780,
+          "endMs": 2800
+        },
+        {
+          "sentenceKey": "forced-english-system-e003-s002",
+          "textHash": "490934daab2c73acf6a283e15a81dac3cea4c7ba78bc1d22edad8dddfa6ca02b",
+          "startMs": 3220,
+          "endMs": 4250
+        },
+        {
+          "sentenceKey": "forced-english-system-e003-s003",
+          "textHash": "cf6d45ad2e61a408b08b6839c5e7ab91fe238861de89c53f35276756c288de10",
+          "startMs": 4680,
+          "endMs": 6100
+        },
+        {
+          "sentenceKey": "forced-english-system-e003-s004",
+          "textHash": "c4670eee98ba564e106d572c50b453c63affc2be48250fb337a22c2581ef8141",
+          "startMs": 6280,
+          "endMs": 7010
+        },
+        {
+          "sentenceKey": "forced-english-system-e003-s005",
+          "textHash": "a0df7f7ffb40932c681e888ab04d3f81b3db09d53393bac571c35ea6348f09d4",
+          "startMs": 7100,
+          "endMs": 11050
+        },
+        {
+          "sentenceKey": "forced-english-system-e003-s006",
+          "textHash": "63d5dbf9dccb1c569804464a849f57f4e7c3f48936fd96a45a5c6a4dd8b4a736",
+          "startMs": 11240,
+          "endMs": 12900
+        },
+        {
+          "sentenceKey": "forced-english-system-e003-s007",
+          "textHash": "ae1b20554f1f7bc90773a7862c6daf19869c5226ce888b6617e821578b56769c",
+          "startMs": 13200,
+          "endMs": 13800
+        },
+        {
+          "sentenceKey": "forced-english-system-e003-s008",
+          "textHash": "1c676fb9d4ac11a5d9c41447cb2ebb7ed2d7c7f98acb64ed159aab73ebd7078d",
+          "startMs": 14740,
+          "endMs": 17750
+        },
+        {
+          "sentenceKey": "forced-english-system-e003-s009",
+          "textHash": "adbfc2082883551088f5f3a544e0121ccbf1a216f813954f00b3fed22ecbb169",
+          "startMs": 18200,
+          "endMs": 19220
+        },
+        {
+          "sentenceKey": "forced-english-system-e003-s010",
+          "textHash": "c7598f65fa4be888cae13c44aa85654ca3c0849468fbeafab843811eb3db2ba2",
+          "startMs": 19650,
+          "endMs": 22600
+        },
+        {
+          "sentenceKey": "forced-english-system-e003-s011",
+          "textHash": "adbfc2082883551088f5f3a544e0121ccbf1a216f813954f00b3fed22ecbb169",
+          "startMs": 23020,
+          "endMs": 23930
+        },
+        {
+          "sentenceKey": "forced-english-system-e003-s012",
+          "textHash": "4afee1e023049bc1cc16c7f1e1f3a22ca5d94cc14802f7a9756829c8c91eb82f",
+          "startMs": 24720,
+          "endMs": 27100
+        },
+        {
+          "sentenceKey": "forced-english-system-e003-s013",
+          "textHash": "adbfc2082883551088f5f3a544e0121ccbf1a216f813954f00b3fed22ecbb169",
+          "startMs": 27900,
+          "endMs": 28800
+        },
+        {
+          "sentenceKey": "forced-english-system-e003-s014",
+          "textHash": "1658df3792e44faf8405e4447cab3f166a0269cafd0a400e21ce0751e1fbd057",
+          "startMs": 30300,
+          "endMs": 33200
+        },
+        {
+          "sentenceKey": "forced-english-system-e003-s015",
+          "textHash": "7db1c75ee44fa07d23a7242229458b5e4a4ce6fcefe101922842a8f18e1ae3f5",
+          "startMs": 33200,
+          "endMs": 34220
+        },
+        {
+          "sentenceKey": "forced-english-system-e003-s016",
+          "textHash": "d61b622bfdbeef3aba0e63c133e70410f085ee19c27e8bb7efd25c7c18343db8",
+          "startMs": 34220,
+          "endMs": 35635
+        }
+      ]
+    },
+    {
+      "collectionKey": "forced-english-system",
+      "episodeKey": "forced-english-system-e004",
+      "sha256": "ac5ae9edd9aaf24bbb00a00324e3152a44e785ba722b9ed33dd86d96bc897d42",
+      "file": "ac5ae9edd9aaf24bbb00a00324e3152a44e785ba722b9ed33dd86d96bc897d42.mp4",
+      "durationMs": 39973,
+      "width": 1280,
+      "height": 720,
+      "clips": [
+        {
+          "sentenceKey": "forced-english-system-e004-s001",
+          "textHash": "d8789113a166da8237dc2338e1fd70fd8b4cd8852b8f8fc9be89b3d79c390bc0",
+          "startMs": 500,
+          "endMs": 1850
+        },
+        {
+          "sentenceKey": "forced-english-system-e004-s002",
+          "textHash": "e92a58f1273931b733a2a1274e82a93a1d9f61a6538f20ffee97f2d2c9cff437",
+          "startMs": 4650,
+          "endMs": 6150
+        },
+        {
+          "sentenceKey": "forced-english-system-e004-s003",
+          "textHash": "79970b1c513642427d944e9caa5a1a65aadf8c4323421532fc6d19a00dbbdaba",
+          "startMs": 6260,
+          "endMs": 8070
+        },
+        {
+          "sentenceKey": "forced-english-system-e004-s004",
+          "textHash": "dbee463adaf659da46838b852dbe8d0485c6da1ef46313b1f91d2c59d510a0b1",
+          "startMs": 9780,
+          "endMs": 11550
+        },
+        {
+          "sentenceKey": "forced-english-system-e004-s005",
+          "textHash": "f7b9d97f024f45f1db2006f3d47aef671b613ddb884a0fb89af1de25230e8e1b",
+          "startMs": 12920,
+          "endMs": 14800
+        },
+        {
+          "sentenceKey": "forced-english-system-e004-s006",
+          "textHash": "cd95a15849199e75e481a02467097c84e69ec0a300c88d95b000abdc1aee947f",
+          "startMs": 15070,
+          "endMs": 15500
+        },
+        {
+          "sentenceKey": "forced-english-system-e004-s007",
+          "textHash": "1b2ae6b9b11bb09493759f65b47ff23c6c9f2bb629b56d1abd3614e6c060967a",
+          "startMs": 18150,
+          "endMs": 19600
+        },
+        {
+          "sentenceKey": "forced-english-system-e004-s008",
+          "textHash": "533e5c48a9ac2e33e4cb7a98bcfc19442e6d77c4ced7c1653f437d1a09ef59db",
+          "startMs": 19900,
+          "endMs": 21900
+        },
+        {
+          "sentenceKey": "forced-english-system-e004-s009",
+          "textHash": "680f537f6d05ede18dfd88cb0b6d3f5ace07712b40ca88e11c88d493164f5708",
+          "startMs": 23250,
+          "endMs": 25330
+        },
+        {
+          "sentenceKey": "forced-english-system-e004-s010",
+          "textHash": "5147320f8766d88c6810a495f38400569640f3b2d9a16fa919dfdd8687889977",
+          "startMs": 26280,
+          "endMs": 27900
+        },
+        {
+          "sentenceKey": "forced-english-system-e004-s011",
+          "textHash": "5ec5fad8970723e296d8bf67a0af1a30ec973002cee21cac3d1f2b0bdc8e8ea8",
+          "startMs": 30100,
+          "endMs": 32250
+        },
+        {
+          "sentenceKey": "forced-english-system-e004-s012",
+          "textHash": "b637a7a9c545c0dd644ec9ab73a469501e59845f0f0eb3d4a0ebc853ed584223",
+          "startMs": 32490,
+          "endMs": 34320
+        },
+        {
+          "sentenceKey": "forced-english-system-e004-s013",
+          "textHash": "3ecd10fbf62f69ef84bd0f5a2b8b8965518210764e83e99b5a50c981ef80518e",
+          "startMs": 34760,
+          "endMs": 36400
+        },
+        {
+          "sentenceKey": "forced-english-system-e004-s014",
+          "textHash": "449532d9a00fa4128429025df0716dec5a8e7e24af4253cdbf6719ba27f4be6e",
+          "startMs": 36590,
+          "endMs": 37950
+        },
+        {
+          "sentenceKey": "forced-english-system-e004-s015",
+          "textHash": "f65cc976e9dc03dfd9ba2ce09bc7bede91cf2fb246375e229846545104e5fd05",
+          "startMs": 38400,
+          "endMs": 39200
+        }
+      ]
+    },
+    {
+      "collectionKey": "forced-english-system",
+      "episodeKey": "forced-english-system-e005",
+      "sha256": "6bff686a9dff3b51706c72de872ad72e844a08f88085512bb2e84d8e85359379",
+      "file": "6bff686a9dff3b51706c72de872ad72e844a08f88085512bb2e84d8e85359379.mp4",
+      "durationMs": 41475,
+      "width": 1280,
+      "height": 720,
+      "clips": [
+        {
+          "sentenceKey": "forced-english-system-e005-s001",
+          "textHash": "6988e8612c28e08e17a0a15ba23c421e058df05d3ef1275e2239a41d1363a8ba",
+          "startMs": 2950,
+          "endMs": 3880
+        },
+        {
+          "sentenceKey": "forced-english-system-e005-s002",
+          "textHash": "d55ebea4ef80e8f80865fa458d4c7b9fab7f5c6c80ccff68bda993dbc60ada5c",
+          "startMs": 4030,
+          "endMs": 4880
+        },
+        {
+          "sentenceKey": "forced-english-system-e005-s003",
+          "textHash": "1a6dbd67baf09635423e4f95919a59676db560b3a3478b4291b7bdde50694e18",
+          "startMs": 5120,
+          "endMs": 6540
+        },
+        {
+          "sentenceKey": "forced-english-system-e005-s004",
+          "textHash": "c7a3600e69ccb7d00d47e0de463326d45a497fee89775c4cfdbf3e66c6947e91",
+          "startMs": 6600,
+          "endMs": 8530
+        },
+        {
+          "sentenceKey": "forced-english-system-e005-s005",
+          "textHash": "86d0419387c8b811b509157d77c71ba25fe9debecc57ef87cab935bc4880305c",
+          "startMs": 8770,
+          "endMs": 10320
+        },
+        {
+          "sentenceKey": "forced-english-system-e005-s006",
+          "textHash": "e57ea6d94d5206b6a3c549c58ca609be9f4fd25617ed794917fb93ea1c951be3",
+          "startMs": 10700,
+          "endMs": 11960
+        },
+        {
+          "sentenceKey": "forced-english-system-e005-s007",
+          "textHash": "0836733b19437dc26528f7300cf9ca029b1e5846287786f725ae9bd28c3e381d",
+          "startMs": 12670,
+          "endMs": 13840
+        },
+        {
+          "sentenceKey": "forced-english-system-e005-s008",
+          "textHash": "e40af1b4f128e48fd2a9576143351f50fe3170b0604ec3d01fdf1ca38d43a8f1",
+          "startMs": 14020,
+          "endMs": 15720
+        },
+        {
+          "sentenceKey": "forced-english-system-e005-s009",
+          "textHash": "7b8d8a81fe79ccfd516d1b96a897037413b3b8be364190b0a9c216679cd546d1",
+          "startMs": 16050,
+          "endMs": 17600
+        },
+        {
+          "sentenceKey": "forced-english-system-e005-s010",
+          "textHash": "efbe3d9ce61e600ab8905930bc75bb3cf23b8bedf0b1f6577d69a40686b71fd6",
+          "startMs": 17950,
+          "endMs": 19900
+        },
+        {
+          "sentenceKey": "forced-english-system-e005-s011",
+          "textHash": "96f90319c2df0b7742060da099492a15924556e84025fabd661aaf408ff08f48",
+          "startMs": 20030,
+          "endMs": 20800
+        },
+        {
+          "sentenceKey": "forced-english-system-e005-s012",
+          "textHash": "06f9b92a3b65c752df0b4f35f35ea8484b8523d1003567dfdbccd9601a69df67",
+          "startMs": 24300,
+          "endMs": 27930
+        },
+        {
+          "sentenceKey": "forced-english-system-e005-s013",
+          "textHash": "3e95e8821dcce844d88477414119b3b252afbaaea53e5eaae9db4668d8903e94",
+          "startMs": 28030,
+          "endMs": 29200
+        },
+        {
+          "sentenceKey": "forced-english-system-e005-s014",
+          "textHash": "5649b11fabf6d7ab3f0c584b0f3c6e7c12c4cbe8160a77875f4dc9a9d8f80a94",
+          "startMs": 30850,
+          "endMs": 32340
+        },
+        {
+          "sentenceKey": "forced-english-system-e005-s015",
+          "textHash": "32bc22a3191f12ea56ca00a3bac0c6adc659ad5827d97a452674c364dac57b38",
+          "startMs": 32500,
+          "endMs": 33500
+        },
+        {
+          "sentenceKey": "forced-english-system-e005-s016",
+          "textHash": "e39315f5edc6cd007c6fa9c4895bc1a8642da7f7cd786112fef204e1bbc3d3c6",
+          "startMs": 38820,
+          "endMs": 40480
+        },
+        {
+          "sentenceKey": "forced-english-system-e005-s017",
+          "textHash": "6874b128c5b7c58bbd8fd78211bdfd2d35fa42847af0dda5a26b42140d74bcf2",
+          "startMs": 40600,
+          "endMs": 41475
+        }
+      ]
+    }
+  ]
+}

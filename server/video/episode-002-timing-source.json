@@ -1,0 +1,183 @@
+{
+  "sourceFile": "pre5.mp4",
+  "selectedFile": "02-聪明的丹尼.mp4",
+  "videoSha256": "9fd695ae9763020bb5e89256729b7f4ef082233c6b47a2c92a4eabedc63d3fd6",
+  "selectedSourceRangeMs": [
+    60060,
+    90057
+  ],
+  "subtitleSourceRangeMs": [
+    90057,
+    120053
+  ],
+  "method": "带字幕重播按 200ms 采样 OCR，对照既有台词按出现顺序匹配；单遍音轨 -30dB/80ms 静音间隙辅助选择起止边界并预留头尾。10ms 步长音轨包络互相关确认两遍相对时间一致。",
+  "review": "已核对字幕、音轨对齐与静音间隙；未人工逐句试听、未微信真机验证。",
+  "alignment": {
+    "episode": 2,
+    "bestEnvelopeCorrelation": 0.9999932403319209,
+    "subtitleAudioOffsetMs": 0
+  },
+  "ocr": "0.1\t\n0.3\t\n0.5\t\n0.7\t\n0.9\t\n1.1\t\n1.3\t\n1.5\t\n1.7\t\n1.9\t\n2.1\tI heard you're super smart and know everything. | ДИЛЯЮА, Hł4#M0\n2.3\tI heard you're super smart and know everything. | ІFĂTНЯЖИ, H4łMü\n2.5\tI heard you're super smart and know everything. | DFЯRАЯЮ, f4#ЯÈ\n2.7\tI heard you're super smart and know everything. | DFSRЯЮА, f4#BЯÈ\n2.9\tI heard you're super smart and know everything. | DFяАЯЮ, H4#U\n3.1\tI heard you're super smart and know everything. | DFSRАЯЮА, f4#BÈ\n3.3\tI heard you're super smart and know everything. | DFRАЯЮА, f4#B#IÈ\n3.5\tI heard you're super smart and know everything. | DFЯRАЯЮ, f4#BIÈ\n3.7\tI heard you're super smart and know everything. | DAЯRAЯЮ, f4#BIÈ\n3.9\tI heard you're super smart and know everything. | AЯR#ЯЮ, f4#BÈ\n4.1\t\n4.3\t\n4.5\t\n4.7\tYep.\n4.9\tYep. | XJ\n5.1\tYep. | XJ\n5.3\t\n5.5\t\n5.7\t\n5.9\t\n6.1\t\n6.3\tWho's this guy!\n6.5\tWho's this guy!\n6.7\tWho's this guy!\n6.9\tWho's this guy!\n7.1\tWho's this guy?\n7.3\t\n7.5\t\n7.7\t\n7.9\tIt's Copernicus.\n8.1\tIt's Copernicus.\n8.3\tIt's Copernicus.\n8.5\tIt's Copernicus.\n8.7\tIt's Copernicus.\n8.9\tIt's Copernicus.\n9.1\tIt's Copernicus. | WAREE\n9.3\tOh, I thought it was Newton.\n9.5\tOh, I thought it was Newton.\n9.7\tOh, I thought it was Newton.\n9.9\tOh, I thought it was Newton.\n10.1\tOh, I thought it was Newton.\n10.3\tOh, I thought it was Newton. | ШТИЕТФЕ\n10.5\tOh, I thought it was Newton.\n10.7\tOh, I thought it was Newton.\n10.9\tOh, I thought it was Newton.\n11.1\tOh, I thought it was Newton.\n11.3\tOh, I thought it was Newton.\n11.5\t\n11.7\tWhere is this statue? | ZARESN\n11.9\tWhere is this statue? | ET HELEDE\n12.1\tWhere is this statue? | ETALSEDE\n12.3\tWhere is this statue? | 21 BESDE\n12.5\tWhere is this statue? | ETREREDE\n12.7\tWhere is this statue? | ETALREO\n12.9\tWhere is this statue? | ET BEREDE\n13.1\tIt's in Torun, Poland. | ER*IEIE\n13.3\tIt's in Torun, Poland. | ER=IE\n13.5\tIt's in Torun, Poland. | ER=IEIE\n13.7\tIt's in Torun, Poland. | ER=IEIE\n13.9\tIt's in Torun, Poland, | ZR=IE1E\n14.1\tIt's in Torun, Poland, | ER=I1t\n14.3\tIt's in Torun, Poland. | ER=I1€\n14.5\tIt's in Torun, Poland, | ER=IE1t\n14.7\tIt's in Torun, Poland. | ER=IE1E\n14.9\t\n15.1\t\n15.3\t\n15.5\t\n15.7\t\n15.9\t\n16.1\tWho are they?\n16.3\tWho are they?\n16.5\tWho are they?\n16.7\tWho are they?\n16.9\tWho are they?\n17.1\t\n17.3\t\n17.5\tThey're Marx and Engels.\n17.7\tThey're Marx and Engels.\n17.9\tThey're Marx and Engels.\n18.1\tThey're Marx and Engels.\n18.3\tThey're Marx and Engels.\n18.5\tThey're Marx and Engels.\n18.7\tThey're Marx and Engels.\n18.9\tThey're Marx and Engels.\n19.1\t\n19.3\t\n19.5\t\n19.7\tAre they close?\n19.9\tAre they close?\n20.1\tAre they close?\n20.3\tAre they close?\n20.5\t\n20.7\t\n20.9\tYeah.They were really good friends.\n21.1\tYeah.They were really good friends.\n21.3\tYeah.They were really good friends.\n21.5\tYeah.They were really good friends.\n21.7\tYeah.They were really good friends.\n21.9\tYeah.They were really good friends.\n22.1\tYeah.They were really good friends.\n22.3\tYeah.They were really good friends.\n22.5\tYeah.They were really good friends.\n22.7\tYeah.They were really good friends.\n22.9\tYeah.They were really good friends.\n23.1\tYeah. They were really good friends.\n23.3\tWhat country is this statue in? | ETHERENMER?\n23.5\tWhat country is this statue in? | EHREMER?\n23.7\tWhat country is this statue in? | XNHERENMER\n23.9\tWhat country is this statue in? | 21BESENMER?\n24.1\tWhat country is this statue in? | 21BESENMERZ\n24.3\tWhat country is this statue in? | 21BESENMERZ\n24.5\tWhat country is this statue in? | 21BESENMERZ\n24.7\tWhat country is this statue in? | 21BESENMERZ\n24.9\tWhat country is this statue in? | EHREMER\n25.1\tWhat country is this statue in? | Z1REOER?\n25.3\tIt's in Berlin, Germany, | ЕHEAIE\n25.5\tIt's in Berlin, Germany, | ЕHEAI\n25.7\tIt's in Berlin, Germany | ЕНЕIAI\n25.9\tIt's in Berlin, Germany | ЕНEIAIE\n26.1\tIt's in Berlin, Germany, | ЕHEAI\n26.3\tIt's in Berlin, Germany, | ЕНЕIIE\n26.5\tIt's in Berlin, Germany, | ЕНEAI\n26.7\tIt's in Berlin, Germany. | EHEMME\n26.9\tWow! You really are super smart! | LШ/E830713007\n27.1\tWow! You really are super smart! | LШRVKETBOIEAĞ AUT\n27.3\tWow! You really are super smart! | LШVKE0830F13 0107\n27.5\tWow! You really are super smart! | LШ/KE08307130707\n27.7\tWow! You really are super smart! | L0/RE0830713E3U7\n27.9\tWow! You really are super smart!\n28.1\tWow! You really are super smart! | LD/TE8305130705\n28.3\tWow! You really are super smart! | LШ/TE83F13ЕJ07\n28.5\tWow! You really are super smart!\n28.7\tWow! You really are super smart!\n28.9\tWow! You really are super smart! | LD/RETEJOGEEUT\n29.1\tWow! You really are super smart! | LOVRETBOATDĚ AAOЯ\n29.3\t\n29.5\t\n29.7\t\n29.9\t\n",
+  "silence": [
+    "silence_start: 0",
+    "silence_end: 0.378021 | silence_duration: 0.378021",
+    "silence_start: 0.769729",
+    "silence_end: 2.090875 | silence_duration: 1.321146",
+    "silence_start: 2.746229",
+    "silence_end: 2.83625 | silence_duration: 0.0900208",
+    "silence_start: 3.54775",
+    "silence_end: 3.632896 | silence_duration: 0.0851458",
+    "silence_start: 3.906646",
+    "silence_end: 4.008729 | silence_duration: 0.102083",
+    "silence_start: 4.11375",
+    "silence_end: 4.786625 | silence_duration: 0.672875",
+    "silence_start: 4.950625",
+    "silence_end: 5.880896 | silence_duration: 0.930271",
+    "silence_start: 5.913271",
+    "silence_end: 6.258646 | silence_duration: 0.345375",
+    "silence_start: 7.026583",
+    "silence_end: 8.000958 | silence_duration: 0.974375",
+    "silence_start: 8.293437",
+    "silence_end: 8.375875 | silence_duration: 0.0824375",
+    "silence_start: 8.864417",
+    "silence_end: 9.380854 | silence_duration: 0.516437",
+    "silence_start: 9.747813",
+    "silence_end: 10.092083 | silence_duration: 0.344271",
+    "silence_start: 10.208729",
+    "silence_end: 10.297854 | silence_duration: 0.089125",
+    "silence_start: 10.863396",
+    "silence_end: 10.945333 | silence_duration: 0.0819375",
+    "silence_start: 11.113875",
+    "silence_end: 11.737063 | silence_duration: 0.623188",
+    "silence_start: 12.474146",
+    "silence_end: 12.557146 | silence_duration: 0.083",
+    "silence_start: 12.800854",
+    "silence_end: 13.210187 | silence_duration: 0.409333",
+    "silence_start: 13.952875",
+    "silence_end: 14.091292 | silence_duration: 0.138417",
+    "silence_start: 14.375604",
+    "silence_end: 14.460646 | silence_duration: 0.0850417",
+    "silence_start: 14.493896",
+    "silence_end: 15.326313 | silence_duration: 0.832417",
+    "silence_start: 15.400333",
+    "silence_end: 16.155875 | silence_duration: 0.755542",
+    "silence_start: 16.843646",
+    "silence_end: 17.557208 | silence_duration: 0.713562",
+    "silence_start: 17.885562",
+    "silence_end: 18.001229 | silence_duration: 0.115667",
+    "silence_start: 18.655958",
+    "silence_end: 19.644521 | silence_duration: 0.988563",
+    "silence_start: 19.880937",
+    "silence_end: 20.055354 | silence_duration: 0.174417",
+    "silence_start: 20.337521",
+    "silence_end: 20.956708 | silence_duration: 0.619188",
+    "silence_start: 21.258437",
+    "silence_end: 21.514479 | silence_duration: 0.256042",
+    "silence_start: 22.253687",
+    "silence_end: 22.39975 | silence_duration: 0.146062",
+    "silence_start: 22.575458",
+    "silence_end: 22.669021 | silence_duration: 0.0935625",
+    "silence_start: 22.763",
+    "silence_end: 23.301521 | silence_duration: 0.538521",
+    "silence_start: 23.370792",
+    "silence_end: 23.458646 | silence_duration: 0.0878542",
+    "silence_start: 24.805958",
+    "silence_end: 25.168104 | silence_duration: 0.362146",
+    "silence_start: 26.387854",
+    "silence_end: 26.799312 | silence_duration: 0.411458",
+    "silence_start: 27.243333",
+    "silence_end: 27.456521 | silence_duration: 0.213188",
+    "silence_start: 28.271104",
+    "silence_end: 28.366854 | silence_duration: 0.09575",
+    "silence_start: 28.451042",
+    "silence_end: 28.569187 | silence_duration: 0.118146",
+    "silence_start: 28.825187",
+    "silence_end: 29.4195 | silence_duration: 0.594313"
+  ],
+  "clips": [
+    {
+      "sentenceKey": "forced-english-system-e002-s001",
+      "textHash": "425a2ec09def5e39676a3a8cc324ea971302938bdcebc492267756cd14c1ee50",
+      "startMs": 2020,
+      "endMs": 4220
+    },
+    {
+      "sentenceKey": "forced-english-system-e002-s002",
+      "textHash": "c2214b9c94ff812b7e288c0a48302e95209a59c8b4f23bf13756629d6a90d6d8",
+      "startMs": 4700,
+      "endMs": 5150
+    },
+    {
+      "sentenceKey": "forced-english-system-e002-s003",
+      "textHash": "eeb3fc3300713f713ecec409f0372c23d84e584ae3c3a15410cc01118b79a3f3",
+      "startMs": 6180,
+      "endMs": 7200
+    },
+    {
+      "sentenceKey": "forced-english-system-e002-s004",
+      "textHash": "f7074f8c7dd52ef33c4fcb26904f0c392ad53a17147bb99a38400f7743b32b5f",
+      "startMs": 7890,
+      "endMs": 9020
+    },
+    {
+      "sentenceKey": "forced-english-system-e002-s005",
+      "textHash": "65df0dd2356baffee6aaea0b1fdc41edcd80851f9b6fe7109ec2a0a28be62841",
+      "startMs": 9280,
+      "endMs": 11300
+    },
+    {
+      "sentenceKey": "forced-english-system-e002-s006",
+      "textHash": "02076dc708696c39347b62b3d9e22fa9efb7723cb6db4c87c3239fa1bc2c6703",
+      "startMs": 11640,
+      "endMs": 12950
+    },
+    {
+      "sentenceKey": "forced-english-system-e002-s007",
+      "textHash": "fe4e097e3483afb1c1f05c9162c73f99833cb6cdd7cc377228484efa3afa1784",
+      "startMs": 13110,
+      "endMs": 14700
+    },
+    {
+      "sentenceKey": "forced-english-system-e002-s008",
+      "textHash": "eae68576e858916dffa98ed5a0fe0ea40f925acb29d54665512b7d0c69fe4aa1",
+      "startMs": 16050,
+      "endMs": 17000
+    },
+    {
+      "sentenceKey": "forced-english-system-e002-s009",
+      "textHash": "6986acaf627ca920567cf0e48c7d1175c72d818f37ad450b84100588437cde05",
+      "startMs": 17450,
+      "endMs": 18800
+    },
+    {
+      "sentenceKey": "forced-english-system-e002-s010",
+      "textHash": "203c95a969d1da8c8abd5131c34b9db8bfda3fc830f35042a31cdd45a5f7a90c",
+      "startMs": 19540,
+      "endMs": 20500
+    },
+    {
+      "sentenceKey": "forced-english-system-e002-s011",
+      "textHash": "9d6ccd04e6bfc6db0fd45e97b467eea9b9b92b36c25fa7da145184b7590a4a2e",
+      "startMs": 20850,
+      "endMs": 22900
+    },
+    {
+      "sentenceKey": "forced-english-system-e002-s012",
+      "textHash": "97d4d072a7a563cd6a373a69aba9907feb815a08be25f4c665e025d52f206067",
+      "startMs": 23200,
+      "endMs": 24920
+    },
+    {
+      "sentenceKey": "forced-english-system-e002-s013",
+      "textHash": "91d8fc6e4d55a0379d963e5f8bf77eed7002e679db5382c55dfd055b7cb20574",
+      "startMs": 25070,
+      "endMs": 26520
+    },
+    {
+      "sentenceKey": "forced-english-system-e002-s014",
+      "textHash": "f2efd50c748922d7a330e4d4743aaa3234836e7949167a9d1f70aea8ed67c049",
+      "startMs": 26700,
+      "endMs": 29000
+    }
+  ]
+}

@@ -24,3 +24,9 @@
 
 
 单集条目与个人待复习列表均返回 `speakerName`，优先展示人物名；该字段与练习角色 `speaker` 独立，不从 context 前缀推断。
+
+### 视频学习（可选字段）
+
+单集详情新增 `video: {url,version,durationMs} | null`；条目新增 `videoClip: {startMs,endMs,version} | null`。未准备资源或文本哈希不匹配时返回 null，旧合集继续原学习流程。
+
+`GET /api/episodes/:id/video?version=SHA256` 提供 MP4 文件流及单一 Range，返回 200 / 206 / 400 / 404 / 416，每次从 `el_episode_video` 查询当前视频并校验单集和合集的发布、软删除状态；逐句区间从 `el_sentence_video` 批量读取，同时检查台词可见性、所属单集、视频版本和文本哈希。所有公开 ID 仍为十进制字符串。资源准备、时间轴与部署见 [视频说明](video.md)。

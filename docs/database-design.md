@@ -1,6 +1,6 @@
 # 数据库设计 v2（含对话角色）
 
-本设计对应 `server/migrations/001_learning.sql`，新库使用该初始化 SQL；已有数字主键库新增角色字段使用 `002_sentence_speaker.sql`，本轮未执行数据库变更。旧字符串主键表若已存在，必须单独设计并确认升级路径，不能用本初始化脚本直接替换。
+本设计对应 `server/migrations/001_learning.sql`，新库使用该初始化 SQL；已有数字主键库新增角色字段使用 `002_sentence_speaker.sql`，视频映射另见 `006_episode_video.sql`，本次已获授权在测试库新增视频相关两表。旧字符串主键表若已存在，必须单独设计并确认升级路径，不能用本初始化脚本直接替换。
 
 ## 公共字段与约束
 
@@ -108,8 +108,28 @@ created_at 默认 CURRENT_TIMESTAMP(3)；updated_at 默认及自动更新均为 
 
 ## 验证边界
 
-隔离测试覆盖字段规范、ID 精度、枚举映射、关联过滤和导入行为。尚未执行真实 MySQL DDL 或 DML 验证，不能将替身测试视为已完成数据库迁移。获得授权后应在测试库验证约束、实际导入和重复导入。
+隔离测试覆盖字段规范、ID 精度、枚举映射、关联过滤和导入行为。本次视频迁移已在 `ytc-tool` 测试库实际建表并导入 1 条视频与 14 条片段，再次预览没有新增或更新；这不代表历史全库迁移或生产迁移已验证。生产操作需单独授权。
 
 ## 人物名显示
 
 `el_sentences.speaker_name VARCHAR(80) NOT NULL DEFAULT ''` 保存人物名，API/清单对应 `speakerName`。空字符串兼容旧合集的你/AI；多人台词可保存“奥利、丹尼”。已有库运行 004_sentence_speaker_name.sql 对应的迁移脚本，不重建表、不重置 ID 或进度。新后端部署前必须完成此迁移。
+
+## el_episode_video 单集视频
+
+- `id`、`created_at`、`updated_at`、`is_del` 沿用公共字段。
+- `episode_id BIGINT UNSIGNED`：唯一，外键关联单集。
+- `file_name VARCHAR(80)`、`file_sha256 CHAR(64)`：ascii_bin，文件名为 SHA-256.mp4。
+- `duration_ms INT UNSIGNED`、`width/height SMALLINT UNSIGNED`：视频时长和像素尺寸。
+- 视频发布继承单集和合集；一个单集维护一个当前视频记录。替换文件保留记录 ID，旧文件不覆盖。
+
+## el_sentence_video 台词视频片段
+
+- 公共字段与上表相同。
+- `sentence_id BIGINT UNSIGNED`：唯一，外键关联台词。
+- `video_id BIGINT UNSIGNED`：外键关联单集视频；运行时和导入同时检查视频与台词属于同一单集。
+- `video_sha256 CHAR(64)`：绑定具体媒体版本，与当前视频不一致时不提供片段。
+- `text_sha256 CHAR(64)`：英文、中文、人物名的 JSON 数组哈希，文本变化不继续套用旧时间。
+- `start_ms/end_ms INT UNSIGNED`：校验 0 ≤ start < end ≤ 视频时长。
+- 唯一索引不含 is_del，不允许导入自动恢复软删除。更新视频与片段映射以单集为事务边界，保留原 ID。
+
+文件仍独立存储，数据库不存二进制内容或带环境域名的 URL。JSON 仅用于导入和备份，运行时不读取映射清单。SQL、导入预览和部署见 [视频说明](video.md)。
