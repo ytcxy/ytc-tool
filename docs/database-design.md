@@ -133,3 +133,7 @@ created_at 默认 CURRENT_TIMESTAMP(3)；updated_at 默认及自动更新均为 
 - 唯一索引不含 is_del，不允许导入自动恢复软删除。更新视频与片段映射以单集为事务边界，保留原 ID。
 
 文件仍独立存储，数据库不存二进制内容或带环境域名的 URL。JSON 仅用于导入和备份，运行时不读取映射清单。SQL、导入预览和部署见 [视频说明](video.md)。
+
+## 网页管理扩展（005）
+
+`005_web_admin.sql` 为增量迁移：`el_users` 增加唯一可空的 `admin_username`、`admin_password_hash`、默认 0 的 `is_admin` 和 `admin_must_change_password`；`el_sessions` 增加 `session_type`，默认 miniapp，管理会话为 admin。新增 `el_admin_audit_logs`，保留统一公共字段及操作者外键，记录目标类型/ID、动作和 JSON 差异；密码与令牌不进入审计。部署新版前必须应用迁移，详情见 [管理端说明](web-admin.md)。

@@ -11,7 +11,10 @@ export class ErrorsFilter implements ExceptionFilter {
   } else {
    const code=(error as {code?:string})?.code;
    if(code==='ER_NO_SUCH_TABLE') {status=503;message='学习内容尚未初始化，请稍后再试';}
-   this.logger.error(code || 'UNEXPECTED_ERROR');
+   const type=(error as {type?:string})?.type;
+   if(type==='entity.too.large'){status=413;message='请求数据过大，请缩小导入文件';}
+   else if(type==='entity.parse.failed'){status=400;message='JSON 格式不正确';}
+   else this.logger.error(code || 'UNEXPECTED_ERROR');
   }
   host.switchToHttp().getResponse().status(status).json({statusCode:status,message});
  }

@@ -30,3 +30,7 @@
 单集详情新增 `video: {url,version,durationMs} | null`；条目新增 `videoClip: {startMs,endMs,version} | null`。未准备资源或文本哈希不匹配时返回 null，旧合集继续原学习流程。
 
 `GET /api/episodes/:id/video?version=SHA256` 提供 MP4 文件流及单一 Range，返回 200 / 206 / 400 / 404 / 416，每次从 `el_episode_video` 查询当前视频并校验单集和合集的发布、软删除状态；逐句区间从 `el_sentence_video` 批量读取，同时检查台词可见性、所属单集、视频版本和文本哈希。所有公开 ID 仍为十进制字符串。资源准备、时间轴与部署见 [视频说明](video.md)。
+
+## 网页管理接口
+
+新增 `/api/admin`，使用独立的管理 Cookie、管理员权限检查与 CSRF 校验；小程序 Bearer 会话不能访问管理接口。接口清单、参数和错误规则见 [网页管理端](web-admin.md#管理接口)。
